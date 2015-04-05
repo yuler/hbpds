@@ -19,3 +19,15 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+$router->group(['prefix' => 'admin'], function($router)
+{
+	Route::get('/', 'Admin\PagesController@index');
+	
+	Route::resources([
+		'news' => 'Admin\HbNewsController',
+	]);
+
+
+});
