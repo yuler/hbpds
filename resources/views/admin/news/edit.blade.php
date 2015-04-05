@@ -11,7 +11,7 @@
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
 	        <li><a href="/admin/new"><i class="fa fa-newspaper-o"></i> 新闻管理</a></li>
-	        <li class="active">新建</li>
+	        <li class="active">编辑</li>
 	      </ol>
 	    </section>
 
@@ -21,7 +21,7 @@
 	     	<div class="row">
 	      	  	<div class="box box-primary">
 	                <div class="box-header">
-	                  	<h3 class="box-title">新建</h3>
+	                  	<h3 class="box-title">编辑</h3>
 	                </div><!-- /.box-header -->
 
 	                <!-- form start -->
@@ -30,11 +30,11 @@
 		                <div class="box-body">
 		                    <div class="form-group">
 		                      <label for="exampleInputEmail1">新闻标题</label>
-		                      <input type="text" class="form-control" placeholder="输入新闻标题" name="title" value="{{ session('_old_input')['title'] }}">
+		                      <input type="text" class="form-control" placeholder="输入新闻标题" name="title" value="{{ session('_old_input')['title'] ? session('_old_input')['title'] : $hbNew['title'] }}">
 		                    </div>
 		                    <div class="form-group">
 		                      <label for="exampleInputPassword1">新闻内容</label>
-		                      <textarea class="simditor" name="content" placeholder="输入新闻内容,支持拖拽上传图片。">{{ session('_old_input')['content'] }}</textarea>
+		                      <textarea class="simditor" name="content" placeholder="输入新闻内容,支持拖拽上传图片。">{{ session('_old_input')['content'] ? session('_old_input')['content'] : $hbNew['content'] }}</textarea>
 		                    </div>
 		                    <div class="form-group">
 		                      <label for="exampleInputFile">语言种类</label>
@@ -44,7 +44,7 @@
 		                      </select>
 		                    </div>
 		                    <div class="checkbox">
-		                      <input type="checkbox" class="minimal" id="publish" name="published"> 
+		                      <input type="checkbox" class="minimal" id="publish" name="published" value="">
 		                      <label for="publish" style="padding-left:5px;">发布</label>
 		                    </div>
 		                </div><!-- /.box-body -->

@@ -19,7 +19,7 @@ class CreateHbNewsTable extends Migration {
 			$table->text('content');
 			$table->tinyInteger('lang');
 			$table->timestamp('published_at');
-			$table->tinyInteger('published');
+			$table->tinyInteger('published')->nullable()->default(0);
 			$table->timestamps();
 		});
 	}

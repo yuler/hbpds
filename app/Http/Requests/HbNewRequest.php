@@ -11,7 +11,7 @@ class HbNewRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return false;
+		return true;
 	}
 
 	/**
@@ -22,7 +22,8 @@ class HbNewRequest extends Request {
 	public function rules()
 	{
 		return [
-			//
+			'title' => 'required|min:20|max:100',
+        	'content' => 'required',
 		];
 	}
 

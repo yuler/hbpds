@@ -30,6 +30,18 @@
 	.table-hover > tbody > tr:hover {
 	  background-color: #FFE4E4;
 	}
+	.form-errors {
+		display: none;
+		position: fixed;
+		top: 80px;
+		z-index: 1000;
+		left: 45%;
+		width: 20%;
+	}
+	.form-errors li {
+		list-style-type: none;
+		text-align: center;
+ 	}
 
   </style>
 
@@ -53,6 +65,14 @@
 
     </div><!-- ./wrapper -->
 	
+	@if ( $errors->any())
+    	<ul class="alert alert-danger form-errors">
+    		@foreach ($errors->all() as $error)
+    			<li>{{ $error }}</li>
+    		@endforeach
+    	</ul>
+    @endif
+
 	<script type="text/javascript">
 	  	$(function(){
 	  		$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
@@ -93,7 +113,10 @@
 	                pasteImage: true,
 	            });
 	        }
-	       
+	       	
+	       	if($('.form-errors').length > 0){
+	       		$('.form-errors').slideDown(1000).delay(3000).slideUp(1000);
+	       	}
 	  	})
 	</script>
   </body>

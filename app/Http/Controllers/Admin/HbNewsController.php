@@ -5,7 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\hbNew;
+use App\HbNew;
+
+use App\Http\Requests\HbNewRequest;
 
 class HbNewsController extends Controller {
 
@@ -16,7 +18,7 @@ class HbNewsController extends Controller {
 	 */
 	public function index()
 	{
-		$news = hbNew::paginate(10);
+		$news = HbNew::paginate(10);
 		return view('admin.news.index')->withNews($news);
 	}
 
@@ -35,9 +37,21 @@ class HbNewsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(HbNewRequest $request)
 	{
-		return '123';
+		$hbNew = new HbNew();
+
+		$hbNew->title = $request->input('title');
+		$hbNew->content = $request->input('content');
+		$hbNew->lang = $request->input('lang');
+		if($request->has('published')){
+			$hbNew->published = 1;
+			$hbNew->published_at = date('y-m-d H:i:s',time());
+		}
+
+		$hbNew->save();		
+
+		return redirect('admin/new');
 	}
 
 	/**
@@ -59,7 +73,8 @@ class HbNewsController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$hbNew = HbNew::find($id);
+		return view('admin.news.edit')->with('hbNew',$hbNew);
 	}
 
 	/**

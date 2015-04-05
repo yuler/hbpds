@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => env('APP_TIMEZONE', 'UTC'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,8 +52,8 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
-
+	'locale' => env('APP_LOCALE', 'en'),
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Application Fallback Locale
@@ -145,6 +145,7 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		'Laracasts\Flash\FlashServiceProvider',
 	],
 
 	/*
@@ -193,6 +194,7 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
+		'Flash' => 'Laracasts\Flash\Flash',
 	],
 
 ];

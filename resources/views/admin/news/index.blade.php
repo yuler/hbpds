@@ -49,15 +49,14 @@
 								    <td><input type="checkbox" class="minimal"></td>
 						            <td>{{ $new->id }}</td>
 						            <td>{{ $new->title }}</td>
-						            <td>{{ $new->content }}</td>
+						            <td>{{ str_limit($new->content,$limit = 50, $end = '...') }}</td>
 						            <td>{{ $new->lang }}</td>
 						            <td>{{ $new->published_at }}</td>
 						            <td>{{ $new->published }}</td>
 						            <td>{{ $new->created_at }}</td>
 						            <td>{{ $new->updated_at }}</td>
 						            <td>
-						            	<a href="" class="btn btn-default btn-xs"><i class="fa fa-file"></i>  查看</a>
-						            	<a href="" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>  编辑</a>
+						            	<a href="/admin/new/{{ $new->id }}/edit" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>  编辑</a>
 						            	<a href="" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  删除</a>
 						            </td>
 						        </tr>
