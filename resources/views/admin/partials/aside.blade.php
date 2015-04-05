@@ -42,7 +42,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/admin/news"><i class="fa fa-circle-o"></i> 新闻</a></li>
+                <li><a href="/admin/new"><i class="fa fa-circle-o"></i> 新闻</a></li>
                 <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 新闻附件</a></li>
               </ul>
             </li>

@@ -20,7 +20,9 @@
 		width: 100%;
 	}
 	.content-wrapper {
+		padding: 0 30px;
 		padding-top: 50px;
+		min-height: 790px!important;
 	}
 	.no-print{
 		top:120px!important;
@@ -28,6 +30,7 @@
 	.table-hover > tbody > tr:hover {
 	  background-color: #FFE4E4;
 	}
+
   </style>
 
 
@@ -74,6 +77,23 @@
 	        $('table thead input[type="checkbox"]').click(function(){
 	        	alert('xxx');
 	        });
+
+	        if($('.simditor').length > 0){
+		        editor = new Simditor({
+	                textarea: $('.simditor'),
+	                toolbar:[
+	                    'title','bold','italic','underline','strikethrough','ol','ul','blockquote','code','link','image','hr'
+	                ],
+	                defaultImage : '/assets/img/avatar/default.jpg',
+	                upload: {
+	                    url: '/admin/attachment?att_type=1&_token={{ Session::token() }}',
+	                    fileKey: 'upload',
+	                    leaveConfirm: '正在上传文件，如果离开上传会自动取消'
+	                },
+	                pasteImage: true,
+	            });
+	        }
+	       
 	  	})
 	</script>
   </body>

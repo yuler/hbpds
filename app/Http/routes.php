@@ -26,7 +26,9 @@ $router->group(['prefix' => 'admin'], function($router)
 	Route::get('/', 'Admin\PagesController@index');
 	
 	Route::resources([
-		'news' => 'Admin\HbNewsController',
+		'new' => 'Admin\HbNewsController',
+
+		'attachment' => 'Admin\HbAttachmentsController',
 	]);
 
 

@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class HbNew extends Model {
+class HbAttachment extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'hb_news';
+	protected $table = 'hb_attachments';
 
 	protected $primaryKey = "id";
 
@@ -18,7 +18,7 @@ class HbNew extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id','title','content','lang','published_at','published','created_at','updated_at'];
+	protected $fillable = ['id','att_name','att_path','att_type','created_at','updated_at'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -26,5 +26,4 @@ class HbNew extends Model {
 	 * @var array
 	 */
 	protected $hidden = [];
-
 }

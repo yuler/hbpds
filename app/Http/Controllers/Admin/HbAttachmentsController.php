@@ -1,13 +1,13 @@
-<?php namespace App\Http\Controllers\admin;
+<?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\HbAttachment;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Str;
 
-use App\hbNew;
-
-class HbNewsController extends Controller {
+class HbAttachmentsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,8 +16,7 @@ class HbNewsController extends Controller {
 	 */
 	public function index()
 	{
-		$news = hbNew::paginate(10);
-		return view('admin.news.index')->withNews($news);
+		//
 	}
 
 	/**
@@ -27,7 +26,7 @@ class HbNewsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('admin.news.create');
+		//
 	}
 
 	/**
@@ -35,9 +34,23 @@ class HbNewsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		return '123';
+		$att_type = $request->input('att_type');
+		$file = $request->file('upload');
+		$serverName = Str::random() . '.' . $file->getClientOriginalExtension();
+		$serverPath = env('UPLOAD_PATH') .'/'. date('Y',time()) . '/'
+			. date('m',time()) . '/' . date('d',time());
+		$file->move( public_path() . $serverPath . '/', $serverName);
+
+		$attachment = new HbAttachment();
+		$attachment->att_name = $file->getClientOriginalName();
+		$attachment->att_type = $att_type;
+		$attachment->att_path = $serverPath . '/' . $serverName;
+		
+		$attachment->save();
+
+        return response()->json(['success'=>'true','msg'=>'上传失败','file_path' => $attachment->att_path ]);
 	}
 
 	/**

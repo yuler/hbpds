@@ -23,3 +23,9 @@
     <script src="/plugins/chartjs/Chart.min.js" type="text/javascript"></script>
     
     <script src="/dist/js/demo.js" type="text/javascript"></script>
+
+    <script src="/plugins/simditor-2.1.5/scripts/module.js" type="text/javascript" ></script>
+    <script src="/plugins/simditor-2.1.5/scripts/hotkeys.js" type="text/javascript" ></script>
+    <script src="/plugins/simditor-2.1.5/scripts/uploader.js" type="text/javascript" ></script>
+    <script src="/plugins/simditor-2.1.5/scripts/simditor.js" type="text/javascript" ></script>
+    <script src="/plugins/simditor-2.1.5/scripts/simditor-dropzone.js" type="text/javascript"></script>
