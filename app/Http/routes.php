@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+
+
 
 Route::get('home', 'HomeController@index');
 
@@ -36,3 +37,5 @@ $router->group(['prefix' => 'admin'], function($router)
 
 
 });
+
+Route::controller('/','PagesController');
