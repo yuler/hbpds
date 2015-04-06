@@ -19,13 +19,14 @@
 	      <!-- Main row -->
 	     	<div class="row">
 	      	  	<div class="box">
-	      	  		{!! Form::open(['route' => 'admin.new.batch.destroy', 'method' => 'post']) !!}
+	      	  		
+	      	  		
 	                <div class="box-header">
 	                  	<h3 class="box-title">新闻列表</h3>
 					  	<br><br>
 					  	<div>
 			                <a href="/admin/new/create" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i>  新建</a>
-			                <button  class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  批量删除</button>
+			                <button href="javascript:$('form').submit();" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  批量删除</button>
 	                  	</div>
 	                </div><!-- /.box-header -->
 	                <div class="box-body">
@@ -67,7 +68,6 @@
 						{!! $news->render() !!}
 	                </div><!-- /.box-body -->
 
-	                {!! Form::close() !!} 
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
 	    </section><!-- /.content -->
