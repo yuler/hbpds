@@ -25,34 +25,31 @@
 	                </div><!-- /.box-header -->
 
 	                <!-- form start -->
-	                <form role="form" action="/admin/new" method="POST">
-	                	<input type="hidden" name="_token" value="{{ Session::token() }}">
+	                {!! Form::model($new, ['route' => ['admin.new.update', [$new->id] ], 'method' => 'put']) !!}
+	                
 		                <div class="box-body">
 		                    <div class="form-group">
-		                      <label for="exampleInputEmail1">新闻标题</label>
-		                      <input type="text" class="form-control" placeholder="输入新闻标题" name="title" value="{{ session('_old_input')['title'] ? session('_old_input')['title'] : $hbNew['title'] }}">
+		                    	{!! Form::label('title', '新闻标题') !!}
+		                    	{!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => '输入新闻标题']) !!}
 		                    </div>
 		                    <div class="form-group">
-		                      <label for="exampleInputPassword1">新闻内容</label>
-		                      <textarea class="simditor" name="content" placeholder="输入新闻内容,支持拖拽上传图片。">{{ session('_old_input')['content'] ? session('_old_input')['content'] : $hbNew['content'] }}</textarea>
+		                    	{!! Form::label('content', '新闻标题') !!}
+		                    	{!! Form::textarea('content', null, ['class' => 'simditor', 'placeholder' => '输入新闻内容,支持拖拽上传图片。']) !!}
 		                    </div>
 		                    <div class="form-group">
-		                      <label for="exampleInputFile">语言种类</label>
-		                      <select name="lang" class="form-control">
-								<option value="0">中文繁体</option>
-								<option value="1">英文</option>
-		                      </select>
+		                    	{!! Form::label('lang', '语言种类') !!}
+		                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
 		                    </div>
 		                    <div class="checkbox">
-		                      <input type="checkbox" class="minimal" id="publish" name="published" value="">
-		                      <label for="publish" style="padding-left:5px;">发布</label>
+		                      {!! Form::checkbox('published', null , null , ['id' => 'published','class' => 'minimal']) !!}
+		                      {!! Form::label('published', '发布' ,['style' => 'padding-left:5px;']) !!}
 		                    </div>
 		                </div><!-- /.box-body -->
 
 		                <div class="box-footer">
 		                    <button type="submit" class="btn btn-primary">Submit</button>
 		                </div>
-	                </form>
+	                {!! Form::close() !!}
 
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->

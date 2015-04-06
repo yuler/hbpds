@@ -12,7 +12,7 @@ class HbNewsSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(range(1, 76) as $index)
+		foreach(range(1, 30) as $index)
 		{
 			HbNew::create([
 			  'title' => $faker->text(10),

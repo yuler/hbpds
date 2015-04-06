@@ -74,7 +74,7 @@ class HbNewsController extends Controller {
 	public function edit($id)
 	{
 		$hbNew = HbNew::find($id);
-		return view('admin.news.edit')->with('hbNew',$hbNew);
+		return view('admin.news.edit')->withNew($hbNew);
 	}
 
 	/**
@@ -83,9 +83,21 @@ class HbNewsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, HbNewRequest $request)
 	{
-		//
+		$hbNew = HbNew::find($id);
+
+		$hbNew->title = $request->input('title');
+		$hbNew->content = $request->input('content');
+		$hbNew->lang = $request->input('lang');
+		if($request->has('published')){
+			$hbNew->published = 1;
+			$hbNew->published_at = date('y-m-d H:i:s',time());
+		}
+
+		$hbNew->save();		
+
+		return redirect('admin/new');
 	}
 
 	/**
@@ -96,7 +108,15 @@ class HbNewsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		HbNew::destroy($id);
+		return redirect()->back();
 	}
 
+
+	public function batchDestroy(HbNewRequest $request){
+		$request->input('ids[]');
+		dd($request);
+		HbNew::destroy($id);
+		return redirect()->back();
+	}
 }

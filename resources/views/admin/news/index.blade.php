@@ -19,12 +19,13 @@
 	      <!-- Main row -->
 	     	<div class="row">
 	      	  	<div class="box">
+	      	  		{!! Form::open(['route' => 'admin.new.batch.destroy', 'method' => 'post']) !!}
 	                <div class="box-header">
 	                  	<h3 class="box-title">新闻列表</h3>
 					  	<br><br>
 					  	<div>
 			                <a href="/admin/new/create" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i>  新建</a>
-			                <a href="/admin/new" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  批量删除</a>
+			                <button  class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  批量删除</button>
 	                  	</div>
 	                </div><!-- /.box-header -->
 	                <div class="box-body">
@@ -36,8 +37,8 @@
 						        <th>标题</th>
 						        <th>内容</th>
 						        <th>语言</th>
-						        <th>发布时间</th>
 						        <th>发布状态</th>
+						        <th>发布时间</th>
 						        <th>创建时间</th>
 						        <th>修改时间</th>
 						        <th></th>
@@ -46,18 +47,18 @@
 						    <tbody>
 						    @foreach ($news as $new)
 						        <tr>
-								    <td><input type="checkbox" class="minimal"></td>
+								    <td><input type="checkbox" class="minimal" name="ids" value="{{ $new->id }}"></td>
 						            <td>{{ $new->id }}</td>
-						            <td>{{ $new->title }}</td>
-						            <td>{{ str_limit($new->content,$limit = 50, $end = '...') }}</td>
+						            <td>{{ str_limit($new->title,$limit = 20, $end = '...') }}</td>
+						            <td>{{ str_limit($new->content,$limit = 40, $end = '...') }}</td>
 						            <td>{{ $new->lang }}</td>
-						            <td>{{ $new->published_at }}</td>
 						            <td>{{ $new->published }}</td>
+						            <td>{{ $new->published_at }}</td>
 						            <td>{{ $new->created_at }}</td>
 						            <td>{{ $new->updated_at }}</td>
 						            <td>
-						            	<a href="/admin/new/{{ $new->id }}/edit" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>  编辑</a>
-						            	<a href="" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>  删除</a>
+						            	<a href="/admin/new/{{ $new->id }}/edit" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
+						            	<a href="{{ route('admin.new.destroy',array($new->id)) }}" class="btn btn-danger btn-xs" data-token="{{ csrf_token() }}" data-method="delete" data-confirm="你确定删除这条记录吗？"><i class="fa fa-trash"></i>删除</a>
 						            </td>
 						        </tr>
 							@endforeach 
@@ -65,8 +66,12 @@
 						</table>
 						{!! $news->render() !!}
 	                </div><!-- /.box-body -->
+
+	                {!! Form::close() !!} 
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
 	    </section><!-- /.content -->
+
+	    <br><br>
 	</div><!-- /.content-wrapper -->
 @endsection

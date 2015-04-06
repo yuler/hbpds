@@ -25,6 +25,11 @@ $router->group(['prefix' => 'admin'], function($router)
 {
 	Route::get('/', 'Admin\PagesController@index');
 	
+	Route::controller('/batchDestroy/new', [
+		'as' => 'admin.batch.destroy',
+		'uses' => 'Admin\HbNewsController@batchDestroy'
+	]);
+
 	Route::resources([
 		'new' => 'Admin\HbNewsController',
 

@@ -90,13 +90,11 @@
 	          radioClass: 'iradio_flat-green'
 	        });
 
-	        $('document').on('click','table thead input[type="checkbox"]',function(){
-	        	alert('xx');
-	        });
-	        
-	        $('table thead input[type="checkbox"]').click(function(){
-	        	alert('xxx');
-	        });
+	        $('table thead input[type="checkbox"]').on('ifClicked', function(event){
+			  	$('table tbody input[type="checkbox"]').iCheck('toggle');
+			});
+
+
 
 	        if($('.simditor').length > 0){
 		        editor = new Simditor({
