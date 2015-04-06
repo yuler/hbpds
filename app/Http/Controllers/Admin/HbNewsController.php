@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\HbNew;
 
 use App\Http\Requests\HbNewRequest;
+use Laracasts\Flash\Flash;
 
 class HbNewsController extends Controller {
 
@@ -51,6 +52,7 @@ class HbNewsController extends Controller {
 
 		$hbNew->save();		
 
+		Flash::success('新闻保存成功');
 		return redirect('admin/new');
 	}
 
@@ -96,7 +98,7 @@ class HbNewsController extends Controller {
 		}
 
 		$hbNew->save();		
-
+		Flash::success('新闻修改成功');
 		return redirect('admin/new');
 	}
 
@@ -109,14 +111,8 @@ class HbNewsController extends Controller {
 	public function destroy($id)
 	{
 		HbNew::destroy($id);
+		Flash::success('新闻删除成功');
 		return redirect()->back();
 	}
 
-
-	public function batchDestroy(HbNewRequest $request){
-		$request->input('ids[]');
-		dd($request);
-		HbNew::destroy($id);
-		return redirect()->back();
-	}
 }

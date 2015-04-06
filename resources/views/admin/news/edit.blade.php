@@ -25,7 +25,7 @@
 	                </div><!-- /.box-header -->
 
 	                <!-- form start -->
-	                {!! Form::model($new, ['route' => ['admin.new.update', [$new->id] ], 'method' => 'put']) !!}
+	                {!! Form::model($new, ['route' => ['admin.new.update', $new->id ], 'method' => 'put']) !!}
 	                
 		                <div class="box-body">
 		                    <div class="form-group">

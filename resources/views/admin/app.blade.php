@@ -42,6 +42,13 @@
 		list-style-type: none;
 		text-align: center;
  	}
+ 	.flash-message {
+		position: fixed;
+		z-index: 1000;
+		bottom: 15px;
+		right: 15px;
+		width: 15%;
+ 	}
 
   </style>
 
@@ -65,6 +72,7 @@
 
     </div><!-- ./wrapper -->
 	
+
 	@if ( $errors->any())
     	<ul class="alert alert-danger form-errors">
     		@foreach ($errors->all() as $error)
@@ -72,6 +80,14 @@
     		@endforeach
     	</ul>
     @endif
+
+    @if (Session::has('flash_notification.message'))
+	    <div class="alert alert-{{ Session::get('flash_notification.level') }} flash-message">
+	        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+	        {{ Session::get('flash_notification.message') }}
+	    </div>
+	@endif
 
 	<script type="text/javascript">
 	  	$(function(){
@@ -94,8 +110,6 @@
 			  	$('table tbody input[type="checkbox"]').iCheck('toggle');
 			});
 
-
-
 	        if($('.simditor').length > 0){
 		        editor = new Simditor({
 	                textarea: $('.simditor'),
@@ -113,10 +127,51 @@
 	        }
 	       	
 	       	if($('.form-errors').length > 0){
-	       		$('.form-errors').slideDown(1000).delay(3000).slideUp(1000);
+	       		$('.form-errors').slideDown(1000).delay(2000).slideUp(1000);
 	       	}
+	       	if($('.flash-message').length > 0){
+	       		$('.flash-message').delay(2000).slideUp(2000);
+	       	}
+	       	
+
+			$('#confirmDelete').on('show.bs.modal', function (e) {
+				  $message = $(e.relatedTarget).attr('data-message');
+				  $(this).find('.modal-body p').text($message);
+				  $title = $(e.relatedTarget).attr('data-title');
+				  $(this).find('.modal-title').text($title);
+
+				  // Pass form reference to modal for submission on yes/ok
+				  var form = $(e.relatedTarget).closest('form');
+				  $(this).find('.modal-footer #confirm').data('form', form);
+			});
+
+			/*<!-- Form confirm (yes/ok) handler, submits form -->*/
+			$('#confirmDelete').find('.modal-footer #confirm').on('click', function(){
+				$(this).data('form').submit();
+			});
 	  	})
 	</script>
+
+
+	<!-- Delte Confirm Modal Dialog -->
+	<div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">Delete Parmanently</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Are you sure about this ?</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-danger" id="confirm">删除</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
   </body>
 </html>
 

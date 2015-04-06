@@ -31,12 +31,12 @@
     <script src="/plugins/simditor-2.1.5/scripts/simditor-dropzone.js" type="text/javascript"></script>
     <script src="/plugins/app/all.js" type="text/javascript"></script>
 
-    <script>
+    <!-- <script>
                 /*
-        <a href="posts/2" data-method="delete"> <---- We want to send an HTTP DELETE request
-
+        <a href="posts/2" data-method="delete"> 
+    
         - Or, request confirmation in the process -
-
+    
         <a href="posts/2" data-method="delete" data-confirm="Are you sure?">
         */
          
@@ -110,4 +110,4 @@
           laravel.initialize();
          
         })();
-    </script>
+    </script> -->
