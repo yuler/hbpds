@@ -31,7 +31,7 @@ $router->group(['prefix' => 'admin'], function($router)
 
 	Route::resources([
 		'new' => 'Admin\HbNewsController',
-
+		'auction' => 'Admin\HbAuctionsController',
 		'attachment' => 'Admin\HbAttachmentsController',
 	]);
 
