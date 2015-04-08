@@ -30,8 +30,11 @@ $router->group(['prefix' => 'admin'], function($router)
 	Route::controller('batchDestroy', 'Admin\HbBatchDestroyController');
 
 	Route::resources([
+
 		'new' => 'Admin\HbNewsController',
 		'auction' => 'Admin\HbAuctionsController',
+		'asa' => 'Admin\HbAsasController',
+		'artwork' => 'Admin\HbArtworksController',
 		'attachment' => 'Admin\HbAttachmentsController',
 	]);
 
