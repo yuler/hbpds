@@ -11,8 +11,8 @@
 |
 */
 
-
-
+// language 
+$router->get('lang/{lang}', 'LanguageController@setLanguage');
 
 Route::get('home', 'HomeController@index');
 
@@ -25,7 +25,6 @@ Route::controllers([
 $router->group(['prefix' => 'admin'], function($router)
 {
 	Route::get('/', 'Admin\PagesController@index');
-	
 	
 	Route::controller('batchDestroy', 'Admin\HbBatchDestroyController');
 
