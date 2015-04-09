@@ -11,8 +11,8 @@
 |
 */
 
-
-
+// language 
+$router->get('lang/{lang}', 'LanguageController@setLanguage');
 
 Route::get('home', 'HomeController@index');
 

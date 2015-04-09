@@ -1,1 +1,1 @@
-index.blade.php
+{{ trans('passwords.sent') }}
