@@ -16,7 +16,7 @@ class HbAuctionsController extends Controller {
 	public function index()
 	{
 		$auctions = HbAuction::paginate(10);
-		return view('admin.auctions.index')->withNews($auctions);
+		return view('admin.auctions.index')->withAuctions($auctions);
 	}
 
 	/**
@@ -39,15 +39,11 @@ class HbAuctionsController extends Controller {
 		$hbAcution = new HbAuction();
 
 		$hbAuction->auction_name = $request->input('auction_name');
-		$hbAuction->preview_begint_time = $request->input('preview_begin_time');
-		$hbAuution->preview_end_time = $request->input('preview_end_time');
-		$hbAuction->auction_begint_time = $request->input('auction_begint_time');
-		$hbAuction->auction_end_time = $request->input('auction_end_time');
+		$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
+		$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
+		$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
 		$hbAuction->lang = $request->input('lang');
-		if($request->has('published')){
-			$hbNew->published = 1;
-			$hbNew->published_at = date('y-m-d H:i:s',time());
-		}
 
 		$hbAuction->save();		
 
@@ -88,21 +84,19 @@ class HbAuctionsController extends Controller {
 	public function update($id, HbAuctionRequest $request)
 	{
 		$hbAuction = HbAuction::find($id);
+
 		$hbAuction->auction_name = $request->input('auction_name');
-		$hbAuction->preview_begint_time = $request->input('preview_begin_time');
-		$hbAuution->preview_end_time = $request->input('preview_end_time');
-		$hbAuction->auction_begint_time = $request->input('auction_begint_time');
-		$hbAuction->auction_end_time = $request->input('auction_end_time');
+		$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
+		$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
+		$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
 		$hbAuction->lang = $request->input('lang');
-		if($request->has('published')){
-			$hbNew->published = 1;
-			$hbNew->published_at = date('y-m-d H:i:s',time());
-		}
 
 		$hbAuction->save();		
 
 		Flash::success('保存成功');
 		return redirect('admin/auction');
+
 	}
 
 	/**
