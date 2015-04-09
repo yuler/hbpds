@@ -50,7 +50,7 @@
 						    <tbody>
 						    @foreach ($auctions as $auction)
 						        <tr>
-								    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $new->id }}"></td>
+								    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $auction->id }}"></td>
 						            <td>{{ $auction->id }}</td>
 						            <td>{{ str_limit($auction->auction_name,$limit = 20, $end = '...') }}</td>
 						            <td>{{ $auction->lang }}</td>
@@ -60,7 +60,6 @@
 						            <td>{{ $auction->auction_end_time }}</td>
 						            <td>
 						            	<a href="/admin/auction/{{ $auction->id }}/edit" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
-						            	<!-- <a href="{{ route('admin.new.destroy',array($new->id)) }}" class="btn btn-danger btn-xs" data-token="{{ csrf_token() }}" data-method="delete" data-confirm="你确定删除这条记录吗？"><i class="fa fa-trash"></i>  删除</a> -->
 						            </td>
 						        </tr>
 							@endforeach 

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbNew;
+use App\HbAuction;
 use Laracasts\Flash\Flash;
 
 class HbBatchDestroyController extends Controller {
@@ -22,4 +23,14 @@ class HbBatchDestroyController extends Controller {
 		return redirect()->back();
 	}
 
+	public function deleteAuctions(Request $request)
+	{
+		if($request->has('ids')){
+			HbAuction::destroy($request->input('ids'));
+			Flash::success('删除成功');
+			return redirect()->back();
+		}
+		Flash::error('至少选中一条');
+		return redirect()->back();
+	}
 }

@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbAuction;
+use App\Http\Requests\HbAuctionRequest;
+use Laracasts\Flash\Flash;
 class HbAuctionsController extends Controller {
 
 
@@ -36,13 +38,17 @@ class HbAuctionsController extends Controller {
 	 */
 	public function store(HbAuctionRequest $request)
 	{
-		$hbAcution = new HbAuction();
+		$hbAuction = new HbAuction();
 
 		$hbAuction->auction_name = $request->input('auction_name');
-		$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
-		$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
-		$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
-		$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
+		if($request->has('preview_begin_time'))
+			$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		if($request->has('preview_end_time'))
+			$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
+		if($request->has('auction_begint_time'))
+			$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
+		if($request->has('auction_end_time'))
+			$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
 		$hbAuction->lang = $request->input('lang');
 
 		$hbAuction->save();		
@@ -72,7 +78,7 @@ class HbAuctionsController extends Controller {
 	public function edit($id)
 	{
 		$hbAuction = HbAuction::find($id);
-		return view('admin.auction.edit')->withNew($hbAuction);
+		return view('admin.auctions.edit')->withAuction($hbAuction);
 	}
 
 	/**
@@ -86,10 +92,14 @@ class HbAuctionsController extends Controller {
 		$hbAuction = HbAuction::find($id);
 
 		$hbAuction->auction_name = $request->input('auction_name');
-		$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
-		$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
-		$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
-		$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
+		if($request->has('preview_begin_time'))
+			$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		if($request->has('preview_end_time'))
+			$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
+		if($request->has('auction_begint_time'))
+			$hbAuction->auction_begint_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_begint_time'));
+		if($request->has('auction_end_time'))
+			$hbAuction->auction_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('auction_end_time'));
 		$hbAuction->lang = $request->input('lang');
 
 		$hbAuction->save();		

@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbAsa;
+use App\Http\Requests\HbAsaRequest;
+use Laracasts\Flash\Flash;
 class HbAsasController extends Controller {
 
 	/**
@@ -15,6 +17,7 @@ class HbAsasController extends Controller {
 	public function index()
 	{
 		$asas = HbAsa::paginate(10);
+		//dd($asas);
 		return view('admin.asas.index')->withAsas($asas);
 	}
 
@@ -53,7 +56,7 @@ class HbAsasController extends Controller {
 		$hbAsa->save();		
 
 		Flash::success('保存成功');
-		return redirect('admin/asa');
+		return redirect('admin/auction');
 	}
 
 	/**
