@@ -14,8 +14,8 @@ class HbAsasController extends Controller {
 	 */
 	public function index()
 	{
-		$news = HbAsa::paginate(10);
-		return view('admin.news.index')->withNews($news);
+		$asas = HbAsa::paginate(10);
+		return view('admin.asas.index')->withAsas($asas);
 	}
 
 	/**
@@ -25,7 +25,7 @@ class HbAsasController extends Controller {
 	 */
 	public function create()
 	{
-		return view('admin.news.create');
+		return view('admin.asas.create');
 	}
 
 	/**
@@ -35,20 +35,25 @@ class HbAsasController extends Controller {
 	 */
 	public function store(HbAsaRequest $request)
 	{
-		$hbNew = new HbAsa();
+		$hbAsa = new HbAsa();
 
-		$hbNew->title = $request->input('title');
-		$hbNew->content = $request->input('content');
-		$hbNew->lang = $request->input('lang');
-		if($request->has('published')){
-			$hbNew->published = 1;
-			$hbNew->published_at = date('y-m-d H:i:s',time());
-		}
+		$hbAsa->asa_name = $request->input('asa_name');
+		$hbAsa->asa_addr = $request->input('asa_addr');
+		$hbAsa->asa_image = $request->input('asa_image');
+		$hbAsa->asa_only_online = $request->input('asa_only_online');
+		$hbAsa->asa_online_url = $request->input('asa_online_url');
+		$hbAsa->asa_online_logo = $request->input('asa_online_logo');
+		$hbAsa->auction_id = $request->input('auction_id');
+		$hbAsa->lang = $request->input('lang');
+		$hbAsa->preview_begin_time = date('yy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		$hbAsa->preview_end_time = date('yyyy-mm-dd HH:ii:ss',$request->preview_end_time);
+		$hbAsa->begin_time = date('yyyy-mm-dd HH:ii:ss',$request->begin_time);
+		$hbAsa->end_time = date('yyyy-mm-dd HH:ii:ss',$request->end_time);
 
-		$hbNew->save();		
+		$hbAsa->save();		
 
-		Flash::success('新闻保存成功');
-		return redirect('admin/new');
+		Flash::success('保存成功');
+		return redirect('admin/asa');
 	}
 
 	/**
@@ -70,8 +75,8 @@ class HbAsasController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$hbNew = HbAsa::find($id);
-		return view('admin.news.edit')->withNew($hbNew);
+		$hbAsa = HbAsa::find($id);
+		return view('admin.news.edit')->withAsa($hbAsa);
 	}
 
 	/**
@@ -82,19 +87,27 @@ class HbAsasController extends Controller {
 	 */
 	public function update($id, HbAsaRequest $request)
 	{
-		$hbNew = HbAsa::find($id);
 
-		$hbNew->title = $request->input('title');
-		$hbNew->content = $request->input('content');
-		$hbNew->lang = $request->input('lang');
-		if($request->has('published')){
-			$hbNew->published = 1;
-			$hbNew->published_at = date('y-m-d H:i:s',time());
-		}
 
-		$hbNew->save();		
-		Flash::success('新闻修改成功');
-		return redirect('admin/new');
+
+		$hbAsa = HbAsa::find($id);
+		$hbAsa->asa_name = $request->input('asa_name');
+		$hbAsa->asa_addr = $request->input('asa_addr');
+		$hbAsa->asa_image = $request->input('asa_image');
+		$hbAsa->asa_only_online = $request->input('asa_only_online');
+		$hbAsa->asa_online_url = $request->input('asa_online_url');
+		$hbAsa->asa_online_logo = $request->input('asa_online_logo');
+		$hbAsa->auction_id = $request->input('auction_id');
+		$hbAsa->lang = $request->input('lang');
+		$hbAsa->preview_begin_time = date('yy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+		$hbAsa->preview_end_time = date('yyyy-mm-dd HH:ii:ss',$request->preview_end_time);
+		$hbAsa->begin_time = date('yyyy-mm-dd HH:ii:ss',$request->begin_time);
+		$hbAsa->end_time = date('yyyy-mm-dd HH:ii:ss',$request->end_time);
+
+		$hbAsa->save();		
+
+		Flash::success('保存成功');
+		return redirect('admin/asa');
 	}
 
 	/**
