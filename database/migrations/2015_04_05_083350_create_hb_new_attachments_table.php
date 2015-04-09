@@ -15,8 +15,8 @@ class CreateHbNewAttachmentsTable extends Migration {
 		Schema::create('hb_new_attachments', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('attachment_id')->unsigned();;
-			$table->integer('new_id')->unsigned();;
+			$table->integer('attachment_id')->unsigned();
+			$table->integer('new_id')->unsigned();
 			$table->timestamps();
 			$table->foreign('new_id')->references('id')->on('hb_news')->onDelete('cascade');
 			$table->foreign('attachment_id')->references('id')->on('hb_attachments')->onDelete('cascade');
