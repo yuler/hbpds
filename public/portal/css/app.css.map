@@ -1,0 +1,1 @@
+{"version":3,"sources":["_pages/_index.scss"],"names":[],"mappings":"AACY;EACV,cAAO,EAAA","file":"app.css","sourcesContent":[".page-index {\n\t.collapse {\n\t\twdith: 500px;\n\t}\n}"],"sourceRoot":"/source/"}
