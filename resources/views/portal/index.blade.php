@@ -8,7 +8,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/public/portal/css/all.css" rel="stylesheet">
+		<link href="/portal/css/app.css" rel="stylesheet">
 		
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,9 +31,9 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="#">
-							<img src="/imgs/logo.jpg" alt="logo">
+							<img src="/imgs/logo.jpg" alt="logo" class="logo">
+							<img src="/imgs/logo-text.png" alt="logo" class="logo-text">
 						</a>
-						<img src="/imgs/logo-text.png" alt="logo">
 					</div>
 				
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,4 +95,3 @@
 		<script src="/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
->>>>>>> b34ff0751eebeb7381838a87a31fb8b1b2e9464c

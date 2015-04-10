@@ -1,3 +1,10 @@
+header nav {
+  padding: 30px 0;
+  background-color: white !important; }
+  header nav .navbar-header .navbar-brand .logo-text {
+    position: absolute;
+    top: 30px; }
+
 .page-index .collapse {
   wdith: 500px; }
 

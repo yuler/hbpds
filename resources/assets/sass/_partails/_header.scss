@@ -1,0 +1,14 @@
+header {
+	nav {
+		padding: 30px 0;
+		background-color:$backgroundColor!important;
+		.navbar-header .navbar-brand {
+			.logo {
+			}
+			.logo-text {
+				position: absolute;
+				top: 30px;
+			}
+		}
+	}	
+}
