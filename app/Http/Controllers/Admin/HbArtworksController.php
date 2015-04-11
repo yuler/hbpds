@@ -16,7 +16,7 @@ class HbArtworksController extends Controller {
 	public function index()
 	{
 		$news = HbArtwork::paginate(10);
-		return view('admin.news.index')->withNews($news);
+		return view('admin.artworks.index')->withNews($news);
 	}
 
 	/**
@@ -26,7 +26,7 @@ class HbArtworksController extends Controller {
 	 */
 	public function create()
 	{
-		return view('admin.news.create');
+		return view('admin.artworks.create');
 	}
 
 	/**
@@ -48,8 +48,8 @@ class HbArtworksController extends Controller {
 
 		$hbNew->save();		
 
-		Flash::success('新闻保存成功');
-		return redirect('admin/new');
+		Flash::success('保存成功');
+		return redirect('admin/artwork');
 	}
 
 	/**
@@ -72,7 +72,7 @@ class HbArtworksController extends Controller {
 	public function edit($id)
 	{
 		$hbNew = HbArtwork::find($id);
-		return view('admin.news.edit')->withNew($hbNew);
+		return view('admin.artworks.edit')->withNew($hbNew);
 	}
 
 	/**
@@ -94,8 +94,8 @@ class HbArtworksController extends Controller {
 		}
 
 		$hbNew->save();		
-		Flash::success('新闻修改成功');
-		return redirect('admin/new');
+		Flash::success('修改成功');
+		return redirect('admin/artwork');
 	}
 
 	/**

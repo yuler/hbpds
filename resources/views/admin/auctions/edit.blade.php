@@ -34,7 +34,7 @@
 				<div role="tabpanel">
 					<ul class="nav nav-tabs" role="tablist" id="myTab">
 						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">拍卖会</a></li>
-						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">所属专场</a></li>
+						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">专场</a></li>
 					</ul>
 					<div class="tab-content">
 	   		 		<div role="tabpanel" class="tab-pane active" id="home"> 

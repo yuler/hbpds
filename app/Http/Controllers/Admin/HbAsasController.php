@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbAsa;
+use App\HbArtwork;
 use App\Http\Requests\HbAsaRequest;
 use Laracasts\Flash\Flash;
 class HbAsasController extends Controller {
@@ -82,7 +83,8 @@ class HbAsasController extends Controller {
 	public function edit($id)
 	{
 		$hbAsa = HbAsa::find($id);
-		return view('admin.asas.edit')->withAsa($hbAsa);
+		$artworks = HbArtwork::where('asa_id','=',$id)->paginate(10);
+		return view('admin.asas.edit')->withAsa($hbAsa)->withArtworks($artworks);
 	}
 
 	/**
