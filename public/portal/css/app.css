@@ -1,12 +1,71 @@
-header nav {
-  padding: 30px 0;
+header nav.navbar-logo {
+  padding: 15px 0;
+  margin: 0px;
   background-color: white !important; }
-  header nav .navbar-header .navbar-brand .logo-text {
-    position: absolute;
-    top: 30px; }
+  header nav.navbar-logo .navbar-header .navbar-brand {
+    padding-top: 0px; }
+    header nav.navbar-logo .navbar-header .navbar-brand img {
+      display: inline-block; }
+  header nav.navbar-logo form .input-group-addon {
+    background: #ffcc00; }
+header nav.navbar-menu {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  margin: 0px;
+  border: 0px;
+  background-color: rgba(130, 130, 130, 0.5) !important; }
+  header nav.navbar-menu ul.nav > li {
+    padding-right: 30px; }
+    header nav.navbar-menu ul.nav > li:hover > a {
+      background-color: rgba(220, 192, 82, 0.5) !important;
+      padding-bottom: 10px;
+      border-bottom: 5px solid #ffcc00; }
+    header nav.navbar-menu ul.nav > li a {
+      padding-top: 15px;
+      color: white !important;
+      padding-bottom: 15px; }
+      header nav.navbar-menu ul.nav > li a:hover {
+        background-color: rgba(220, 192, 82, 0.5) !important;
+        padding-bottom: 10px;
+        border-bottom: 5px solid #ffcc00; }
+    header nav.navbar-menu ul.nav > li.active a {
+      background-color: inherit !important;
+      border-bottom: 5px solid #ffcc00;
+      padding-bottom: 10px; }
+    header nav.navbar-menu ul.nav > li.dropdown:hover .dropdown-menu {
+      display: block; }
+    header nav.navbar-menu ul.nav > li.dropdown .dropdown-menu {
+      min-width: 103px;
+      border: 0px;
+      padding: 0px;
+      background-color: rgba(220, 192, 82, 0.5) !important; }
+      header nav.navbar-menu ul.nav > li.dropdown .dropdown-menu a:hover {
+        padding-bottom: 15px;
+        border: none; }
 
-.page-index .collapse {
-  wdith: 500px; }
+footer .description {
+  padding: 30px 0px;
+  border-bottom: 5px solid #ffcc00;
+  background-color: #e5e5e5; }
+  footer .description ul {
+    padding: 0px; }
+    footer .description ul li {
+      padding: 15px 0;
+      padding-right: 8%;
+      display: inline-block;
+      list-style-type: none; }
+    footer .description ul li.last {
+      padding: 0px;
+      float: right; }
+footer .copy {
+  padding: 15px 0; }
+  footer .copy img {
+    float: right; }
 
-
-/*# sourceMappingURL=app.css.map */
+#index .carousel .carousel-inner img {
+  width: 100%; }
+#index .product-list {
+  padding: 30px 0; }
+  #index .product-list img {
+    width: 100%; }

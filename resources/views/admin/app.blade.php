@@ -110,6 +110,8 @@
 			  	$('table tbody input[type="checkbox"]').iCheck('toggle');
 			});
 
+	        $('.datepicker').datepicker();
+
 	        if($('.simditor').length > 0){
 		        editor = new Simditor({
 	                textarea: $('.simditor'),
