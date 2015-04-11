@@ -22,16 +22,20 @@ Route::controllers([
 ]);
 
 
+
+
 $router->group(['prefix' => 'admin'], function($router)
 {
 	Route::get('/', 'Admin\PagesController@index');
 	
 	Route::controller('batchDestroy', 'Admin\HbBatchDestroyController');
 
+	Route::get('/auction/{id}/editWithAsas','Admin\HbAuctionsController@editWithAsas');
 	Route::resources([
 
 		'new' => 'Admin\HbNewsController',
 		'auction' => 'Admin\HbAuctionsController',
+
 		'asa' => 'Admin\HbAsasController',
 		'artwork' => 'Admin\HbArtworksController',
 		'attachment' => 'Admin\HbAttachmentsController',

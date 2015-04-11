@@ -39,7 +39,8 @@ class HbAsasController extends Controller {
 	public function store(HbAsaRequest $request)
 	{
 		$hbAsa = new HbAsa();
-
+		$auction_id = $request->input('auction_id');
+		$hbAsa->auction_id = $auction_id;
 		$hbAsa->asa_name = $request->input('asa_name');
 		$hbAsa->asa_addr = $request->input('asa_addr');
 		$hbAsa->asa_image = $request->input('asa_image');
@@ -48,15 +49,17 @@ class HbAsasController extends Controller {
 		$hbAsa->asa_online_logo = $request->input('asa_online_logo');
 		$hbAsa->auction_id = $request->input('auction_id');
 		$hbAsa->lang = $request->input('lang');
-		$hbAsa->preview_begin_time = date('yy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
-		$hbAsa->preview_end_time = date('yyyy-mm-dd HH:ii:ss',$request->preview_end_time);
-		$hbAsa->begin_time = date('yyyy-mm-dd HH:ii:ss',$request->begin_time);
-		$hbAsa->end_time = date('yyyy-mm-dd HH:ii:ss',$request->end_time);
-
+		$hbAsa->preview_begin_time = $request->input('preview_begin_time');
+		$hbAsa->preview_end_time = $request->input('preview_end_time');
+		$hbAsa->begin_time = $request->input('$request->begin_time');
+		$hbAsa->end_time = $request->input('end_time');
 		$hbAsa->save();		
-
+		if($auction_id!=null||$auction_id!=""){
+			Flash::success('创建专场成功');
+			return redirect('admin/auction/'.$auction_id.'/edit?page=1');
+		}
 		Flash::success('保存成功');
-		return redirect('admin/auction');
+		return  redirect('admin/asa');
 	}
 
 	/**
@@ -79,7 +82,7 @@ class HbAsasController extends Controller {
 	public function edit($id)
 	{
 		$hbAsa = HbAsa::find($id);
-		return view('admin.news.edit')->withAsa($hbAsa);
+		return view('admin.asas.edit')->withAsa($hbAsa);
 	}
 
 	/**
@@ -94,6 +97,11 @@ class HbAsasController extends Controller {
 
 
 		$hbAsa = HbAsa::find($id);
+		$auction_id = $request->input('auction_id');
+		if($request->has('auction_id')){
+			$hbAsa->auction_id = $auction_id;	
+		}
+		
 		$hbAsa->asa_name = $request->input('asa_name');
 		$hbAsa->asa_addr = $request->input('asa_addr');
 		$hbAsa->asa_image = $request->input('asa_image');
@@ -102,15 +110,17 @@ class HbAsasController extends Controller {
 		$hbAsa->asa_online_logo = $request->input('asa_online_logo');
 		$hbAsa->auction_id = $request->input('auction_id');
 		$hbAsa->lang = $request->input('lang');
-		$hbAsa->preview_begin_time = date('yy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
-		$hbAsa->preview_end_time = date('yyyy-mm-dd HH:ii:ss',$request->preview_end_time);
-		$hbAsa->begin_time = date('yyyy-mm-dd HH:ii:ss',$request->begin_time);
-		$hbAsa->end_time = date('yyyy-mm-dd HH:ii:ss',$request->end_time);
-
+		$hbAsa->preview_begin_time = $request->input('preview_begin_time');
+		$hbAsa->preview_end_time = $request->input('preview_end_time');
+		$hbAsa->begin_time = $request->input('$request->begin_time');
+		$hbAsa->end_time = $request->input('end_time');
 		$hbAsa->save();		
-
+		if($auction_id!=null||$auction_id!=""){
+			Flash::success('修改专场成功');
+			return redirect('admin/auction/'.$auction_id.'/edit?page=1');
+		}
 		Flash::success('保存成功');
-		return redirect('admin/asa');
+		return  redirect('admin/asa');
 	}
 
 	/**

@@ -37,7 +37,6 @@
 						    <thead>
 						      <tr>
 						      	<th><input type="checkbox" class="minimal"></th>
-						        <th>id</th>
 						        <th>名称</th>
 						        <th>语言</th>
 						        <th>预展开始时间</th>
@@ -51,7 +50,6 @@
 						    @foreach ($auctions as $auction)
 						        <tr>
 								    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $auction->id }}"></td>
-						            <td>{{ $auction->id }}</td>
 						            <td>{{ str_limit($auction->auction_name,$limit = 20, $end = '...') }}</td>
 						            <td>{{ $auction->lang }}</td>
 						            <td>{{ $auction->preview_begin_time }}</td>

@@ -66,7 +66,6 @@
 						            <td>{{ $asa->lang}}</td>
 						            <td>
 						            	<a href="/admin/asa/{{ $asa->id }}/edit" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
-						            	<!-- <a href="{{ route('admin.new.destroy',array($new->id)) }}" class="btn btn-danger btn-xs" data-token="{{ csrf_token() }}" data-method="delete" data-confirm="你确定删除这条记录吗？"><i class="fa fa-trash"></i>  删除</a> -->
 						            </td>
 						        </tr>
 							@endforeach 

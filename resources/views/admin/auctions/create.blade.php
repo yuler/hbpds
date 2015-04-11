@@ -34,24 +34,23 @@
 		                    </div>
 		                    <div class="form-group">
 		                    	{!! Form::label('preview_begin_time', '预展开始时间') !!}
-<!--<input id="d2a25" type="text" class="Wdate" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',disabledDates:['%y-%M-%d {%H-1}\:..\:..','%y-%M-%d {%H+1}\:..\:..']})"/> -->
-		                    	{!! Form::text('preview_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '输入预展开始时间']) !!}
+		                    	{!! Form::text('preview_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展开始时间']) !!}
 		                    </div>
 
 		                    <div class="form-group">
 		                    	{!! Form::label('preview_end_time', '预展结束时间') !!}
-		                    	{!! Form::text('preview_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '输入预展开始时间']) !!}
+		                    	{!! Form::text('preview_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展结束时间']) !!}
 		                    </div>
 
  							<div class="form-group">
 		                    	{!! Form::label('auction_begin_time', '拍卖开始时间') !!}
 
-		                    	{!! Form::text('auction_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '输入预展开始时间']) !!}
+		                    	{!! Form::text('auction_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖开始时间']) !!}
 		                    </div>
 		                    <div class="form-group">
 		                    	{!! Form::label('auction_end_time', '拍卖结束时间') !!}
 
-		                    	{!! Form::text('auction_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '输入预展开始时间']) !!}
+		                    	{!! Form::text('auction_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖结束时间']) !!}
 		                    </div>
 
 		                    <div class="form-group">
