@@ -1,0 +1,26 @@
+footer {
+	.description {
+		padding: 30px 0px;
+		border-bottom: 5px solid $themeColor;
+		background-color: $footerBackgroundColor;
+		ul {
+			padding: 0px;
+			li {
+				padding: 15px 0;
+				padding-right: 8%;
+				display: inline-block;
+				list-style-type: none;	
+			}
+			li.last {
+				padding: 0px;
+				float: right;
+			}
+		}
+	}
+	.copy {
+		padding: 15px 0;
+		img {
+			float: right;
+		}
+	}
+}
