@@ -47,7 +47,7 @@
                 <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 新闻附件</a></li>
               </ul>
             </li>
-            <li>
+<!--            <li>
               <a href="pages/widgets.html">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
               </a>
@@ -152,10 +152,11 @@
               </ul>
             </li>
             <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
+<li class="header">LABELS</li>
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+-->
           </ul>
         </section>
         <!-- /.sidebar -->

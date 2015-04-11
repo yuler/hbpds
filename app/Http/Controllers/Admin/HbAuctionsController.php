@@ -41,8 +41,9 @@ class HbAuctionsController extends Controller {
 		$hbAuction = new HbAuction();
 
 		$hbAuction->auction_name = $request->input('auction_name');
+//	dd($request->input('preview_begin_time'));
 		if($request->has('preview_begin_time'))
-			$hbAuction->preview_begint_time = date('yyyy-mm-dd HH:ii:ss',$request->input('preview_begin_time'));
+			$hbAuction->preview_begint_time = date('Y-m-d H:i:s',$request->input('preview_begin_time'));
 		if($request->has('preview_end_time'))
 			$hbAuution->preview_end_time = $date('yyyy-mm-dd HH:ii:ss',$request->input('preview_end_time'));
 		if($request->has('auction_begint_time'))
