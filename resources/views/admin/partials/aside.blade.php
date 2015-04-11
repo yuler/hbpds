@@ -32,8 +32,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/admin/auction"><i class="fa fa-circle-o"></i> 拍卖会管理</a></li>
-                <li class="active"><a href="/admin/asa"><i class="fa fa-circle-o"></i> 拍卖专场管理</a></li>
-		<li> <a href="/admin/artwork"><i class="fa fa-circle-o"></i>拍品管理</a></li>
+              <!--   <li class="active"><a href="/admin/asa"><i class="fa fa-circle-o"></i> 拍卖专场管理</a></li>
+		            <li> <a href="/admin/artwork"><i class="fa fa-circle-o"></i>拍品管理</a></li> -->
               </ul>
             </li>
             <li class="treeview">
