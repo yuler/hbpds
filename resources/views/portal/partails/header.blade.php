@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="/">
 					<img src="/imgs/logo.jpg" alt="logo" class="logo">
 					<img src="/imgs/logo-text.png" alt="logo" class="logo-text">
 				</a>
@@ -21,7 +21,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="input-group">
-							<input type="text" id="email" name="email" class="form-control" placeholder="商品名或 LOT 號">
+							<input type="text" id="email" name="email" class="form-control" placeholder="{{ trans('header.search') }}">
 							<a type="submit" class="btn input-group-addon">
 								&nbsp;&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;
 							</a>
@@ -34,7 +34,7 @@
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">
-				<li class="active"><a href="#">首頁</a></li>
+				<li class="active"><a href="#">{{ trans('header.home') }}</a></li>
 				<li><a href="#">拍賣日曆</a></li>
 				<li><a href="#">網上拍賣</a></li>
 				<li><a href="#">拍賣須知</a></li>
@@ -51,9 +51,9 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="/lang/zh-TW" class="active">繁體</a>
+					<a href="/lang/zh-TW" class="{{ session('locale') == 'zh-TW' ? 'active' : '' }}">繁體</a>
 					|
-					<a href="/lang/en">English</a>
+					<a href="/lang/en" class="{{ session('locale') == 'en' ? 'active' : '' }}" >English</a>
 				</li>
 			</ul>
 		</div>

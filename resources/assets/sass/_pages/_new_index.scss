@@ -1,55 +1,5 @@
 #newIndex {
-	padding-top: 50px;
-	.sub-nav {
-		padding: 7px 0px;
-		background-color: $subNavBackgroundColor;
-		.breadcrumb {
-			margin: 0px;
-			background-color: inherit;
-			li {
-				&:before{
-					content: '';
-				}
-				a {
-					color:black;
-					text-decoration: none;
-				}
-				
-			}
-		}
-	}
-	.left-menu {
-		min-height: 350px;
-		padding: 0;
-		padding-top: 15px;
-		margin: 0px;
-		background-image: url('/imgs/left-menu-bg.png');
-		li {
-			list-style-type: none;
-			a {
-				display: block;
-				padding: 10px 0px;
-				margin: 20px 30px;
-				text-decoration: none;
-				color: #333;
-				&:hover {
-					color:#F3D578;
-				}
-			}
-			&.active {
-				border-right: 5px solid $themeColor;
-				a {
-					font-size: 18px;
-					font-weight: bolder;
-					color: #000;
-				}
-			}
-		}
-	}
 	.content {
-		h1 {
-			margin-bottom: 50px;
-		}
 		ul {
 			padding: 0;
 			margin: 0;
@@ -67,6 +17,10 @@
 				.html {
 					margin-top: -22px;
 					padding-left: 150px;
+					a {
+						text-decoration: none;
+						color: #000;
+					}
 					article {
 						color: #999;
 						font-size: 14px;
