@@ -24,7 +24,7 @@ header {
 		margin: 0px;
 		border: 0px;
 		background-color: $menuBackgroundColor!important;
-		ul.nav >li {
+		ul.navbar-left >li {
 			padding-right: 30px;
 			&:hover {
 				>a {
@@ -61,6 +61,34 @@ header {
 					border: none;
 				}
 			}
+		}
+		ul.navbar-right {
+			padding-right: 25px;
+			li {
+				color: $themeColor;
+				a {
+					font-size: 12px;
+					padding: 3px 0px;
+					margin: 12px 10px;
+					color: $themeColor;
+					display: inline-block;
+					&:hover{
+						color:white;
+					}
+					&.active {
+						background-color: inherit!important;
+						padding: 3px 15px;
+						margin: 12px 10px;
+						border-radius: 5px;
+						color: white;
+						background-color: $langBackgroundColor!important;
+						&:hover{
+							color:white;
+						}
+					}
+				}
+			}
+			
 		}
 	}
 }

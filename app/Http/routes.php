@@ -43,5 +43,7 @@ $router->group(['prefix' => 'admin'], function($router)
 
 
 });
-
+Route::resources([
+	'/new' => 'HbNewController'
+]);
 Route::controller('/','PagesController');

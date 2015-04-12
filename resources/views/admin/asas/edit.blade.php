@@ -16,14 +16,13 @@
     	<!-- Content Header (Page header) -->
 	    <section class="content-header">
 	      <h1>
-	       <!--  新闻管理 -->
+	        修改拍卖专场
 	        <small></small>
 	      </h1>
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
 	        <li><a href="/admin/auction"><i class="fa fa-newspaper-o"></i> 拍卖会管理</a></li>
-	        <li><a href="/admin/auction/<?php echo $_GET["auction_id"]?>/edit"><i class="fa fa-newspaper-o"></i> 编辑拍卖会</a></li>
-	        <li><a href="/admin/auction/{{$asa->id}}/edit"><i class="fa fa-newspaper-o"></i> 编辑拍卖专场</a></li>
+	        <li><a href="/admin/auction/{{$asa->auction_id}}/edit"><i class="fa fa-newspaper-o"></i> 编辑拍卖会</a></li>
 	        <li class="active">编辑专场</li>
 	      </ol>
 	    </section>
@@ -96,7 +95,7 @@
 				                    	{!! Form::label('lang', '语言种类') !!}
 				                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
 				                    </div>
-				                    <input  name="auction_id"  type="hidden" id="auction_id" value="<?php echo $_GET["auction_id"]?>"/>
+				                    <input  name="auction_id"  type="hidden" id="auction_id" value="{{$asa->auction_id}}"/>
 				                </div><!-- /.box-body -->
 
 				                <div class="box-footer">
@@ -110,7 +109,7 @@
 	      	  		
 				                <div class="box-header">
 								  	<div>
-						                <a href="/admin/artwork/create?asa_id={{$asa->id}}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i>  新建</a>
+						                <a href="/admin/artwork/create?asa_id={{$asa->id}}&auction_id={{$asa->auction_id}}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i>  新建</a>
 						                <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete" data-title="删除" data-message="确认删除选中？">
 									        <i class="glyphicon glyphicon-trash"></i> 批量删除
 									    </button>
@@ -123,14 +122,40 @@
 								      <tr>
 								      	<th><input type="checkbox" class="minimal"></th>
 								        
-								        <th>专场名称</th>
-								        <th>预展时间开始时间</th>
-								        <th>预展结束时间</th>
-								        <th>拍卖开始时间</th>
-								        <th>拍卖结束时间</th>
-								        <th>拍卖低点</th>
-								        <th>仅网拍</th>
-								        <th>网拍地址</th>
+								        <th>拍品名称</th>
+								        <th>编号</th>
+								        <th>作者</th>
+								        <th>尺寸</th>
+								        <th>材质</th>
+								        <th>年代</th>
+								        <th>价格HKD</th>
+								        <th>价格RMB</th>
+								       <!--  <th>作者简介</th>
+								        <th>款识</th>
+								        <th>题识</th>
+								        <th>题签</th>
+								        <th>钤印</th>
+								        <th>收藏印</th>
+								        <th>出版</th>
+								        <th>释文</th>
+								        <th>签名</th>
+
+								        <th>品相</th>
+								        <th>参阅</th>
+
+								        <th>著录</th>
+								        <th>展览</th>
+								        <th>来源</th>
+								        <th>lot号</th>
+								        <th>起始估价HKD</th>
+								        <th>最高估价HKD</th>
+								        <th>起始估价RMB</th>
+								        <th>最高估价RMB</th>
+								        <th>朝代</th>
+								        <th>作品描述</th> -->
+
+
+
 								        <th>语言</th>
 								        
 								        <th></th>
@@ -140,17 +165,41 @@
 								    @foreach ($artworks as $artwork)
 								        <tr>
 										    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $artwork->id }}"></td>
-								            <td>{{ str_limit($asa->asa_name,$limit = 20, $end = '...') }}</td>
-								            <td>{{ $artwork->preview_begin_time}}</td>
-								            <td>{{ $artwork->preview_end_time }}</td>
-								            <td>{{ $artwork->begin_time }}</td>
-								            <td>{{ $artwork->end_time }}</td>
-								            <td>{{ $artwork->asa_addr }}</td>
-								            <td>{{ $artwork->asa_only_online }}</td>
-								            <td>{{ $artwork->asa_online_url}}</td>
+								            <td>{{ str_limit($artwork->art_name,$limit = 20, $end = '...') }}</td>
+								            <td>{{ $artwork->art_code}}</td>
+								            <td>{{ $artwork->art_author }}</td>
+								            <td>{{ $artwork->art_size }}</td>
+								            <td>{{ $artwork->art_material }}</td>
+								            <td>{{ $artwork->art_age }}</td>
+								            <td>{{ $artwork->art_price_hkd }}</td>
+								            <td>{{ $artwork->art_price_rmb}}</td>
+								            
+								            <!-- <td>{{ $artwork->author_sumarry}}</td>
+								            <td>{{ $artwork->art_inscription}}</td>
+								            <td>{{ $artwork->art_tizhi}}</td>
+								            <td>{{ $artwork->art_mark}}</td>
+								            <td>{{ $artwork->art_seal}}</td>
+								            <td>{{ $artwork->art_collection_seal}}</td>
+								            <td>{{ $artwork->art_publish}}</td>
+								            <td>{{ $artwork->art_annotation}}</td>
+								            <td>{{ $artwork->art_signature}}</td>
+								            <td>{{ $artwork->art_phase}}</td>
+								            <td>{{ $artwork->art_reference}}</td>
+								            <td>{{ $artwork->art_record}}</td>
+								            <td>{{ $artwork->art_exhibition}}</td>
+								            <td>{{ $artwork->art_source}}</td>
+								            <td>{{ $artwork->art_lot}}</td>
+
+								            <td>{{ $artwork->begin_price_hkd}}</td>
+								            <td>{{ $artwork->end_price_hkd}}</td>
+								            <td>{{ $artwork->begin_price_rmb}}</td>
+								            <td>{{ $artwork->end_price_rmb}}</td>
+								            <td>{{ $artwork->art_dynasty}}</td>
+								            <td>{{ $artwork->art_sumarry}}</td>
+ -->
 								            <td>{{ $artwork->lang}}</td>
 								            <td>
-								            	<a href="/admin/artwork/{{ $artwork->id }}/edit?auction_id={{$asa->id}}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
+								            	<a href="/admin/artwork/{{ $artwork->id }}/edit?auction_id={{$asa->auction_id}}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
 								            </td>
 								        </tr>
 									@endforeach 
