@@ -33,7 +33,7 @@
 	</nav>
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-left">
 				<li class="active"><a href="#">首頁</a></li>
 				<li><a href="#">拍賣日曆</a></li>
 				<li><a href="#">網上拍賣</a></li>
@@ -43,10 +43,17 @@
 						關於我們&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">橫濱香港簡介</a></li>
-						<li><a href="#">聯繫方式</a></li>
-						<li><a href="#">新聞中心</a></li>
+						<li><a href="/introduction">橫濱香港簡介</a></li>
+						<li><a href="/contact">聯繫方式</a></li>
+						<li><a href="/new">新聞中心</a></li>
 					</ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="/lang/zh-TW" class="active">繁體</a>
+					|
+					<a href="/lang/en">English</a>
 				</li>
 			</ul>
 		</div>
