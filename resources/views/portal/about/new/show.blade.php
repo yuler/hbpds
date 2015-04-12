@@ -21,7 +21,7 @@
 					</ul>
 				</div>
 				<div class="col-md-10 content">
-					<h1>{{ $new->title }}</h1>
+					<h2>{{ $new->title }}</h2>
 					<div class="data">{{ date('Y-m-d', strtotime($new->published_at)) }}</div>
 					<br>
 					<div>

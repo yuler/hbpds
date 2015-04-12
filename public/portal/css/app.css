@@ -121,50 +121,85 @@ footer .copy {
           #newIndex .content ul li .html .pic-list > div img {
             width: 100% !important; }
 
+#auctionPreview .left-menu {
+  padding-right: 30px; }
+  #auctionPreview .left-menu h1 {
+    color: #ffcc00; }
+  #auctionPreview .left-menu > ul {
+    padding: 0;
+    margin: 0; }
+    #auctionPreview .left-menu > ul li {
+      list-style-type: none; }
+      #auctionPreview .left-menu > ul li h4 {
+        color: #ffcc00; }
+      #auctionPreview .left-menu > ul li > div h3 {
+        color: #ffcc00; }
+      #auctionPreview .left-menu > ul li > div > ul {
+        padding: 0;
+        margin: 0; }
+        #auctionPreview .left-menu > ul li > div > ul li {
+          text-align: right; }
+          #auctionPreview .left-menu > ul li > div > ul li a {
+            text-decoration: none;
+            color: #999;
+            padding: 15px 0px;
+            padding-right: 20px;
+            display: block; }
+            #auctionPreview .left-menu > ul li > div > ul li a:hover {
+              color: #ffcc00; }
+  #auctionPreview .left-menu hr {
+    border: 1px solid #eee; }
+#auctionPreview .content {
+  padding-left: 0px;
+  margin-top: 20px; }
+  #auctionPreview .content > div {
+    border: 1px solid #999; }
+
 html body {
   font-size: 16px;
   font-family: "Microsoft Yahei"; }
   html body h1 {
-    font-size: 30px; }
+    font-size: 40px; }
 
-#newIndex, #newShow {
+#newIndex, #newShow, #auctionPreview {
   padding-top: 50px; }
-  #newIndex .sub-nav, #newShow .sub-nav {
+  #newIndex .sub-nav, #newShow .sub-nav, #auctionPreview .sub-nav {
     padding: 7px 0px;
     background-color: rgba(226, 210, 138, 0.5); }
-    #newIndex .sub-nav .breadcrumb, #newShow .sub-nav .breadcrumb {
+    #newIndex .sub-nav .breadcrumb, #newShow .sub-nav .breadcrumb, #auctionPreview .sub-nav .breadcrumb {
       margin: 0px;
       background-color: inherit; }
-      #newIndex .sub-nav .breadcrumb li:before, #newShow .sub-nav .breadcrumb li:before {
+      #newIndex .sub-nav .breadcrumb li:before, #newShow .sub-nav .breadcrumb li:before, #auctionPreview .sub-nav .breadcrumb li:before {
         content: ''; }
-      #newIndex .sub-nav .breadcrumb li a, #newShow .sub-nav .breadcrumb li a {
+      #newIndex .sub-nav .breadcrumb li a, #newShow .sub-nav .breadcrumb li a, #auctionPreview .sub-nav .breadcrumb li a {
         color: black;
         text-decoration: none; }
-  #newIndex .left-menu, #newShow .left-menu {
-    min-height: 567px;
-    padding: 0;
-    padding-top: 15px;
-    margin: 0px;
-    background: url('/imgs/left-menu-bg.png') no-repeat; }
-    #newIndex .left-menu li, #newShow .left-menu li {
-      list-style-type: none; }
-      #newIndex .left-menu li a, #newShow .left-menu li a {
-        display: block;
-        padding: 10px 0px;
-        margin: 20px 30px;
-        text-decoration: none;
-        color: #333; }
-        #newIndex .left-menu li a:hover, #newShow .left-menu li a:hover {
-          color: #F3D578; }
-      #newIndex .left-menu li.active, #newShow .left-menu li.active {
-        border-right: 5px solid #ffcc00; }
-        #newIndex .left-menu li.active a, #newShow .left-menu li.active a {
-          font-size: 18px;
-          font-weight: bolder;
-          color: #000; }
-  #newIndex .content h1, #newShow .content h1 {
-    margin-bottom: 50px; }
-  #newIndex .content .data, #newShow .content .data {
-    color: #ffcc00;
-    width: 150px;
-    z-index: 10px; }
+
+#newIndex .left-menu, #newShow .left-menu {
+  min-height: 567px;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0px;
+  background: url('/imgs/left-menu-bg.png') no-repeat; }
+  #newIndex .left-menu li, #newShow .left-menu li {
+    list-style-type: none; }
+    #newIndex .left-menu li a, #newShow .left-menu li a {
+      display: block;
+      padding: 10px 0px;
+      margin: 20px 30px;
+      text-decoration: none;
+      color: #333; }
+      #newIndex .left-menu li a:hover, #newShow .left-menu li a:hover {
+        color: #F3D578; }
+    #newIndex .left-menu li.active, #newShow .left-menu li.active {
+      border-right: 5px solid #ffcc00; }
+      #newIndex .left-menu li.active a, #newShow .left-menu li.active a {
+        font-size: 18px;
+        font-weight: bolder;
+        color: #000; }
+#newIndex .content h1, #newShow .content h1 {
+  margin-bottom: 50px; }
+#newIndex .content .data, #newShow .content .data {
+  color: #ffcc00;
+  width: 150px;
+  z-index: 10px; }

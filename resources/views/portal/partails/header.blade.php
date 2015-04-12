@@ -40,8 +40,8 @@
 						拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/introduction">拍賣預展</a></li>
-						<li><a href="/contact">歷史拍賣</a></li>
+						<li><a href="/auction/preview">拍賣預展</a></li>
+						<li><a href="/auction/history">歷史拍賣</a></li>
 					</ul>
 				</li>
 				<li><a href="#">網上拍賣</a></li>
