@@ -3,7 +3,7 @@
   
   @include('admin.partials.head')
   
-
+@include('admin.partials.scripts')
   <style type="text/css">
 	.main-header {
 	  position: fixed;
@@ -68,7 +68,7 @@
 
 		@include('admin.partials.aside2')
 
-		@include('admin.partials.scripts')
+		
 
     </div><!-- ./wrapper -->
 	

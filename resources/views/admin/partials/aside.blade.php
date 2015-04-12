@@ -26,13 +26,26 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">主导航</li>
-            <li class="active treeview">
+            <li>
+                <a href="/admin/auction"><i class="fa fa-circle-o"></i> 拍卖会管理</a>
+            </li>
+            <li>
+                <a href="/admin/new"><i class="fa fa-circle-o"></i> 新闻管理</a>
+            </li>
+            <li>
+                <a href="/admin/banner"><i class="fa fa-circle-o"></i> 广告管理</a>
+            </li>
+            <li>
+                <a href="/admin/ad"><i class="fa fa-circle-o"></i> 专场广告管理</a>
+            </li>
+           <!--  <li class="active treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>仪表板</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span> 资源管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                <li><a href="/admin/auction"><i class="fa fa-circle-o"></i> 拍卖会管理</a></li>
+              <!--   <li class="active"><a href="/admin/asa"><i class="fa fa-circle-o"></i> 拍卖专场管理</a></li>
+		            <li> <a href="/admin/artwork"><i class="fa fa-circle-o"></i>拍品管理</a></li> 
               </ul>
             </li>
             <li class="treeview">
@@ -45,8 +58,8 @@
                 <li><a href="/admin/new"><i class="fa fa-circle-o"></i> 新闻</a></li>
                 <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 新闻附件</a></li>
               </ul>
-            </li>
-            <li>
+            </li> -->
+<!--            <li>
               <a href="pages/widgets.html">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
               </a>
@@ -151,10 +164,11 @@
               </ul>
             </li>
             <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
+<li class="header">LABELS</li>
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+-->
           </ul>
         </section>
         <!-- /.sidebar -->

@@ -29,6 +29,7 @@
     <script src="/plugins/simditor-2.1.5/scripts/uploader.js" type="text/javascript" ></script>
     <script src="/plugins/simditor-2.1.5/scripts/simditor.js" type="text/javascript" ></script>
     <script src="/plugins/simditor-2.1.5/scripts/simditor-dropzone.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="/plugins/app/all.js" type="text/javascript"></script>
 
     <!-- <script>
@@ -111,3 +112,11 @@
          
         })();
     </script> -->
+
+<script type="text/javascript">
+  function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+  }
+</script>
