@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class HbBannerRequest extends Request {
+class HbAuctionRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class HbBannerRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required|min:1|max:100'
+			'auction_name' => 'required|min:1|max:100'
         	
 		];
 	}

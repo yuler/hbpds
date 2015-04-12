@@ -9,6 +9,7 @@ use App\HbAuction;
 use App\HbAsa;
 use Laracasts\Flash\Flash;
 
+use App\HbBanner;
 class HbBatchDestroyController extends Controller {
 
 	// destroy news
@@ -39,6 +40,16 @@ class HbBatchDestroyController extends Controller {
 	{
 		if($request->has('ids')){
 			HbAsa::destroy($request->input('ids'));
+			Flash::success('删除成功');
+			return redirect()->back();
+		}
+		Flash::error('至少选中一条');
+		return redirect()->back();
+	}
+	public function deleteBanners(Request $request)
+	{
+		if($request->has('ids')){
+			HbBanner::destroy($request->input('ids'));
 			Flash::success('删除成功');
 			return redirect()->back();
 		}

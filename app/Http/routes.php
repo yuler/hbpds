@@ -39,6 +39,9 @@ $router->group(['prefix' => 'admin'], function($router)
 		'asa' => 'Admin\HbAsasController',
 		'artwork' => 'Admin\HbArtworksController',
 		'attachment' => 'Admin\HbAttachmentsController',
+
+		'ad' => 'Admin\HbBatchDestroyController',
+		'banner' => 'Admin\HbBannersController',
 	]);
 
 
