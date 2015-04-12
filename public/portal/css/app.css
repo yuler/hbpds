@@ -36,7 +36,7 @@ header nav.navbar-menu {
     header nav.navbar-menu ul.navbar-left > li.dropdown:hover .dropdown-menu {
       display: block; }
     header nav.navbar-menu ul.navbar-left > li.dropdown .dropdown-menu {
-      min-width: 103px;
+      min-width: 114px;
       border: 0px;
       padding: 0px;
       background-color: rgba(220, 192, 82, 0.7) !important; }
