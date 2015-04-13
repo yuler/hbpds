@@ -60,10 +60,6 @@
 		                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
 		                    </div>
 
- 							<div class="form-group">
-		                    	{!! Form::label('asa_image', '宣传图') !!}
-		                    	{!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
-		                    </div>
 
 		                    <div class="form-group">
 		                    	{!! Form::label('asa_only_online', '仅限网拍') !!}
@@ -84,6 +80,16 @@
 		                    	{!! Form::label('lang', '语言种类') !!}
 		                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
 		                    </div>
+
+				<div class="form-group">
+                                        {!! Form::label('asa_image', '宣传图') !!}
+                                        {!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
+<!--<input id="fileupload" type="file" name="upload" data-url="/admin/attachment" multiple> -->
+
+<a href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传头像</a>				<input name="upload" type="file" class="hide" id="uploadAvatar">
+                                    </div>					
+				
+
 		                    <input  name="auction_id"  type="hidden" id="auction_id" value="<?php echo $_GET["auction_id"]?>" />
 		                   
 		                </div><!-- /.box-body -->
@@ -99,6 +105,72 @@
 	</div><!-- /.content-wrapper -->
 	<br>
 	<br>
+<script type="text/javascript">
+/**
+$('#fileupload').fileupload({ 
+dataType: 'json',
+        forceIframeTransport: true, 
+    done: function (e, data) {  
+        $.each(data.result, function (index, file) {  
+            $('<p/>').text(file.name + ' uploaded').appendTo($("body"));  
+        });  
+    }  
+});
+*/
 
+$('#uploadAvatar').fileupload({
+        url: '/admin/attachment',
+        dataType: 'json',
+        forceIframeTransport: true,
+        /*done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },*/
+        progress: function (e, data) {
+        	$('#uploadAvatarProgress').fadeIn(1000);
+    		var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#uploadAvatarProgress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        },
+        success: function(result, textStatus, jqXHR){
+        	var alert = '<div class="row">' +
+							'<div class="alertMsg col-lg-2 col-sm-3 col-xs-6">' +
+								'<div>' +
+									' ' +
+								'</div>' +
+							'</div>' +
+						'</div>';
+        	var template = Handlebars.compile(alert);
+    		data = $.parseJSON(result.jsonStr);
+    		var html = template(data);
+    		$('footer').after(html);
+    		$('.alertMsg').fadeIn(1000).delay(2000).slideUp(1000).queue(function(){
+    			$('.alertMsg').parent().remove();
+    		});
+    		if(data.success){
+    			$('.avatar img, .nav-avatar img').attr('src',webRoot + '/' + data.obj.avatarPath);
+    		}
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+        	console.log(jqXHR);
+        	console.log(textStatus);
+        	console.log(errorThrown);
+        },
+        complete: function(e,data) {
+        	setTimeout( function(){
+    			$('#uploadAvatarProgress').fadeOut(1000);
+    			setTimeout(function(){
+    				$('#uploadAvatarProgress .progress-bar').css(
+	                    'width',
+	                    '0%'
+	                )
+    			},1000)
+    		},2000);
+        },
+    }) 
+</script>
 	
 @endsection

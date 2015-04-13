@@ -36,7 +36,7 @@ class HbAttachmentsController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$att_type = $request->input('att_type');
+
 		$file = $request->file('upload');
 		$serverName = Str::random() . '.' . $file->getClientOriginalExtension();
 		$serverPath = env('UPLOAD_PATH') .'/'. date('Y',time()) . '/'
@@ -45,7 +45,8 @@ class HbAttachmentsController extends Controller {
 
 		$attachment = new HbAttachment();
 		$attachment->att_name = $file->getClientOriginalName();
-		$attachment->att_type = $att_type;
+		if($request->has('att_type'))
+			$attachment->att_type = $request->input('att_type');
 		$attachment->att_path = $serverPath . '/' . $serverName;
 		
 		$attachment->save();
