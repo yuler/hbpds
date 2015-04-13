@@ -28,76 +28,98 @@
 	                </div><!-- /.box-header -->
 
 	                <!-- form start -->
-	                {!! Form::open(['route' => 'admin.asa.store', 'method' => 'post']) !!}
+	                
 	                
 		                <div class="box-body">
-		                    <div class="form-group">
-		                    	{!! Form::label('asa_name', '专场名称') !!}
-		                    	{!! Form::text('asa_name', null, ['class' => 'form-control', 'placeholder' => '输入专场名称']) !!}
 
-		                    </div>
-		                    
- 							<div class="form-group">
-		                    	{!! Form::label('preview_begin_time', '预展开始时间') !!}
-		                    	{!! Form::text('preview_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展开始时间']) !!}
-		                    </div>
+							<div class="row">
 
-		                    <div class="form-group">
-		                    	{!! Form::label('preview_begin_time', '预展结束时间') !!}
-		                    	{!! Form::text('preview_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展结束时间']) !!}
-		                    </div>
+								<div class="col-md-6">
+									{!! Form::open(['route' => 'admin.asa.store', 'method' => 'post']) !!}
 
- 							<div class="form-group">
-		                    	{!! Form::label('begin_time', '拍卖开始时间') !!}
-		                    	{!! Form::text('begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖开始时间']) !!}
-		                    </div>
-		                    <div class="form-group">
-		                    	{!! Form::label('end_time', '拍卖结束时间') !!}
-		                    	{!! Form::text('end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖结束时间']) !!}
-		                    </div>
-		                     <div class="form-group">
-		                    	{!! Form::label('asa_addr', '拍卖地点') !!}
-		                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
-		                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('asa_name', '专场名称') !!}
+				                    	{!! Form::text('asa_name', null, ['class' => 'form-control', 'placeholder' => '输入专场名称']) !!}
+
+				                    </div>
+				                    
+		 							<div class="form-group">
+				                    	{!! Form::label('preview_begin_time', '预展开始时间') !!}
+				                    	{!! Form::text('preview_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展开始时间']) !!}
+				                    </div>
+
+				                    <div class="form-group">
+				                    	{!! Form::label('preview_begin_time', '预展结束时间') !!}
+				                    	{!! Form::text('preview_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展结束时间']) !!}
+				                    </div>
+
+		 							<div class="form-group">
+				                    	{!! Form::label('begin_time', '拍卖开始时间') !!}
+				                    	{!! Form::text('begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖开始时间']) !!}
+				                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('end_time', '拍卖结束时间') !!}
+				                    	{!! Form::text('end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖结束时间']) !!}
+				                    </div>
+				                     <div class="form-group">
+				                    	{!! Form::label('asa_addr', '拍卖地点') !!}
+				                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
+				                    </div>
 
 
-		                    <div class="form-group">
-		                    	{!! Form::label('asa_only_online', '仅限网拍') !!}
-		                    	{!! Form::select('asa_only_online', ['0' => '否', '1' => '是'], null, ['class' => 'form-control']) !!}
-		                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('asa_only_online', '仅限网拍') !!}
+				                    	{!! Form::select('asa_only_online', ['0' => '否', '1' => '是'], null, ['class' => 'form-control']) !!}
+				                    </div>
 
-		                    <div class="form-group">
-		                    	{!! Form::label('asa_online_url', '网拍地址') !!}
-		                    	{!! Form::text('asa_online_url', null, ['class' => 'form-control', 'placeholder' => '输入网拍地址']) !!}
-		                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('asa_online_url', '网拍地址') !!}
+				                    	{!! Form::text('asa_online_url', null, ['class' => 'form-control', 'placeholder' => '输入网拍地址']) !!}
+				                    </div>
 
-		                     <div class="form-group">
-		                    	{!! Form::label('asa_online_logo', '网拍LOGO') !!}
-		                    	{!! Form::text('asa_online_logo', null, ['class' => 'form-control', 'placeholder' => '']) !!}
-		                    </div>
+				                     <div class="form-group">
+				                    	{!! Form::label('asa_online_logo', '网拍LOGO') !!}
+				                    	{!! Form::text('asa_online_logo', null, ['class' => 'form-control', 'placeholder' => '']) !!}
+				                    </div>
 
-		                    <div class="form-group">
-		                    	{!! Form::label('lang', '语言种类') !!}
-		                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
-		                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('lang', '语言种类') !!}
+				                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
+				                    </div>
 
-				<div class="form-group">
-                                        {!! Form::label('asa_image', '宣传图') !!}
-                                        {!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
-					<p id='yulan'></p>	
-					<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
-					<input name="upload" type="file" class="hide" id="uploadAvatar">
-                                    </div>					
-				
+									<div class="form-group">
+		                                {!! Form::label('asa_image', '宣传图') !!}
+		                                {!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
+										
+		                             </div>					
+						
 
-		                    <input  name="auction_id"  type="hidden" id="auction_id" value="<?php echo $_GET["auction_id"]?>" />
-		                   
+				                    <input  name="auction_id"  type="hidden" id="auction_id" value="<?php echo $_GET["auction_id"]?>" />
+				                   
+									{!! Form::close() !!}
+								</div><!-- end md-6-->
+
+								<div class="col-sm-6">
+								    <div class="thumbnail">
+								      <img id="yulan" data-src="holder.js/100%x300" alt="上传宣" >
+								      <div class="caption">
+								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
+			                        			
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+											<input name="upload" type="file" class="hide" id="uploadAvatar">
+										</form>
+								      </div>
+								    </div>
+								</div>
+
+			                 </div><!--end box-->
+
 		                </div><!-- /.box-body -->
 
 		                <div class="box-footer">
 		                    <button type="submit" class="btn btn-primary">Submit</button>
 		                </div>
-	                {!! Form::close() !!}
+	                
 
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
@@ -106,27 +128,10 @@
 	<br>
 	<br>
 <script type="text/javascript">
-/**
-$('#fileupload').fileupload({ 
-dataType: 'json',
-        forceIframeTransport: true, 
-    done: function (e, data) {  
-        $.each(data.result, function (index, file) {  
-            $('<p/>').text(file.name + ' uploaded').appendTo($("body"));  
-        });  
-    }  
-});
-*/
-
 $('#uploadAvatar').fileupload({
-        url: '/admin/attachment',
+        url: '/admin/attachment?_token={{ Session::token() }}',
         dataType: 'json',
         forceIframeTransport: true,
-        /*done: function (e, data) {
-            $.each(data.result.files, function (index, file) {
-                $('<p/>').text(file.name).appendTo('#files');
-            });
-        },*/
         progress: function (e, data) {
         	$('#uploadAvatarProgress').fadeIn(1000);
     		var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -136,31 +141,10 @@ $('#uploadAvatar').fileupload({
             );
         },
         success: function(result, textStatus, jqXHR){
-/*
-        	var al = '<div class="row">' +
-							'<div class="alertMsg col-lg-2 col-sm-3 col-xs-6">' +
-								'<div>' +
-									' ' +
-								'</div>' +
-							'</div>' +
-						'</div>';
 
-        	var template = Handlebars.compile(al);
-
-    		data = $.parseJSON(result.jsonStr);
-    		var html = template(data);
-    		$('footer').after(html);
-    		$('.alertMsg').fadeIn(1000).delay(2000).slideUp(1000).queue(function(){
-    			$('.alertMsg').parent().remove();
-    		});
-    		if(data.success){
-    			$('.avatar img, .nav-avatar img').attr('src',webRoot + '/' + data.obj.avatarPath);
-    		}
-*/
-$("#asa_image").val(result.file_path);
-var im='<img width="200" height="150" src="'+result.file_path+'" />';
-$("#yulan").append(im);
-        },
+		$("#asa_image").val(result.file_path);
+		$("#yulan").attr('src',result.file_path);
+		        },
         error: function (jqXHR, textStatus, errorThrown) {
         	console.log(jqXHR);
         	console.log(textStatus);
@@ -177,7 +161,18 @@ $("#yulan").append(im);
     			},1000)
     		},2000);
         },
-    }) 
+    })
+	/*$(document).on('change','#uploadAvatar',function(){
+		$.ajax({
+			url :'/admin/attachment?_token={{ Session::token() }}',
+			method:'Post',
+			dateType:'JSON',
+			data: $('#uploadAvatarForm').serialize(),
+			success:function(data){
+				console.log(data);
+			}
+		})
+	});*/
 </script>
 	
 @endsection

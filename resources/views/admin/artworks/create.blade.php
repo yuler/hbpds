@@ -166,13 +166,33 @@
 		                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
 		                    </div>
 		                    <input  name="asa_id"  type="hidden" id="asa_id" value="<?php echo $_GET["asa_id"]?>" />
-		                   
+		                   <div class="form-group">
+								<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传附件</a>
+								<input name="upload" type="file" class="hide" id="uploadAvatar">
+                             </div>
+
 		                </div><!-- /.box-body -->
+
+
+<div class="row">
+	<div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="..." alt="...">
+	      <div class="caption">
+	        <h3>Thumbnail label</h3>
+	        <p>...</p>
+	        <p><a href="#" class="btn btn-primary" role="button">删除</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	      </div>
+	    </div>
+	  </div>
+</div>
 
 		                <div class="box-footer">
 		                    <button type="submit" class="btn btn-primary">提交</button>
 		                </div>
 	                {!! Form::close() !!}
+
+  
 
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
@@ -180,6 +200,79 @@
 	</div><!-- /.content-wrapper -->
 	<br>
 	<br>
+<script type="text/javascript">
+/**
+$('#fileupload').fileupload({ 
+dataType: 'json',
+        forceIframeTransport: true, 
+    done: function (e, data) {  
+        $.each(data.result, function (index, file) {  
+            $('<p/>').text(file.name + ' uploaded').appendTo($("body"));  
+        });  
+    }  
+});
+*/
 
+$('#uploadAvatar').fileupload({
+        url: '/admin/attachment',
+        dataType: 'json',
+        forceIframeTransport: true,
+        /*done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },*/
+        progress: function (e, data) {
+        	$('#uploadAvatarProgress').fadeIn(1000);
+    		var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#uploadAvatarProgress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        },
+        success: function(result, textStatus, jqXHR){
+/*
+        	var al = '<div class="row">' +
+							'<div class="alertMsg col-lg-2 col-sm-3 col-xs-6">' +
+								'<div>' +
+									' ' +
+								'</div>' +
+							'</div>' +
+						'</div>';
+
+        	var template = Handlebars.compile(al);
+
+    		data = $.parseJSON(result.jsonStr);
+    		var html = template(data);
+    		$('footer').after(html);
+    		$('.alertMsg').fadeIn(1000).delay(2000).slideUp(1000).queue(function(){
+    			$('.alertMsg').parent().remove();
+    		});
+    		if(data.success){
+    			$('.avatar img, .nav-avatar img').attr('src',webRoot + '/' + data.obj.avatarPath);
+    		}
+*/
+$("#asa_image").val(result.file_path);
+var im='<img width="200" height="150" src="'+result.file_path+'" />';
+$("#yulan").append(im);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+        	console.log(jqXHR);
+        	console.log(textStatus);
+        	console.log(errorThrown);
+        },
+        complete: function(e,data) {
+        	setTimeout( function(){
+    			$('#uploadAvatarProgress').fadeOut(1000);
+    			setTimeout(function(){
+    				$('#uploadAvatarProgress .progress-bar').css(
+	                    'width',
+	                    '0%'
+	                )
+    			},1000)
+    		},2000);
+        },
+    }) 
+</script>
 	
 @endsection

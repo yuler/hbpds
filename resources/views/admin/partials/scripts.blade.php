@@ -34,6 +34,7 @@
 <script src="/plugins/jquery-file-upload/jquery.ui.widget.js" type="text/javascript"></script>
 <script src="/plugins/jquery-file-upload/jquery.iframe-transport.js" type="text/javascript"></script>
 <script src="/plugins/jquery-file-upload/jquery.fileupload.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/holder/2.6.0/holder.min.js" type="text/javascript"></script>
     <!-- <script>
                 /*
         <a href="posts/2" data-method="delete"> 
