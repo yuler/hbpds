@@ -21,33 +21,7 @@
 					</ul>
 				</div>
 				<div class="col-md-10 content">
-					<h1>新聞中心</h1>
-					<ul>
-						@foreach ($news as $new)
-							<li>
-								<div class="data">
-									{{ date('Y-m-d', strtotime($new->published_at)) }}
-								</div>
-								<div class="html">
-									<p><a href="/new/{{ $new->id }}">{{ $new->title }}</a></p>
-									<article>
-									{{ str_limit($new->article, $limit = 100, $end = '...') }}
-									</article>
-									<div class="pic-list">
-										@foreach ($new->imgList as $img)
-											<div class="col-md-3">
-												{!!$img !!}
-											</div>
-										@endforeach
-									</div>
-								</div>
-							</li>
-						@endforeach
-					</ul>
-						
-					<div style="float:right;">
-						{!! $news->render() !!}
-					</div>
+					橫濱香港簡介
 				</div>
 			</div>
 		</div>

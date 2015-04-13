@@ -5,6 +5,7 @@
 
 @import '_pages/_index';
 @import '_pages/_new_index';
+@import '_pages/_auction_preview';
 
 html body{
   	font-size: 16px;
@@ -13,11 +14,11 @@ html body{
   		
   	}
   	h1 {
-  		font-size:30px;
+  		font-size:40px;
   	}
 }
 
-#newIndex, #newShow {
+#newIndex, #newShow, #auctionPreview {
 	padding-top: 50px;
 	.sub-nav {
 		padding: 7px 0px;
@@ -37,33 +38,35 @@ html body{
 			}
 		}
 	}
+}
+#newIndex, #newShow {
 	.left-menu {
-		min-height: 567px;
-		padding: 0;
-		padding-top: 15px;
-		margin: 0px;
-		background: url('/imgs/left-menu-bg.png') no-repeat;
-		li {
-			list-style-type: none;
-			a {
-				display: block;
-				padding: 10px 0px;
-				margin: 20px 30px;
-				text-decoration: none;
-				color: #333;
-				&:hover {
-					color:#F3D578;
-				}
-			}
-			&.active {
-				border-right: 5px solid $themeColor;
+			min-height: 567px;
+			padding: 0;
+			padding-top: 15px;
+			margin: 0px;
+			background: url('/imgs/left-menu-bg.png') no-repeat;
+			li {
+				list-style-type: none;
 				a {
-					font-size: 18px;
-					font-weight: bolder;
-					color: #000;
+					display: block;
+					padding: 10px 0px;
+					margin: 20px 30px;
+					text-decoration: none;
+					color: #333;
+					&:hover {
+						color:#F3D578;
+					}
+				}
+				&.active {
+					border-right: 5px solid $themeColor;
+					a {
+						font-size: 18px;
+						font-weight: bolder;
+						color: #000;
+					}
 				}
 			}
-		}
 	}
 	.content {
 		h1 {

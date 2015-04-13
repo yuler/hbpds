@@ -34,10 +34,27 @@
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">
-				<li class="active"><a href="#">{{ trans('header.home') }}</a></li>
-				<li><a href="#">拍賣日曆</a></li>
+				<li class="active"><a href="/">{{ trans('header.home') }}</a></li>
+				<li class="dropdown">
+					<a href="#">
+						拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/auction/preview">拍賣預展</a></li>
+						<li><a href="/auction/history">歷史拍賣</a></li>
+					</ul>
+				</li>
 				<li><a href="#">網上拍賣</a></li>
-				<li><a href="#">拍賣須知</a></li>
+				<li class="dropdown">
+					<a href="#">
+						拍賣須知&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/buy-service">購買服務</a></li>
+						<li><a href="/auction-guide">拍賣指南</a></li>
+						<li><a href="/transaction-read">成交必讀</a></li>
+					</ul>
+				</li>
 				<li class="dropdown">
 					<a href="#">
 						關於我們&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
