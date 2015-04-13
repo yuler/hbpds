@@ -50,6 +50,7 @@ Route::resources([
 	'/new' => 'HbNewController'
 ]);
 
+$router->get('/auction/preview/asa/{id}', 'HbAuctionController@previewAsa');
 $router->controller('/auction', 'HbAuctionController');
 
 Route::controller('/','PagesController');

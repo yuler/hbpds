@@ -12,4 +12,9 @@ class HbAuctionController extends Controller {
 		return view('portal.auction.preview');
 	}
 
+	public function previewAsa($id)
+	{
+		return view('portal.auction.previewAsa');
+	}
+
 }

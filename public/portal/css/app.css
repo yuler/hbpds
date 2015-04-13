@@ -121,39 +121,45 @@ footer .copy {
           #newIndex .content ul li .html .pic-list > div img {
             width: 100% !important; }
 
-#auctionPreview .left-menu {
-  padding-right: 30px; }
-  #auctionPreview .left-menu h1 {
+#auctionPreview .left-menu, #auctionPreviewAsa .left-menu {
+  padding-right: 50px; }
+  #auctionPreview .left-menu h1, #auctionPreviewAsa .left-menu h1 {
     color: #ffcc00; }
-  #auctionPreview .left-menu > ul {
+  #auctionPreview .left-menu > ul, #auctionPreviewAsa .left-menu > ul {
     padding: 0;
-    margin: 0; }
-    #auctionPreview .left-menu > ul li {
+    margin: 0;
+    padding-bottom: 50px; }
+    #auctionPreview .left-menu > ul li, #auctionPreviewAsa .left-menu > ul li {
       list-style-type: none; }
-      #auctionPreview .left-menu > ul li h4 {
+      #auctionPreview .left-menu > ul li h4, #auctionPreviewAsa .left-menu > ul li h4 {
         color: #ffcc00; }
-      #auctionPreview .left-menu > ul li > div h3 {
+      #auctionPreview .left-menu > ul li > div h3, #auctionPreviewAsa .left-menu > ul li > div h3 {
         color: #ffcc00; }
-      #auctionPreview .left-menu > ul li > div > ul {
+      #auctionPreview .left-menu > ul li > div > ul, #auctionPreviewAsa .left-menu > ul li > div > ul {
         padding: 0;
         margin: 0; }
-        #auctionPreview .left-menu > ul li > div > ul li {
+        #auctionPreview .left-menu > ul li > div > ul li, #auctionPreviewAsa .left-menu > ul li > div > ul li {
           text-align: right; }
-          #auctionPreview .left-menu > ul li > div > ul li a {
+          #auctionPreview .left-menu > ul li > div > ul li a, #auctionPreviewAsa .left-menu > ul li > div > ul li a {
             text-decoration: none;
             color: #999;
             padding: 15px 0px;
             padding-right: 20px;
             display: block; }
-            #auctionPreview .left-menu > ul li > div > ul li a:hover {
+            #auctionPreview .left-menu > ul li > div > ul li a:hover, #auctionPreviewAsa .left-menu > ul li > div > ul li a:hover {
               color: #ffcc00; }
-  #auctionPreview .left-menu hr {
+  #auctionPreview .left-menu hr, #auctionPreviewAsa .left-menu hr {
     border: 1px solid #eee; }
-#auctionPreview .content {
-  padding-left: 0px;
+#auctionPreview .content, #auctionPreviewAsa .content {
   margin-top: 20px; }
-  #auctionPreview .content > div {
-    border: 1px solid #999; }
+  #auctionPreview .content > div, #auctionPreviewAsa .content > div {
+    border: 1px solid #ccc;
+    margin-bottom: 50px; }
+    #auctionPreview .content > div > div, #auctionPreviewAsa .content > div > div {
+      padding-left: 0;
+      padding-right: 50px; }
+      #auctionPreview .content > div > div img, #auctionPreviewAsa .content > div > div img {
+        width: 100%; }
 
 html body {
   font-size: 16px;
