@@ -84,9 +84,9 @@
 				<div class="form-group">
                                         {!! Form::label('asa_image', '宣传图') !!}
                                         {!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
-<!--<input id="fileupload" type="file" name="upload" data-url="/admin/attachment" multiple> -->
-
-<a href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传头像</a>				<input name="upload" type="file" class="hide" id="uploadAvatar">
+					<p id='yulan'></p>	
+					<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+					<input name="upload" type="file" class="hide" id="uploadAvatar">
                                     </div>					
 				
 
@@ -136,14 +136,17 @@ $('#uploadAvatar').fileupload({
             );
         },
         success: function(result, textStatus, jqXHR){
-        	var alert = '<div class="row">' +
+/*
+        	var al = '<div class="row">' +
 							'<div class="alertMsg col-lg-2 col-sm-3 col-xs-6">' +
 								'<div>' +
 									' ' +
 								'</div>' +
 							'</div>' +
 						'</div>';
-        	var template = Handlebars.compile(alert);
+
+        	var template = Handlebars.compile(al);
+
     		data = $.parseJSON(result.jsonStr);
     		var html = template(data);
     		$('footer').after(html);
@@ -153,6 +156,10 @@ $('#uploadAvatar').fileupload({
     		if(data.success){
     			$('.avatar img, .nav-avatar img').attr('src',webRoot + '/' + data.obj.avatarPath);
     		}
+*/
+$("#asa_image").val(result.file_path);
+var im='<img width="200" height="150" src="'+result.file_path+'" />';
+$("#yulan").append(im);
         },
         error: function (jqXHR, textStatus, errorThrown) {
         	console.log(jqXHR);
