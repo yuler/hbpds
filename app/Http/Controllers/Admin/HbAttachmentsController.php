@@ -51,7 +51,7 @@ class HbAttachmentsController extends Controller {
 		
 		$attachment->save();
 
-        return response()->json(['success'=>'true','msg'=>'上传失败','file_path' => $attachment->att_path ]);
+        return response()->json(['success'=>'true','msg'=>'上传失败','file_path' => $attachment->att_path,'file_name'=>$attachment->att_name,'att_id'=>$attachment->id ]);
 	}
 
 	/**

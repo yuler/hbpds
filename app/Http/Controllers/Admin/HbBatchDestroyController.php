@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\HbNew;
 use App\HbAuction;
 use App\HbAsa;
+
+use App\HbAttachment;
 use Laracasts\Flash\Flash;
 
 use App\HbBanner;
@@ -55,5 +57,15 @@ class HbBatchDestroyController extends Controller {
 		}
 		Flash::error('至少选中一条');
 		return redirect()->back();
+	}
+
+	public function deleteAttachments(Request $request)
+	{
+		if($request->has('ids')){
+			HbAttachment::destroy($request->input('ids'));
+			return response()->json(['success'=>'true']);
+		}else{
+			return response()->json(['success'=>'false','msg'=>'未输入删除附件ID']);
+		}
 	}
 }
