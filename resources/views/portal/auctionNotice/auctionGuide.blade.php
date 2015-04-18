@@ -5,8 +5,8 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="#">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li><a href="#">拍賣須知&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="#">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="#">拍賣須知</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li class="active">拍賣指南</li>
 				</ol>
 			</div>

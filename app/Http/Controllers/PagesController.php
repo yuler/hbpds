@@ -34,4 +34,9 @@ class PagesController extends Controller {
 	{
 		return view('portal.auctionNotice.transactionRead');
 	}
+
+	public function getOnline()
+	{
+		return view('portal.online.index');
+	}
 }

@@ -6,6 +6,9 @@
 @import '_pages/_index';
 @import '_pages/_new_index';
 @import '_pages/_auction_preview';
+@import '_pages/_asa_preview';
+@import '_pages/_online_index';
+
 
 html body{
   	font-size: 16px;
@@ -18,7 +21,7 @@ html body{
   	}
 }
 
-#newIndex, #newShow, #auctionPreview {
+#newIndex, #newShow, #auctionPreview, #asaPreview, #onlineIndex{
 	padding-top: 50px;
 	.sub-nav {
 		padding: 7px 0px;
@@ -33,12 +36,17 @@ html body{
 				a {
 					color:black;
 					text-decoration: none;
+					&:hover {
+						color:$themeHoverColor;
+					}
 				}
 				
 			}
 		}
 	}
 }
+
+
 #newIndex, #newShow {
 	.left-menu {
 			min-height: 567px;
@@ -77,5 +85,84 @@ html body{
 			width: 150px;
 			z-index: 10px;
 		}
+	}
+}
+
+#auctionPreview, #asaPreview {
+	.left-menu {
+		padding-right: 50px;
+		h1 {
+			color:$themeColor;
+		}
+		>ul {
+			padding: 0;
+			margin: 0;
+			padding-bottom: 50px;
+			>li {
+				list-style-type: none;
+				h4 {
+					color: $themeColor;
+				}
+				>div {
+					h3 {
+						color: $themeColor;
+					}
+					>ul {
+						padding: 0;
+						margin: 0;
+						>li {
+							list-style-type: none;
+							text-align: right;
+							padding: 10px 0;
+							a {
+								text-decoration: none;
+								color: #999;
+								padding: 5px 0px;
+								padding-right: 20px;
+								display: block;
+								&:hover {
+									color:$themeColor;
+								}
+							}
+						}
+
+					}
+				}
+			}
+
+		}
+		.active {
+			/*border-right: 5px solid $themeColor;*/
+			a {
+				border-right: 5px solid $themeColor;
+				font-size: 18px;
+				font-weight: bolder;
+				color: black;
+			}
+		}
+	}
+
+}
+
+hr {
+	border: 1px solid #eee;
+}
+
+.container {
+}
+
+.hb-btn {
+	color: #6F6100;
+	display: inline-block;
+	padding: 9.5px 30px;
+	background-image: url(/imgs/button-bg.png);
+	text-decoration: none;
+	&:active {
+		text-decoration: none;
+	}
+	&:hover, &:active, &:visited{
+		color: #6F6100;
+		background-image: url(/imgs/button-hover-bg.png);
+		text-decoration: none;
 	}
 }

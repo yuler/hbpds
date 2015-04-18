@@ -52,5 +52,7 @@ Route::resources([
 
 $router->get('/auction/preview/asa/{id}', 'HbAuctionController@previewAsa');
 $router->controller('/auction', 'HbAuctionController');
+$router->controller('/artwork', 'HbArtworkController');
+
 
 Route::controller('/','PagesController');

@@ -1,12 +1,12 @@
 @extends('portal.app')
 
 @section('content')
-	<div id="auctionPreviewAsa">
+	<div id="asaPreview">
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li><a href="/">拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li class="active">拍賣預展</li>
 				</ol>
 			</div>
@@ -73,7 +73,113 @@
 					</ul>
 				</div>
 				<div class="col-md-8 content">
-					
+					<h1>私人珍藏</h1>
+
+					<p class="address"><span>拍卖会场: </span> 香港万丽海景酒店</p>
+					<p class="address"><span>预览会场: </span> 香港万丽海景酒店</p>
+
+					<p class="time">11月25日 开拍</p>
+					<p class="time">11月25日 09:00 - 16：00 预展</p>
+
+					<hr>
+
+					<h3>拍卖顺序</h3>
+					<ul>
+						<li>流光溢彩===</li>
+						<li>流光溢彩===</li>
+						<li>流光溢彩===</li>
+						<li>流光溢彩===</li>
+					</ul>
+					<h3 class="goOnline"><a href="/online">参加网上拍卖  <i class="fa fa-arrow-right"></i></a></h3>
+
+					<hr>
+
+					<div class="row productList">
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="/artwork/123">
+								<img src="/imgs/n1.png" alt="">
+								<div>
+									<p>LOT 1</p>
+									<p>估值： 900，000 HKD</p>
+								</div>
+							</a>
+							<div class="info">
+								<p>朝代：当代</p>
+								<p>作者：佚名</p>
+								<p>名称：汽车女司机</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

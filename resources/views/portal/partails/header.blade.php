@@ -44,7 +44,7 @@
 						<li><a href="/auction/history">歷史拍賣</a></li>
 					</ul>
 				</li>
-				<li><a href="#">網上拍賣</a></li>
+				<li><a href="/online">網上拍賣</a></li>
 				<li class="dropdown">
 					<a href="#">
 						拍賣須知&nbsp;&nbsp;<i class="fa fa-angle-down"></i>

@@ -9,11 +9,34 @@ footer {
 				padding: 15px 0;
 				padding-right: 5%;
 				display: inline-block;
-				list-style-type: none;	
+				a {
+					color: black;
+					&:link {
+						text-decoration: underline;
+					}
+				}
 			}
 			li.last {
 				padding: 0px;
 				float: right;
+			}
+			.wx {
+				display: inline-block;
+				.wx-code {
+					display: none;
+				}
+				&:hover {
+					cursor:pointer;
+					.wx-code {
+						padding: 5px;
+						display: block;
+						border: 2px solid #999;
+						position: fixed;
+						bottom: 32%;
+						right: 22%;
+					}
+				}
+				
 			}
 		}
 	}
