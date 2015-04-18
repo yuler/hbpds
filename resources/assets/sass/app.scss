@@ -8,6 +8,7 @@
 @import '_pages/_auction_preview';
 @import '_pages/_asa_preview';
 @import '_pages/_online_index';
+@import '_pages/_artwork_show';
 
 
 html body{
@@ -21,7 +22,7 @@ html body{
   	}
 }
 
-#newIndex, #newShow, #auctionPreview, #asaPreview, #onlineIndex{
+#newIndex, #newShow, #auctionPreview, #asaPreview, #onlineIndex, #artworkShow{
 	padding-top: 50px;
 	.sub-nav {
 		padding: 7px 0px;
@@ -165,4 +166,8 @@ hr {
 		background-image: url(/imgs/button-hover-bg.png);
 		text-decoration: none;
 	}
+}
+
+article {
+	text-indent: 2em;
 }
