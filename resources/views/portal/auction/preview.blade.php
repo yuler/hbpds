@@ -5,8 +5,8 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li><a href="/">拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li class="active">拍賣預展</li>
 				</ol>
 			</div>
@@ -22,7 +22,7 @@
 							<div>
 								<h3>11月25-27日</h3>
 								<ul>
-									<li><a href="">私人收藏</a></li>
+									<li><a href="/auction/preview/asa/123">私人收藏</a></li>
 								</ul>
 							</div>
 							<hr>
@@ -66,6 +66,10 @@
 							</div>
 							<hr>
 						</li>
+						<li>
+							<h1>歷史拍賣</h1>
+							<hr>
+						</li>
 					</ul>
 				</div>
 				<div class="col-md-8 content">
@@ -74,7 +78,7 @@
 							<img src="/imgs/p1.png" alt="">
 						</div>
 						<div class="col-md-6">
-							<p>私人珍藏</p>
+							<h3>私人珍藏</h3>
 							<p>預展\拍賣會</p>
 							<p>香港萬麗海景酒店 XXXx</p>
 							<p>11月25日 10:00 開拍</p>
