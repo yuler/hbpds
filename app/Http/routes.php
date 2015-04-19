@@ -47,9 +47,12 @@ $router->group(['prefix' => 'admin'], function($router)
 
 });
 Route::resources([
-	'/new' => 'HbNewController'
+	'new' => 'HbNewController',
+	'artwork' => 'HbArtworkController'
 ]);
 
+$router->get('/auction/preview/asa/{id}', 'HbAuctionController@previewAsa');
 $router->controller('/auction', 'HbAuctionController');
+
 
 Route::controller('/','PagesController');

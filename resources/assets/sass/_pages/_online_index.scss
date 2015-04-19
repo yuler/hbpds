@@ -1,0 +1,48 @@
+#onlineIndex {
+	.content {
+		padding-top: 30px;
+
+		>p {
+			text-align: center;
+		}
+		ul.prodcut-list {
+			padding: 30px 0;
+			margin: 0;
+			li {
+				list-style-type: none;
+				margin-bottom: 30px;
+				border:3px solid #eee;
+				>div {
+					display: inline-block;
+					&.date {
+						text-align: center;
+						h2{
+							font-family: 'Arial black';
+						}
+						p {
+							font-size: 18px;
+						}
+					}
+					&.img {
+						img {
+							width: 100%;	
+						}
+					}
+					&.info {
+						p {
+							font-size: 24px;
+							span {
+								font-size: 14px;
+							}
+						}
+						.yp-logo {
+							margin-left: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

@@ -6,8 +6,10 @@ header nav.navbar-logo {
     padding-top: 0px; }
     header nav.navbar-logo .navbar-header .navbar-brand img {
       display: inline-block; }
-  header nav.navbar-logo form .input-group-addon {
-    background: #ffcc00; }
+  header nav.navbar-logo form {
+    padding: 0; }
+    header nav.navbar-logo form .input-group-addon {
+      background: #ffcc00; }
 header nav.navbar-menu {
   position: absolute;
   z-index: 10;
@@ -44,7 +46,7 @@ header nav.navbar-menu {
         padding-bottom: 15px;
         border: none; }
   header nav.navbar-menu ul.navbar-right {
-    padding-right: 25px; }
+    padding-right: 15px; }
     header nav.navbar-menu ul.navbar-right li {
       color: #ffcc00; }
       header nav.navbar-menu ul.navbar-right li a {
@@ -58,7 +60,7 @@ header nav.navbar-menu {
         header nav.navbar-menu ul.navbar-right li a.active {
           background-color: inherit !important;
           padding: 3px 15px;
-          margin: 12px 10px;
+          margin: 12px 0;
           border-radius: 5px;
           color: white;
           background-color: #4F4F4F !important; }
@@ -74,11 +76,29 @@ footer .description {
     footer .description ul li {
       padding: 15px 0;
       padding-right: 5%;
-      display: inline-block;
-      list-style-type: none; }
+      display: inline-block; }
+      footer .description ul li a {
+        color: black; }
+        footer .description ul li a:link {
+          text-decoration: underline; }
     footer .description ul li.last {
       padding: 0px;
       float: right; }
+    footer .description ul .wx {
+      display: inline-block; }
+      footer .description ul .wx .wx-code {
+        display: none; }
+      footer .description ul .wx:hover {
+        cursor: pointer; }
+        footer .description ul .wx:hover .wx-code {
+          padding: 5px;
+          display: block;
+          border: 2px solid #999;
+          position: fixed;
+          bottom: 22%;
+          right: 22%;
+          z-index: 10;
+          background-color: white; }
 footer .copy {
   padding: 15px 0; }
   footer .copy img {
@@ -121,39 +141,143 @@ footer .copy {
           #newIndex .content ul li .html .pic-list > div img {
             width: 100% !important; }
 
-#auctionPreview .left-menu {
-  padding-right: 30px; }
-  #auctionPreview .left-menu h1 {
-    color: #ffcc00; }
-  #auctionPreview .left-menu > ul {
-    padding: 0;
-    margin: 0; }
-    #auctionPreview .left-menu > ul li {
-      list-style-type: none; }
-      #auctionPreview .left-menu > ul li h4 {
-        color: #ffcc00; }
-      #auctionPreview .left-menu > ul li > div h3 {
-        color: #ffcc00; }
-      #auctionPreview .left-menu > ul li > div > ul {
-        padding: 0;
-        margin: 0; }
-        #auctionPreview .left-menu > ul li > div > ul li {
-          text-align: right; }
-          #auctionPreview .left-menu > ul li > div > ul li a {
-            text-decoration: none;
-            color: #999;
-            padding: 15px 0px;
-            padding-right: 20px;
-            display: block; }
-            #auctionPreview .left-menu > ul li > div > ul li a:hover {
-              color: #ffcc00; }
-  #auctionPreview .left-menu hr {
-    border: 1px solid #eee; }
 #auctionPreview .content {
-  padding-left: 0px;
   margin-top: 20px; }
   #auctionPreview .content > div {
-    border: 1px solid #999; }
+    border: 1px solid #ccc;
+    margin-bottom: 50px; }
+    #auctionPreview .content > div > div {
+      padding-left: 0;
+      padding-right: 50px; }
+      #auctionPreview .content > div > div img {
+        width: 100%; }
+
+#asaPreview .content h1 {
+  margin-bottom: 20px; }
+#asaPreview .content p.address span {
+  color: #999; }
+#asaPreview .content p.time {
+  font-size: 20px; }
+#asaPreview .content ul {
+  padding: 10px 0;
+  margin: 0; }
+  #asaPreview .content ul li {
+    margin-bottom: 10px;
+    list-style-type: none; }
+#asaPreview .content h3.goOnline {
+  position: absolute;
+  right: 15px;
+  margin-top: -50px; }
+  #asaPreview .content h3.goOnline a {
+    text-decoration: none;
+    color: #ffcc00; }
+#asaPreview .content div.productList > div {
+  margin-bottom: 30px; }
+  #asaPreview .content div.productList > div a {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #999; }
+    #asaPreview .content div.productList > div a img {
+      width: 100%;
+      min-height: 230px; }
+    #asaPreview .content div.productList > div a div {
+      padding-top: 20px;
+      border: 3px solid #eee;
+      border-top: 0px; }
+      #asaPreview .content div.productList > div a div p {
+        padding-left: 15px; }
+  #asaPreview .content div.productList > div > div {
+    display: none;
+    padding-top: 10px;
+    position: absolute;
+    top: 39%;
+    width: 89%;
+    background-color: rgba(0, 0, 0, 0.2); }
+    #asaPreview .content div.productList > div > div p {
+      padding-left: 15px;
+      color: white; }
+  #asaPreview .content div.productList > div:hover .info {
+    display: block; }
+
+#onlineIndex .content {
+  padding-top: 30px; }
+  #onlineIndex .content > p {
+    text-align: center; }
+  #onlineIndex .content ul.prodcut-list {
+    padding: 30px 0;
+    margin: 0; }
+    #onlineIndex .content ul.prodcut-list li {
+      list-style-type: none;
+      margin-bottom: 30px;
+      border: 3px solid #eee; }
+      #onlineIndex .content ul.prodcut-list li > div {
+        display: inline-block; }
+        #onlineIndex .content ul.prodcut-list li > div.date {
+          text-align: center; }
+          #onlineIndex .content ul.prodcut-list li > div.date h2 {
+            font-family: 'Arial black'; }
+          #onlineIndex .content ul.prodcut-list li > div.date p {
+            font-size: 18px; }
+        #onlineIndex .content ul.prodcut-list li > div.img img {
+          width: 100%; }
+        #onlineIndex .content ul.prodcut-list li > div.info p {
+          font-size: 24px; }
+          #onlineIndex .content ul.prodcut-list li > div.info p span {
+            font-size: 14px; }
+        #onlineIndex .content ul.prodcut-list li > div.info .yp-logo {
+          margin-left: 50px; }
+
+#artworkShow .content {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  #artworkShow .content .carousel img {
+    width: 100%; }
+  #artworkShow .content .carousel .left.carousel-control {
+    background-image: inherit;
+    left: -15%; }
+  #artworkShow .content .carousel .right.carousel-control {
+    background-image: inherit;
+    right: -15%; }
+  #artworkShow .content .carousel a .fa {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    color: #333; }
+  #artworkShow .content .info {
+    padding: 30px 0; }
+    #artworkShow .content .info ul {
+      padding: 0;
+      margin: 0; }
+      #artworkShow .content .info ul li {
+        display: inline-block;
+        list-style-type: none;
+        width: 33.3333%;
+        padding: 0 5px;
+        float: left; }
+        #artworkShow .content .info ul li img {
+          width: 100%; }
+    #artworkShow .content .info div .left.carousel-control {
+      width: 5%;
+      left: -5%;
+      background-image: inherit; }
+    #artworkShow .content .info div .right.carousel-control {
+      width: 5%;
+      right: -2%;
+      background-image: inherit; }
+    #artworkShow .content .info div a .fa {
+      position: absolute;
+      top: 35%;
+      z-index: 5;
+      display: inline-block;
+      color: #333; }
+    #artworkShow .content .info div.description {
+      margin-bottom: 30px; }
+      #artworkShow .content .info div.description h3 {
+        text-align: center; }
+    #artworkShow .content .info div.other-link p {
+      text-align: right; }
 
 html body {
   font-size: 16px;
@@ -161,19 +285,21 @@ html body {
   html body h1 {
     font-size: 40px; }
 
-#newIndex, #newShow, #auctionPreview {
+#newIndex, #newShow, #auctionPreview, #asaPreview, #onlineIndex, #artworkShow {
   padding-top: 50px; }
-  #newIndex .sub-nav, #newShow .sub-nav, #auctionPreview .sub-nav {
+  #newIndex .sub-nav, #newShow .sub-nav, #auctionPreview .sub-nav, #asaPreview .sub-nav, #onlineIndex .sub-nav, #artworkShow .sub-nav {
     padding: 7px 0px;
     background-color: rgba(226, 210, 138, 0.5); }
-    #newIndex .sub-nav .breadcrumb, #newShow .sub-nav .breadcrumb, #auctionPreview .sub-nav .breadcrumb {
+    #newIndex .sub-nav .breadcrumb, #newShow .sub-nav .breadcrumb, #auctionPreview .sub-nav .breadcrumb, #asaPreview .sub-nav .breadcrumb, #onlineIndex .sub-nav .breadcrumb, #artworkShow .sub-nav .breadcrumb {
       margin: 0px;
       background-color: inherit; }
-      #newIndex .sub-nav .breadcrumb li:before, #newShow .sub-nav .breadcrumb li:before, #auctionPreview .sub-nav .breadcrumb li:before {
+      #newIndex .sub-nav .breadcrumb li:before, #newShow .sub-nav .breadcrumb li:before, #auctionPreview .sub-nav .breadcrumb li:before, #asaPreview .sub-nav .breadcrumb li:before, #onlineIndex .sub-nav .breadcrumb li:before, #artworkShow .sub-nav .breadcrumb li:before {
         content: ''; }
-      #newIndex .sub-nav .breadcrumb li a, #newShow .sub-nav .breadcrumb li a, #auctionPreview .sub-nav .breadcrumb li a {
+      #newIndex .sub-nav .breadcrumb li a, #newShow .sub-nav .breadcrumb li a, #auctionPreview .sub-nav .breadcrumb li a, #asaPreview .sub-nav .breadcrumb li a, #onlineIndex .sub-nav .breadcrumb li a, #artworkShow .sub-nav .breadcrumb li a {
         color: black;
         text-decoration: none; }
+        #newIndex .sub-nav .breadcrumb li a:hover, #newShow .sub-nav .breadcrumb li a:hover, #auctionPreview .sub-nav .breadcrumb li a:hover, #asaPreview .sub-nav .breadcrumb li a:hover, #onlineIndex .sub-nav .breadcrumb li a:hover, #artworkShow .sub-nav .breadcrumb li a:hover {
+          color: #F3D578; }
 
 #newIndex .left-menu, #newShow .left-menu {
   min-height: 567px;
@@ -203,3 +329,59 @@ html body {
   color: #ffcc00;
   width: 150px;
   z-index: 10px; }
+
+#auctionPreview .left-menu, #asaPreview .left-menu {
+  padding-right: 50px; }
+  #auctionPreview .left-menu h1, #asaPreview .left-menu h1 {
+    color: #ffcc00; }
+  #auctionPreview .left-menu > ul, #asaPreview .left-menu > ul {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 50px; }
+    #auctionPreview .left-menu > ul > li, #asaPreview .left-menu > ul > li {
+      list-style-type: none; }
+      #auctionPreview .left-menu > ul > li h4, #asaPreview .left-menu > ul > li h4 {
+        color: #ffcc00; }
+      #auctionPreview .left-menu > ul > li > div h3, #asaPreview .left-menu > ul > li > div h3 {
+        color: #ffcc00; }
+      #auctionPreview .left-menu > ul > li > div > ul, #asaPreview .left-menu > ul > li > div > ul {
+        padding: 0;
+        margin: 0; }
+        #auctionPreview .left-menu > ul > li > div > ul > li, #asaPreview .left-menu > ul > li > div > ul > li {
+          list-style-type: none;
+          text-align: right;
+          padding: 10px 0; }
+          #auctionPreview .left-menu > ul > li > div > ul > li a, #asaPreview .left-menu > ul > li > div > ul > li a {
+            text-decoration: none;
+            color: #999;
+            padding: 5px 0px;
+            padding-right: 20px;
+            display: block; }
+            #auctionPreview .left-menu > ul > li > div > ul > li a:hover, #asaPreview .left-menu > ul > li > div > ul > li a:hover {
+              color: #ffcc00; }
+  #auctionPreview .left-menu .active, #asaPreview .left-menu .active {
+    /*border-right: 5px solid $themeColor;*/ }
+    #auctionPreview .left-menu .active a, #asaPreview .left-menu .active a {
+      border-right: 5px solid #ffcc00;
+      font-size: 18px;
+      font-weight: bolder;
+      color: black; }
+
+hr {
+  border: 1px solid #eee; }
+
+.hb-btn {
+  color: #6F6100;
+  display: inline-block;
+  padding: 9.5px 30px;
+  background-image: url(/imgs/button-bg.png);
+  text-decoration: none; }
+  .hb-btn:active {
+    text-decoration: none; }
+  .hb-btn:hover, .hb-btn:active, .hb-btn:visited {
+    color: #6F6100;
+    background-image: url(/imgs/button-hover-bg.png);
+    text-decoration: none; }
+
+article {
+  text-indent: 2em; }

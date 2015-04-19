@@ -13,8 +13,11 @@ header {
 			.logo-text {
 			}
 		}
-		form .input-group-addon{
-			background: $themeColor;
+		form {
+			padding: 0;
+			.input-group-addon{
+				background: $themeColor;
+			}
 		}
 	}
 	nav.navbar-menu {
@@ -63,7 +66,7 @@ header {
 			}
 		}
 		ul.navbar-right {
-			padding-right: 25px;
+			padding-right: 15px;
 			li {
 				color: $themeColor;
 				a {
@@ -78,7 +81,7 @@ header {
 					&.active {
 						background-color: inherit!important;
 						padding: 3px 15px;
-						margin: 12px 10px;
+						margin: 12px 0;
 						border-radius: 5px;
 						color: white;
 						background-color: $langBackgroundColor!important;
