@@ -97,7 +97,7 @@
 				                                {!! Form::text('asa_image', null, ['class' => 'form-control', 'placeholder' => '']) !!}
 				                            </div>	
 	       				                    <input  name="auction_id"  type="hidden" id="auction_id" value="{{$asa->auction_id}}"/>
-					                    	<button type="submit" class="btn btn-primary">Submit</button>
+					                    	<button type="submit" class="btn btn-primary">提交</button>
 			                				{!! Form::close() !!}
 
 			                        	</div>
