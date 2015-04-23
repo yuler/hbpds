@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\HbAsa;
 
 class HbAuction extends Model {
 
@@ -19,7 +20,7 @@ class HbAuction extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id','auction_name','privew_begin_time','preview_end_time','auction_begin_time','auction_end_time','lang','created_at','updated_at'];
+	protected $fillable = ['id','auction_name','preview_begin_time ','preview_end_time','auction_begin_time','auction_end_time','lang','created_at','updated_at'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -40,6 +41,10 @@ class HbAuction extends Model {
 
 	public function artworks()
 	{
-		# code...
+		return HbAsa::where('auction_id','=',$this->id)
+				->orderBy('','desc')
+				->groupBy(function($date) {
+	        		return Carbon::parse($date->created_at)->format('Y'); // grouping by years
+	    		});
 	}
 }

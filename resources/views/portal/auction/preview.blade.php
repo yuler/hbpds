@@ -43,7 +43,7 @@
 								<hr>
 							</li>
 						@endforeach
-36						<li>
+						<li>
 							<h1>歷史拍賣</h1>
 							<hr>
 						</li>
