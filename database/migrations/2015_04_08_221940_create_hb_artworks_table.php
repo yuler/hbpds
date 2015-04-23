@@ -15,7 +15,7 @@ class CreateHbArtworksTable extends Migration {
 		Schema::create('hb_artworks', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			
 			$table->string('art_code',20);
 			$table->string('art_author',20);
 			$table->string('art_name',200);
@@ -51,6 +51,8 @@ class CreateHbArtworksTable extends Migration {
 			$table->text('art_description');
 			$table->tinyInteger('is_liupai');
 			$table->tinyInteger('lang');
+
+			$table->timestamps();
 $table->integer('asa_id')->unsigned();
 $table->foreign('asa_id')->references('id')->on('hb_asas')->onDelete('cascade');
 
