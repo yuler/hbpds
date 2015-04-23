@@ -29,4 +29,17 @@ class HbAuction extends Model {
 	protected $hidden = [];
 	//
 
+	public function asas()
+	{
+		return HbAsa::where('auction_id','=',$this->id)
+					->groupBy('preview_begin_time')
+					->having('preview_begin_time', '<', '2015-3')
+					->get();
+	}
+
+
+	public function artworks()
+	{
+		# code...
+	}
 }
