@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\HbNew;
 use App\HbAuction;
+use App\HbArtAtt;
 use App\HbAsa;
 
 use App\HbAttachment;
 use Laracasts\Flash\Flash;
+use Illuminate\Support\Facades\DB;
 
 use App\HbBanner;
 class HbBatchDestroyController extends Controller {
@@ -61,8 +63,16 @@ class HbBatchDestroyController extends Controller {
 
 	public function deleteAttachments(Request $request)
 	{
+
 		if($request->has('ids')){
+DB::beginTransaction();
+			
 			HbAttachment::destroy($request->input('ids'));
+			if($request->input('deleteType')=='artwork'){
+				HbArtAtt::where('att_id','=',$request->input('ids'))->delete();
+			}
+
+DB::commit();
 			return response()->json(['success'=>'true']);
 		}else{
 			return response()->json(['success'=>'false','msg'=>'未输入删除附件ID']);

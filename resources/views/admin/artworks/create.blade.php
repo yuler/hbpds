@@ -31,7 +31,7 @@
 
 						<div class="row">
 							<div class="col-md-6">
-								{!! Form::open(['route' => 'admin.artwork.store', 'method' => 'post']) !!}
+								{!! Form::open(['route' => 'admin.artwork.store', 'method' => 'post', 'id'=>'artForm']) !!}
 								<div class="form-group">
 			                    	{!! Form::label('art_name', '拍品名称') !!}
 			                    	{!! Form::text('art_name', null, ['class' => 'form-control', 'placeholder' => '输入拍品名称']) !!}
@@ -210,14 +210,14 @@ $('#uploadAvatar').fileupload({
             );*/
         },
         success: function(result, textStatus, jqXHR){
-			$("#asa_image").val(result.file_path);
+			//$("#asa_image").val(result.file_path);
 			//var im='<div class="col-md-5"><img src="'+result.file_path+'"/></div>';
 
 			var im = '<div id="att_'+result.att_id+'" class="col-sm-6 col-md-4"><div class="thumbnail"><img src="'+result.file_path+'" ><div class="caption"><h4>'+result.file_name+'</h4><p><a href="javascript:deleteAtt(\''+result.att_id+'\')" class="btn btn-primary btn-xs" role="button" >删除</a></p></div></div></div>';
 
 			$("#yulan").append(im);
-			var atts = '<div id="aaa_'+result.att_id+'" ><input  name="att_ids[]"  type="text"  value="'+result.att_id+'" /></div>'
-			$("form").append($(atts));
+			var atts = '<div id="aaa_'+result.att_id+'" ><input  name="att_ids[]"  type="hidden"  value="'+result.att_id+'" /></div>'
+			$("#artForm").append($(atts));
 			
 
         },
@@ -236,13 +236,12 @@ function deleteAtt(id){
 	$.post('/admin/batchDestroy/attachments',{
 		'_method':'delete',
 		'_token':'{{Session::token()}}',
-		'ids[]':id
+		'ids[]':id,
+		'deleteType':'artwork'
 	},function(data){
-		if(data.success='true'){
+		if(data.success='true'){		
 			$("#att_"+id).remove();
-			alert('bb');
 			$("#aaa_"+id).remove();
-			alert('aa');''
 		}else if(data.success='false'){
 			alert(data.msg);
 		}else {

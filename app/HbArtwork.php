@@ -31,5 +31,8 @@ class HbArtwork extends Model {
 	 */
 	protected $hidden = [];
 
-
+	public function atts()
+	{		
+		return $this->belongsToMany('App\HbAttachment','hb_art_atts','art_id','att_id');
+	}
 }
