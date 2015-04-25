@@ -31,7 +31,7 @@ header nav.navbar-menu {
         background-color: rgba(220, 192, 82, 0.7) !important;
         padding-bottom: 10px;
         border-bottom: 5px solid #ffcc00; }
-    header nav.navbar-menu ul.navbar-left > li.active a {
+    header nav.navbar-menu ul.navbar-left > li.active > a {
       background-color: inherit !important;
       border-bottom: 5px solid #ffcc00;
       padding-bottom: 10px; }
@@ -323,12 +323,14 @@ html body {
         font-size: 18px;
         font-weight: bolder;
         color: #000; }
-#newIndex .content h1, #newShow .content h1 {
-  margin-bottom: 50px; }
-#newIndex .content .data, #newShow .content .data {
-  color: #ffcc00;
-  width: 150px;
-  z-index: 10px; }
+#newIndex .content, #newShow .content {
+  padding: 30px; }
+  #newIndex .content h1, #newShow .content h1 {
+    margin-bottom: 50px; }
+  #newIndex .content .data, #newShow .content .data {
+    color: #ffcc00;
+    width: 150px;
+    z-index: 10px; }
 
 #auctionPreview .left-menu, #asaPreview .left-menu {
   padding-right: 50px; }

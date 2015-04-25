@@ -5,7 +5,7 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="#">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
 				  <li><a href="#">關於我們&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
 				  <li class="active">新聞中心</li>
 				</ol>

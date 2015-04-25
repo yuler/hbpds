@@ -34,8 +34,8 @@
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">
-				<li class="active"><a href="/">{{ trans('header.home') }}</a></li>
-				<li class="dropdown">
+				<li class="{{ isset($subnav) && $subnav == 'home' ? 'active' : '' }}" ><a href="/">{{ trans('header.home') }}</a></li>
+				<li class="dropdown {{ isset($subnav) && $subnav == 'auction' ? 'active' : '' }}">
 					<a href="#">
 						拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
@@ -44,8 +44,8 @@
 						<li><a href="/auction/history">歷史拍賣</a></li>
 					</ul>
 				</li>
-				<li><a href="/online">網上拍賣</a></li>
-				<li class="dropdown">
+				<li class="{{ isset($subnav) && $subnav == 'online' ? 'active' : '' }}"><a href="/online">網上拍賣</a></li>
+				<li class="dropdown {{ isset($subnav) && $subnav == 'auctionNotice' ? 'active' : '' }}">
 					<a href="#">
 						拍賣須知&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
@@ -55,7 +55,7 @@
 						<li><a href="/transaction-read">成交必讀</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
+				<li class="dropdown {{ isset($subnav) && $subnav == 'about' ? 'active' : '' }}">
 					<a href="#">
 						關於我們&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>

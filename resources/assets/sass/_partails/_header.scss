@@ -46,7 +46,7 @@ header {
 					border-bottom: 5px solid $themeColor;
 				}
 			}
-			&.active a{
+			&.active >a{
 				background-color: inherit!important;
   				border-bottom: 5px solid $themeColor;
   				padding-bottom: 10px;
