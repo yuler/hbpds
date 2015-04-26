@@ -107,7 +107,7 @@
 
 			                        	<div class="col-sm-6">
 										    <div class="thumbnail">
-										    	@if(isset($asa->asa_image))
+										    	@if(isset($asa['asa_image']))
 										      		<img id="yulan" data-src="{{$asa->asa_image}}}" >
 										      	@else
 										      		<img id="yulan" data-src="holder.js/100%x300" >
