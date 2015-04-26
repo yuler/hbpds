@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\HbArtwork;
 
 class HbAsa extends Model {
 /**
@@ -26,5 +27,14 @@ class HbAsa extends Model {
 	 */
 	protected $hidden = [];
 
+	public function artworks()
+	{
+		return HbArtwork::where('asa_id','=',$this->id)
+						->get();
+	}
 
+	public function auction()
+	{
+		return $this->hasOne('App\HbAuction', 'id', 'auction_id');
+	}
 }

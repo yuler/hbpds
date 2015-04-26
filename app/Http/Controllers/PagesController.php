@@ -9,34 +9,42 @@ class PagesController extends Controller {
 
 	public function getIndex()
 	{
-		return view('portal.index');
+		return view('portal.index')->withSubnav('home');
 	}
 
 	public function getIntroduction(){
-		return view('portal.about.introduction');
+		return view('portal.about.introduction')->withSubnav('about');
 	}
 
 	public function getContact(){
-		return view('portal.about.contact');
+		return view('portal.about.contact')->withSubnav('about');
 	}
 
 	public function getBuyService()
-	{
-		return view('portal.auctionNotice.buyService');
+	{	
+		session('subNav','auctionNotice');
+		return view('portal.auctionNotice.buyService')->withSubnav('auctionNotice');
 	}
 
 	public function getAuctionGuide()
 	{
-		return view('portal.auctionNotice.auctionGuide');
+		session('subNav','auctionNotice');
+		return view('portal.auctionNotice.auctionGuide')->withSubnav('auctionNotice');
 	}
 
 	public function getTransactionRead()
 	{
-		return view('portal.auctionNotice.transactionRead');
+		return view('portal.auctionNotice.transactionRead')->withSubnav('auctionNotice');
 	}
+
+	public function getAuctionBook()
+	{
+		return view('portal.auctionNotice.auctionBook')->withSubnav('auctionNotice');
+	}
+	
 
 	public function getOnline()
 	{
-		return view('portal.online.index');
+		return view('portal.online.index')->withSubnav('online');
 	}
 }

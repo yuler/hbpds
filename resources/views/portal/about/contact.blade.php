@@ -5,9 +5,9 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="#">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
 				  <li><a href="#">關於我們&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li class="active">新聞中心</li>
+				  <li class="active">聯繫方式</li>
 				</ol>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 					<ul class="left-menu">
 						<li><a href="/introduction">橫濱香港簡介</a></li>
 						<li class="active"><a href="/contact">聯繫方式</a></li>
-						<li><a href="">新聞中心</a></li>
+						<li><a href="/new">新聞中心</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 content">

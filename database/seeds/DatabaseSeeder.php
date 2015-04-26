@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		$this->call('HbNewsSeeder');
-		//$this->call('HbAuctionsSeeder');
+		$this->call('HbAuctionsSeeder');
 	}
 
 }

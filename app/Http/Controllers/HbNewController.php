@@ -23,7 +23,7 @@ class HbNewController extends Controller {
 			$imgList = array_slice($imgList[0], 0, 4);
 			$new->imgList = $imgList;
 		}
-		return view('portal.about.new.index')->withNews($news);
+		return view('portal.about.new.index')->withNews($news)->withSubnav('about');
 	}
 
 	/**
@@ -35,7 +35,7 @@ class HbNewController extends Controller {
 	public function show($id)
 	{
 		$new = HbNew::find($id);
-		return view('portal.about.new.show')->withNew($new);
+		return view('portal.about.new.show')->withNew($new)->withSubnav('about');
 	}
 
 
