@@ -16,11 +16,11 @@
 	    <section class="content-header">
 	      <h1>
 	        修改广告
-	        <small>{{$banner->name}}</small>
+	        <small>{{$ad->name}}</small>
 	      </h1>
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
-	        <li><a href="/admin/banner"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
+	        <li><a href="/admin/ad"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
 	        <li class="active">编辑</li>
 	      </ol>
 	    </section>
@@ -41,7 +41,7 @@
 							<div class="row">
 
 								<div class="col-md-6">
-   					   		 			 {!! Form::model($banner, ['route' => ['admin.banner.update', $banner->id ], 'method' => 'put']) !!}
+   					   		 			 {!! Form::model($ad, ['route' => ['admin.ad.update', $ad->id ], 'method' => 'put']) !!}
 
 				                	<div class="form-group">
 				                    	{!! Form::label('name', '广告名称') !!}
@@ -72,8 +72,8 @@
 								<div class="col-sm-6">
 								    <div class="thumbnail">
 								      
-								      @if(isset($banner['image_url']))
-								      		<img id="yulan" src="{{$banner->image_url}}" >
+								      @if(isset($ad['image_url']))
+								      		<img id="yulan" src="{{$ad->image_url}}" >
 								      	@else
 								      		<img id="yulan" data-src="holder.js/100%x300" >
 								      	@endif
@@ -81,7 +81,7 @@
 								      <div class="caption">
 								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
 			                        			
-											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传主图</a>
 											<input name="upload" type="file" class="hide" id="uploadAvatar">
 										</form>
 								      </div>

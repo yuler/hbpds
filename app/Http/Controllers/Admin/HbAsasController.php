@@ -39,6 +39,7 @@ class HbAsasController extends Controller {
 	 */
 	public function store(HbAsaRequest $request)
 	{
+		
 		$hbAsa = new HbAsa();
 		$auction_id = $request->input('auction_id');
 		$hbAsa->auction_id = $auction_id;
@@ -54,6 +55,11 @@ class HbAsasController extends Controller {
 		$hbAsa->preview_end_time = $request->input('preview_end_time');
 		$hbAsa->begin_time = $request->input('$request->begin_time');
 		$hbAsa->end_time = $request->input('end_time');
+		$hbAsa->asa_preview_addr = $request->input('asa_preview_addr');
+		$hbAsa->asa_group = $request->input('asa_group');
+		
+
+
 		$hbAsa->save();		
 		if($auction_id!=null||$auction_id!=""){
 			Flash::success('创建专场成功');
@@ -116,6 +122,9 @@ class HbAsasController extends Controller {
 		$hbAsa->preview_end_time = $request->input('preview_end_time');
 		$hbAsa->begin_time = $request->input('$request->begin_time');
 		$hbAsa->end_time = $request->input('end_time');
+		$hbAsa->asa_preview_addr = $request->input('asa_preview_addr');
+		$hbAsa->asa_group = $request->input('asa_group');
+		
 		$hbAsa->save();		
 		if($auction_id!=null||$auction_id!=""){
 			Flash::success('修改专场成功');

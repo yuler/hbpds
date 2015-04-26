@@ -48,7 +48,7 @@
 						    <tbody>
 						    @foreach ($ads as $ad)
 						        <tr>
-								    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $banner->id }}"></td>
+								    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $ad->id }}"></td>
 						            <td>{{ str_limit($ad->name,$limit = 20, $end = '...') }}</td>
 						            <td>{{ $ad->target_url }}</td>
 						            <td>{{ $ad->image_url }}</td>
