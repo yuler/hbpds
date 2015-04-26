@@ -14,7 +14,7 @@ class HbAuctionController extends Controller {
 	public function getPreview()
 	{
 		$auctions = HbAuction::where('preview_begin_time', '>' ,[Carbon::now()->year])->orderBy('preview_begin_time')->get();
-		$asas = HbAuction::where('preview_begin_time', '>' ,[Carbon::now()->year])->orderBy('preview_begin_time')->paginate(5);
+		$asas = HbAsa::where('preview_begin_time', '>' ,[Carbon::now()->year])->orderBy('preview_begin_time')->paginate(5);
 		return view('portal.auction.preview')->withAuctions($auctions)->withAsas($asas)->withSubnav('auction');
 	}
 
