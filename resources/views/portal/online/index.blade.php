@@ -14,64 +14,33 @@
 			<p>下列拍卖会均可以参与网上竞拍，点击下面 <a href="" class="hb-btn">参加网上拍卖</a> 既可参与竞投</p>
 
 			<ul class="prodcut-list">
-				<li class="clearfix">
-					<div class="col-md-2 date">
-						<h2>2015</h2>
-						<p>2月15日 开始</p>
-					</div>
-					<div class="col-md-4 img">
-						<img src="/imgs/p1.png" alt="">
-					</div>
-					<div class="col-md-6 info">
-						<h2>私人珍藏</h2>
-						<br>
-						<p><span>拍卖时间: </span> 11月25日 - 11月25日</p>
-						<br>
-						<a href="" class="hb-btn">参加网上拍卖</a>
-						<a href="" class="yp-logo">
-							<img src="/imgs/yp-logo.png" alt="">	
-						</a>
-					</div>
-				</li>
-				<li class="clearfix">
-					<div class="col-md-2 date">
-						<h2>2015</h2>
-						<p>2月15日 开始</p>
-					</div>
-					<div class="col-md-4 img">
-						<img src="/imgs/p2.png" alt="">
-					</div>
-					<div class="col-md-6 info">
-						<h2>私人珍藏</h2>
-						<br>
-						<p><span>拍卖时间: </span> 11月25日 - 11月25日</p>
-						<br>
-						<a href="" class="hb-btn">参加网上拍卖</a>
-						<a href="" class="yp-logo">
-							<img src="/imgs/yp-logo.png" alt="">	
-						</a>
-					</div>
-				</li>
-				<li class="clearfix">
-					<div class="col-md-2 date">
-						<h2>2015</h2>
-						<p>2月15日 开始</p>
-					</div>
-					<div class="col-md-4 img">
-						<img src="/imgs/p3.png" alt="">
-					</div>
-					<div class="col-md-6 info">
-						<h2>私人珍藏</h2>
-						<br>
-						<p><span>拍卖时间: </span> 11月25日 - 11月25日</p>
-						<br>
-						<a href="" class="hb-btn">参加网上拍卖</a>
-						<a href="" class="yp-logo">
-							<img src="/imgs/yp-logo.png" alt="">	
-						</a>
-					</div>
-				</li>
+				@foreach($asas as $asa)
+					<li class="clearfix">
+						<div class="col-md-2 date">
+							<h2>{{ date('y年', strtotime($asa['begin_time'])) }}</h2>
+							<p>{{ date('m月d日', strtotime($asa['begin_time'])) }} 开始</p>
+						</div>
+						<div class="col-md-4 img">
+							<img src="{{ $asa['asa_image'] }}" alt="" style="height:208px;">
+						</div>
+						<div class="col-md-6 info">
+							<h2>{{ $asa['asa_name'] }}</h2>
+							<br>
+							<p>
+								<span>拍卖时间: </span>
+								{{ date('m月d日', strtotime($asa['begin_time'])) }}-{{ date('m月d日', strtotime($asa['end_time'])) }}
+							</p>
+							<br>
+							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn">参加网上拍卖</a>
+							<a href="{{ $asa['asa_online_logo'] }}" class="yp-logo">
+								<img src="/imgs/yp-logo.png" alt="" style="width:100px;height:35px;">	
+							</a>
+						</div>
+					</li>
+				@endforeach
 			</ul>
+
+			{!! $asas->render() !!}
 		</div>
 	</div>
 @endsection

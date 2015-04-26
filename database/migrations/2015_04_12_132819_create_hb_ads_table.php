@@ -18,9 +18,10 @@ class CreateHbAdsTable extends Migration {
 			
 			$table->integer('order');
 			$table->integer('enable');
-
-			$table->integer('asa_id')->unsigned();
-			$table->foreign('asa_id')->references('id')->on('hb_asas')->onDelete('cascade');
+$table->string('image_url',300);
+			$table->string('target_url',300);
+			$table->string('name',300);
+//			$table->foreign('asa_id')->references('id')->on('hb_asas')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

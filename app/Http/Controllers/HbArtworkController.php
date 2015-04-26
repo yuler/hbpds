@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\HbArtwork;
 
 class HbArtworkController extends Controller {
 
@@ -34,7 +35,7 @@ class HbArtworkController extends Controller {
 	 */
 	public function store()
 	{
-		return view('portal.auction.artwork.show');
+		
 	}
 
 	/**
@@ -45,7 +46,8 @@ class HbArtworkController extends Controller {
 	 */
 	public function show($id)
 	{
-		return view('portal.auction.artwork.show');
+		$artwork = HbArtwork::find($id);
+		return view('portal.auction.artwork.show')->withArtwork($artwork)->withSubnav('auction');
 	}
 
 	/**

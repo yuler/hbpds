@@ -19,7 +19,7 @@ class HbAd extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id','asa_id','order','enable','created_at','updated_at'];
+	protected $fillable = ['id','name','target_url','order','enable','created_at','updated_at'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

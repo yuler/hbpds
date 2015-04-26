@@ -36,18 +36,27 @@ class HbBannersController extends Controller {
 	 */
 	public function store(HbBannerRequest $request)
 	{
-		$maxOrder = HbBanner::max('order');
-		if($maxOrder==null){
-			$maxOrder=0;
-		}else {
-			$maxOrder++;
-		}
+
 		$banner = new HbBanner();
+		$order=$request->input('order');
+		if($request->has('order')){
+			$banner->order=$order;
+		}else {
+		$maxOrder = HbBanner::max('order');
+			if($maxOrder==null){
+				$maxOrder=0;
+			}else {
+				$maxOrder++;
+			}
+			$banner->order=$maxOrder;
+		}
+		
 		$banner->name = $request->input('name');
 		$banner->target_url=$request->input('target_url');
 		$banner->image_url=$request->input('image_url');
 		$banner->enable=$request->input('enable');
-		$banner->order=$maxOrder;
+		
+
 		$banner->save();		
 		Flash::success('保存成功');
 		return redirect('admin/banner');
@@ -97,6 +106,7 @@ class HbBannersController extends Controller {
 		$banner->target_url=$request->input('target_url');
 		$banner->image_url=$request->input('image_url');
 		$banner->enable=$request->input('enable');
+		$banner->order=$request->input('order');
 		$banner->save();		
 
 		Flash::success('保存成功');

@@ -42,7 +42,7 @@
 					<h1>{{ $preview_asa['asa_name'] }}</h1>
 
 					<p class="address"><span>拍卖会场: </span> {{ $preview_asa['asa_addr'] }}</p>
-					<p class="address"><span>预览会场: </span> {{ $preview_asa['asa_addr'] }}</p>
+					<p class="address"><span>预览会场: </span> {{ $preview_asa['asa_preview_addr'] }}</p>
 
 					<p class="time">
 						{{ date('y月d', strtotime($preview_asa['begin_time'])) }}-{{ date('d日', strtotime($preview_asa['end_time'])) }} 开拍
@@ -73,12 +73,12 @@
 										<img src="/imgs/n1.png" alt="">
 									@endif
 									<div>
-										<p>{{ $artwork['art_code'] }}</p>
+										<p>{{ $artwork['art_lot'] }}</p>
 										<p>估值： 900，000 HKD</p>
 									</div>
 								</a>
 								<div class="info">
-									<p>朝代: {{ $artwork['art_dynasty'] }}</p>
+									<p>朝代： {{ $artwork['art_dynasty'] }}</p>
 									<p>作者： {{ $artwork['art_author'] }}</p>
 									<p>名称： {{ $artwork['art_name'] }}</p>
 								</div>

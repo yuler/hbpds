@@ -56,6 +56,8 @@
 							</div>
 						</div>
 					@endforeach
+
+					{!! $asas->render() !!}
 				</div>
 			</div>
 		</div>
