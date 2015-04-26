@@ -15,129 +15,86 @@
     	<!-- Content Header (Page header) -->
 	    <section class="content-header">
 	      <h1>
-	        修改拍卖会
-	        <small>修改拍卖会-{{$auction->auction_name}}</small>
+	        修改广告
+	        <small>{{$banner->name}}</small>
 	      </h1>
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
-	        <li><a href="/admin/auction"><i class="fa fa-newspaper-o"></i> 拍卖会管理</a></li>
+	        <li><a href="/admin/banner"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
 	        <li class="active">编辑</li>
 	      </ol>
 	    </section>
 
-	    <!-- Main content -->
-	    <section class="content">
+	   <section class="content">
 	      <!-- Main row -->
 	     	<div class="row">
 	      	  	<div class="box box-primary">
+	                <div class="box-header">
+	                  	<h3 class="box-title">新建</h3>
+	                </div><!-- /.box-header -->
 
-				<div role="tabpanel">
-					<ul class="nav nav-tabs" role="tablist" id="myTab">
-						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">拍卖会</a></li>
-						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">专场</a></li>
-					</ul>
-					<div class="tab-content">
-	   		 		<div role="tabpanel" class="tab-pane active" id="home"> 
-	   		 			{!! Form::model($auction, ['route' => ['admin.auction.update', $auction->id ], 'method' => 'put']) !!}
-		                
+	                <!-- form start -->
+	                
+	                
 		                <div class="box-body">
-		                    <div class="form-group">
-		                    	{!! Form::label('auction_name', '拍卖会名称') !!}
-		                    	{!! Form::text('auction_name', null, ['class' => 'form-control ', 'placeholder' => '输入拍卖会名称']) !!}
-		                    </div>
-		                    <div class="form-group">
-		                    	{!! Form::label('preview_begin_time', '预展开始时间') !!}
-		                    	{!! Form::text('preview_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展开始时间']) !!}
-		                    </div>
 
-		                    <div class="form-group">
-		                    	{!! Form::label('preview_end_time', '预展结束时间') !!}
-		                    	{!! Form::text('preview_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择预展结束时间']) !!}
-		                    </div>
+							<div class="row">
 
- 							<div class="form-group">
-		                    	{!! Form::label('auction_begin_time', '拍卖开始时间') !!}
+								<div class="col-md-6">
+   					   		 			 {!! Form::model($banner, ['route' => ['admin.banner.update', $banner->id ], 'method' => 'put']) !!}
 
-		                    	{!! Form::text('auction_begin_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖开始时间']) !!}
-		                    </div>
-		                    <div class="form-group">
-		                    	{!! Form::label('auction_end_time', '拍卖结束时间') !!}
+				                	<div class="form-group">
+				                    	{!! Form::label('name', '广告名称') !!}
+				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
+				                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('target_url', '跳转页面') !!}
+				                    	{!! Form::text('target_url', null, ['class' => 'form-control', 'placeholder' => '输入跳转页面']) !!}
+				                    </div>
 
-		                    	{!! Form::text('auction_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖结束时间']) !!}
-		                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('image_url', '主图') !!}
+				                    	{!! Form::text('image_url', null, ['class' => 'form-control','placeholder' => '上传主图']) !!}
+				                    </div>
+				                     <div class="form-group">
+				                    	{!! Form::label('order', '顺序') !!}
+				                    	{!! Form::text('order', null, ['class' => 'form-control','placeholder' => '输入序号']) !!}
+				                    </div>
+				                    <div class="form-group">
+				                    	{!! Form::label('enable', '是否可用') !!}
+				                      	{!! Form::select('enable', ['1' => '是','0' => '否'], null, ['class' => 'form-control']) !!}
+				                    </div>
 
-		                    <div class="form-group">
-		                    	{!! Form::label('lang', '语言种类') !!}
-		                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
-		                    </div>
-			                    
-			                </div><!-- /.box-body -->
+				                   <button type="submit" class="btn btn-primary">提交</button>
+									{!! Form::close() !!}
+								</div><!-- end md-6-->
 
-			                <div class="box-footer">
-			                    <button type="submit" class="btn btn-primary">提交</button>
-			                </div>
-		                	{!! Form::close() !!}
-		            	</div>
-	   					 <div role="tabpanel" class="tab-pane" id="profile">
-	   					 	<div class="tab-pane" id="tabs-2">
-	   					 		{!! Form::open(['url' => 'admin/batchDestroy/asas', 'method' => 'delete']) !!}
-	      	  		
-				                <div class="box-header">
-								  	<div>
-						                <a href="/admin/asa/create?auction_id={{$auction->id}}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i>  新建</a>
-						                <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete" data-title="删除" data-message="确认删除选中？">
-									        <i class="glyphicon glyphicon-trash"></i> 批量删除
-									    </button>
-				                  	</div>
-				                </div><!-- /.box-header -->
-				                <div class="box-body">
+								<div class="col-sm-6">
+								    <div class="thumbnail">
+								      
+								      @if(isset($banner['image_url']))
+								      		<img id="yulan" src="{{$banner->image_url}}" >
+								      	@else
+								      		<img id="yulan" data-src="holder.js/100%x300" >
+								      	@endif
 
-		                        <table class="table table-bordered table-striped table-hover">
-								    <thead>
-								      <tr>
-								      	<th><input type="checkbox" class="minimal"></th>
-								        
-								        <th>专场名称</th>
-								        <th>预展时间开始时间</th>
-								        <th>预展结束时间</th>
-								        <th>拍卖开始时间</th>
-								        <th>拍卖结束时间</th>
-								        <th>拍卖低点</th>
-								        <th>仅网拍</th>
-								        <th>网拍地址</th>
-								        <th>语言</th>
-								        
-								        <th></th>
-								      </tr>
-								    </thead>
-								    <tbody>
-								    @foreach ($asas as $asa)
-								        <tr>
-										    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $asa->id }}"></td>
-								            <td>{{ str_limit($asa->asa_name,$limit = 20, $end = '...') }}</td>
-								            <td>{{ $asa->preview_begin_time}}</td>
-								            <td>{{ $asa->preview_end_time }}</td>
-								            <td>{{ $asa->begin_time }}</td>
-								            <td>{{ $asa->end_time }}</td>
-								            <td>{{ $asa->asa_addr }}</td>
-								            <td>{{ $asa->asa_only_online }}</td>
-								            <td>{{ $asa->asa_online_url}}</td>
-								            <td>{{ $asa->lang}}</td>
-								            <td>
-								            	<a href="/admin/asa/{{ $asa->id }}/edit?auction_id={{$auction->id}}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i>  编辑</a>
-								            </td>
-								        </tr>
-									@endforeach 
-								    </tbody>
-								</table>
-								
-							{!! $asas->render() !!}
-	                		</div><!-- /.box-body -->
-	                		{!! Form::close() !!} 
-	               		</div>
-	            	</div>    
-	  			</div>
-			</div>
+								      <div class="caption">
+								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
+			                        			
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+											<input name="upload" type="file" class="hide" id="uploadAvatar">
+										</form>
+								      </div>
+								    </div>
+								</div>
+
+			                 </div><!--end box-->
+
+		                </div><!-- /.box-body -->
+
+		             
+	                
+
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
 	    </section><!-- /.content -->
@@ -145,6 +102,52 @@
 	<br>
 	<br>
 
+<script type="text/javascript">
+$('#uploadAvatar').fileupload({
+        url: '/admin/attachment?_token={{ Session::token() }}',
+        dataType: 'json',
+        forceIframeTransport: true,
+        progress: function (e, data) {
+        	$('#uploadAvatarProgress').fadeIn(1000);
+    		var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#uploadAvatarProgress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        },
+        success: function(result, textStatus, jqXHR){
 
+		$("#image_url").val(result.file_path);
+		$("#yulan").attr('src',result.file_path);
+		        },
+        error: function (jqXHR, textStatus, errorThrown) {
+        	console.log(jqXHR);
+        	console.log(textStatus);
+        	console.log(errorThrown);
+        },
+        complete: function(e,data) {
+        	setTimeout( function(){
+    			$('#uploadAvatarProgress').fadeOut(1000);
+    			setTimeout(function(){
+    				$('#uploadAvatarProgress .progress-bar').css(
+	                    'width',
+	                    '0%'
+	                )
+    			},1000)
+    		},2000);
+        },
+    })
+	/*$(document).on('change','#uploadAvatar',function(){
+		$.ajax({
+			url :'/admin/attachment?_token={{ Session::token() }}',
+			method:'Post',
+			dateType:'JSON',
+			data: $('#uploadAvatarForm').serialize(),
+			success:function(data){
+				console.log(data);
+			}
+		})
+	});*/
+</script>
 
 @endsection

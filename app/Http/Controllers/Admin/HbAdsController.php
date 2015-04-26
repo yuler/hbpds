@@ -34,8 +34,23 @@ class HbAdsController extends Controller {
 	public function store(HbAdRequest $request)
 	{
 		$ad = new HbAd();
-
+		$order=$request->input('order');
+		if($request->has('order')){
+			$ad->order=$order;
+		}else {
+		$maxOrder = HbAd::max('order');
+			if($maxOrder==null){
+				$maxOrder=0;
+			}else {
+				$maxOrder++;
+			}
+			$ad->order=$maxOrder;
+		}
+		
 		$ad->name = $request->input('name');
+		$ad->target_url=$request->input('target_url');
+		$ad->image_url=$request->input('image_url');
+		$ad->enable=$request->input('enable');
 		
 
 		$ad->save();		
@@ -82,7 +97,11 @@ class HbAdsController extends Controller {
 	{
 		$ad = HbAd::find($id);
 
-		
+		$ad->name = $request->input('name');
+		$ad->target_url=$request->input('target_url');
+		$ad->image_url=$request->input('image_url');
+		$ad->enable=$request->input('enable');
+		$ad->order=$request->input('order');
 		$ad->save();		
 
 		Flash::success('保存成功');
