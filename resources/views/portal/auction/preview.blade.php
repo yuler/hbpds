@@ -23,11 +23,22 @@
 								@foreach( $auction->auctionGroup() as $group)
 									<div>
 										<h3>
-											{{ date('m月d', strtotime($group['beginDate'])) }}-{{ date('d日', strtotime($group['endDate'])) }}
+											{{ date('m月d日', strtotime($group['endDate'])) }}-{{ date('m月d日', strtotime($group['beginDate'])) }}
 										</h3>
 										<ul>
 											@foreach( $auction->asasByGroup($group['asa_group']) as $asa)
-												<li><a href="/auction/preview/asa/{{ $asa['id'] }}">{{ $asa['asa_name'] }}</a></li>
+												<li>
+													@if( date('Y-m-d H:i:s') > $asa['preview_begin_time'] && 
+														date('Y-m-d H:i:s') < $asa['preview_end_time'] )
+														<span style="float:left;margin-left:100px;background-image:url('/imgs/today_bg.png');height:35px;width:35px;">
+															<span style="line-height: 35px;color:white;font-size:14px;">今天&nbsp;</span>
+														</span>
+													@endif
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<a href="/auction/preview/asa/{{ $asa['id'] }}" style="display: inline-block;">
+														{{ $asa['asa_name'] }}
+													</a>
+												</li>
 											@endforeach
 										</ul>
 									</div>
@@ -49,8 +60,16 @@
 							</div>
 							<div class="col-md-6">
 								<h3>{{ $asa['asa_name'] }}</h3>
-								<p>預展\拍賣會</p>
-								<p>{{ $asa['asa_addr']}}</p>
+								@if(strlen($asa['asa_preview_addr']) == 0 || 
+									strlen($asa['asa_addr']) == 0 || 
+									['asa_addr'] == $asa['asa_preview_addr'])
+									<p>預展\拍賣会场</p>
+									<p>{{ $asa['asa_addr']}}</p>
+								@else
+									<p>預展会场：{{ $asa['asa_preview_addr']}}</p>
+									<p>拍賣会场：{{ $asa['asa_addr']}}</p>
+								@endif
+								
 								<p>{{ $asa['begin_time']}} 開拍</p>
 								<p>{{ $asa['preview_begin_time']}} 預覽</p>
 							</div>

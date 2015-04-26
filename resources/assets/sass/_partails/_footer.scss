@@ -48,4 +48,20 @@ footer {
 			float: right;
 		}
 	}
+	.goto-top {
+		right: 5%;
+		bottom: 10%;
+		position: fixed;
+		a.hover {
+			display:none;
+		}
+		&:hover {
+			a.default{
+				display:none;
+			}
+			a.hover {
+				display:block;
+			}
+		}
+	}
 }

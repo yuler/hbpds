@@ -103,6 +103,16 @@ footer .copy {
   padding: 15px 0; }
   footer .copy img {
     float: right; }
+footer .goto-top {
+  right: 5%;
+  bottom: 10%;
+  position: fixed; }
+  footer .goto-top a.hover {
+    display: none; }
+  footer .goto-top:hover a.default {
+    display: none; }
+  footer .goto-top:hover a.hover {
+    display: block; }
 
 #index .carousel .carousel-inner img {
   width: 100%; }

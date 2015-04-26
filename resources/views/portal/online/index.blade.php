@@ -31,8 +31,8 @@
 								{{ date('m月d日', strtotime($asa['begin_time'])) }}-{{ date('m月d日', strtotime($asa['end_time'])) }}
 							</p>
 							<br>
-							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn">参加网上拍卖</a>
-							<a href="{{ $asa['asa_online_logo'] }}" class="yp-logo">
+							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn" target="_blank">参加网上拍卖</a>
+							<a href="{{ $asa['asa_online_logo'] }}" class="yp-logo" target="_blank">
 								<img src="/imgs/yp-logo.png" alt="" style="width:100px;height:35px;">	
 							</a>
 						</div>

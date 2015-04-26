@@ -23,7 +23,7 @@
 								@foreach( $auction->auctionGroup() as $group)
 									<div>
 										<h3>
-											{{ date('m月d', strtotime($group['beginDate'])) }}-{{ date('d日', strtotime($group['endDate'])) }}
+											{{ date('m月d日', strtotime($group['beginDate'])) }}-{{ date('m月d日', strtotime($group['endDate'])) }}
 										</h3>
 										<ul>
 											@foreach( $auction->asasByGroup($group['asa_group']) as $asa)
@@ -40,15 +40,22 @@
 				</div>
 				<div class="col-md-8 content">
 					<h1>{{ $preview_asa['asa_name'] }}</h1>
-
-					<p class="address"><span>拍卖会场: </span> {{ $preview_asa['asa_addr'] }}</p>
-					<p class="address"><span>预览会场: </span> {{ $preview_asa['asa_preview_addr'] }}</p>
+					
+					@if(strlen($preview_asa['asa_preview_addr']) == 0 || 
+						strlen($asa['asa_addr']) == 0 || 
+						['asa_addr'] == $asa['asa_preview_addr'])
+						<p>預展\拍賣会场</p>
+						<p>{{ $preview_asa['asa_addr']}}</p>
+					@else
+						<p class="address"><span>拍卖会场: </span> {{ $preview_asa['asa_addr'] }}</p>
+						<p class="address"><span>预览会场: </span> {{ $preview_asa['asa_preview_addr'] }}</p>
+					@endif
 
 					<p class="time">
-						{{ date('y月d', strtotime($preview_asa['begin_time'])) }}-{{ date('d日', strtotime($preview_asa['end_time'])) }} 开拍
+						{{ date('m月d日', strtotime($preview_asa['begin_time'])) }}-{{ date('m月d日', strtotime($preview_asa['end_time'])) }} 开拍
 					</p>
 					<p class="time">
-						{{ date('y月d', strtotime($preview_asa['preview_begin_time'])) }}-{{ date('d日', strtotime($preview_asa['preview_end_time'])) }} 预展
+						{{ date('m月d日', strtotime($preview_asa['preview_begin_time'])) }}-{{ date('m月d日', strtotime($preview_asa['preview_end_time'])) }} 预展
 					</p>
 
 					<hr>
@@ -59,8 +66,10 @@
 							<li>{{ $asa['asa_name'] }}</li>
 						@endforeach
 					</ul>
-					<h3 class="goOnline"><a href="/online">参加网上拍卖  <i class="fa fa-arrow-right"></i></a></h3>
 
+					@if(strlen($preview_asa['asa_online_url'] > 0))
+						<h3 class="goOnline"><a href="{{ $preview_asa['asa_online_url'] }}" target="_blank">参加网上拍卖  <i class="fa fa-arrow-right"></i></a></h3>
+					@endif
 					<hr>
 
 					<div class="row productList">
@@ -73,7 +82,7 @@
 										<img src="/imgs/n1.png" alt="">
 									@endif
 									<div>
-										<p>{{ $artwork['art_lot'] }}</p>
+										<p>LOT {{ $artwork['art_lot'] }}</p>
 										<p>估值： 900，000 HKD</p>
 									</div>
 								</a>

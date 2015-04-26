@@ -34,7 +34,7 @@ class HbAuctionController extends Controller {
 								->groupBy('year')
 					    		->get();
 		//$auctions = HbAuction::whereBetween('preview_begin_time', [Carbon::now()->year, Carbon::now()])->orderBy('preview_begin_time')->get();
-		$asas = HbAsa::where('preview_begin_time', '>', [Carbon::now()->year])->orderBy('preview_begin_time','desc')->paginate(5);
+		$asas = HbAsa::where('preview_begin_time', '<', [Carbon::now()->year])->orderBy('preview_begin_time','desc')->paginate(5);
 		return view('portal.auction.history')->withHistoryAuction($historyAuction)->withAsas($asas)->withSubnav('auction');
 	}
 

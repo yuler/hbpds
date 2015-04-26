@@ -23,4 +23,13 @@
 			<img src="/imgs/logo-jp.png" alt="">
 		</div>
 	</div>
+
+	<div class="goto-top">
+		<a href="javascript:void(0);" onclick="$('html,body').animate({scrollTop: '0px'}, 600);return false;" class="default">
+			<img src="/imgs/goto_top.png" alt="">
+		</a>
+		<a href="javascript:void(0);" onclick="$('html,body').animate({scrollTop: '0px'}, 600);return false;" class="hover">
+			<img src="/imgs/goto_top_hover.png" alt="">
+		</a>
+	</div>
 </footer>

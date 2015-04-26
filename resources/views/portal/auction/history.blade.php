@@ -22,8 +22,8 @@
 					@endforeach
 				</div>
 				<div class="col-md-8 content">
-					@foreach($asas as $asa)
-						<div class="row">
+					@forelse($asas as $asa)
+					    <div class="row">
 							<div class="col-md-6">
 								<a href="/auction/preview/asa/{{ $asa['id'] }}">
 									<img src="{{ $asa['asa_image'] }}" alt="">
@@ -37,7 +37,12 @@
 								<p>{{ $asa['preview_begin_time']}} 預覽</p>
 							</div>
 						</div>
-					@endforeach
+					@empty
+					    <div class="row" style="border:0px;min-height:300px;">
+					    	<h1>占无历史拍卖记录</h1>
+					    </div>
+					@endforelse
+						
 
 					{!! $asas->render() !!}
 				</div>
