@@ -10,7 +10,7 @@
 	      </h1>
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
-	        <li><a href="/admin/banner"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
+	        <li><a href="/admin/ad"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
 	        <li class="active">新建</li>
 	      </ol>
 	    </section>
@@ -32,7 +32,7 @@
 							<div class="row">
 
 								<div class="col-md-6">
-									{!! Form::open(['route' => 'admin.banner.store', 'method' => 'post']) !!}
+									{!! Form::open(['route' => 'admin.ad.store', 'method' => 'post']) !!}
 
 				                	<div class="form-group">
 				                    	{!! Form::label('name', '广告名称') !!}
@@ -66,7 +66,7 @@
 								      <div class="caption">
 								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
 			                        			
-											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传主图</a>
 											<input name="upload" type="file" class="hide" id="uploadAvatar">
 										</form>
 								      </div>

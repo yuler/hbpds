@@ -66,7 +66,7 @@
 								      <div class="caption">
 								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
 			                        			
-											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传主图</a>
 											<input name="upload" type="file" class="hide" id="uploadAvatar">
 										</form>
 								      </div>

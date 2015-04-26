@@ -83,11 +83,13 @@ class HbArtworksController extends Controller {
 			$artwork->save();
 
 			//图片上传
-			foreach ($request->input('att_ids') as $att_id) {
-				$hbArtatt = new HbArtAtt();
-				$hbArtatt->att_id = $att_id;
-				$hbArtatt->art_id = $artwork->id;
-				$hbArtatt->save();
+			if($request->has('att_ids')){
+				foreach ($request->input('att_ids') as $att_id) {
+					$hbArtatt = new HbArtAtt();
+					$hbArtatt->att_id = $att_id;
+					$hbArtatt->art_id = $artwork->id;
+					$hbArtatt->save();
+				}
 			}
 
 		DB::commit();
@@ -174,15 +176,16 @@ class HbArtworksController extends Controller {
 			$artwork->save();
 
 			//图片上传
-			foreach ($request->input('att_ids') as $att_id) {
-				$artAtts = HbArtAtt::whereRaw('art_id = ? and att_id = ?', array($id,$att_id))->get();
-				if(sizeof($artAtts)<1){
-					$hbArtatt = new HbArtAtt();
-					$hbArtatt->att_id = $att_id;
-					$hbArtatt->art_id = $artwork->id;
-					$hbArtatt->save();
-				}
-					
+			if($request->has('att_ids')){
+				foreach ($request->input('att_ids') as $att_id) {
+					$artAtts = HbArtAtt::whereRaw('art_id = ? and att_id = ?', array($id,$att_id))->get();
+					if(sizeof($artAtts)<1){
+						$hbArtatt = new HbArtAtt();
+						$hbArtatt->att_id = $att_id;
+						$hbArtatt->art_id = $artwork->id;
+						$hbArtatt->save();
+					}
+				}	
 			}
 
 		DB::commit();
