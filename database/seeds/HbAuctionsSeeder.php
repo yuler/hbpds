@@ -24,7 +24,7 @@ class HbAuctionsSeeder extends Seeder {
 				'auction_end_time' => $faker->dateTimeThisYear($max = 'now'),
 				'lang' => 0,
  			]);
- 			foreach(range(1, 5) as $index){
+ 			foreach(range(1, 10) as $index){
 	 			$hbAsa = HbAsa::create([
 	 				'auction_id' => $hbAuction->id,
 	 				'asa_name' => $faker->text(10),
@@ -37,9 +37,10 @@ class HbAuctionsSeeder extends Seeder {
 	 				'asa_only_online' => $index % 2,
 	 				'asa_online_url' => 'www.online.com',
 	 				'asa_online_logo' => 'http://fakeimg.pl/100x100/?text=logo',
+	 				'asa_group' => '1'
 	 			]);
 
-	 			foreach(range(1, 5) as $index){ 
+	 			foreach(range(1, 10) as $index){ 
 	 				$hbArtwork = HbArtwork::create([
 		 				'art_code' => 'LOT' . $index ,
 		 				'art_author' => $faker->text(10),

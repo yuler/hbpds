@@ -30,7 +30,7 @@ class CreateHbAsasTable extends Migration {
 			$table->string('asa_online_url',200);
 			$table->string('asa_online_logo',100);
 			$table->tinyInteger('lang');
-			$table->tinyInteger('group');
+			$table->tinyInteger('asa_group');
 			$table->integer('auction_id')->unsigned();
 
 			$table->timestamps();
