@@ -107,7 +107,11 @@
 
 			                        	<div class="col-sm-6">
 										    <div class="thumbnail">
-										      <img id="yulan" data-src="holder.js/100%x300" alt="上传宣" >
+										    	@if(isset($asa->asa_image))
+										      		<img id="yulan" data-src="{{$asa->asa_image}}}" >
+										      	@else
+										      		<img id="yulan" data-src="holder.js/100%x300" >
+										      	@endif
 										      <div class="caption">
 										      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
 					                        			
