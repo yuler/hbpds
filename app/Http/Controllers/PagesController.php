@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\HbAsa;
 
 class PagesController extends Controller {
 
@@ -45,6 +46,7 @@ class PagesController extends Controller {
 
 	public function getOnline()
 	{
-		return view('portal.online.index')->withSubnav('online');
+		$asas = HbAsa::where('asa_only_online','=','1')->paginate(5);
+		return view('portal.online.index')->withAsas($asas)->withSubnav('online');
 	}
 }

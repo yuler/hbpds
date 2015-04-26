@@ -24,6 +24,7 @@ class CreateHbAsasTable extends Migration {
 			$table->timestamp('end_time');
 
 			$table->string('asa_addr',200);
+			$table->string('asa_preview_addr',200);
 			$table->string('asa_image',200);
 			$table->tinyInteger('asa_only_online');
 

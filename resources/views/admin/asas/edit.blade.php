@@ -74,6 +74,11 @@
 						                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
 						                    </div>
 						                    <div class="form-group">
+						                    	{!! Form::label('asa_preview_addr', '预展地点') !!}
+						                    	{!! Form::text('asa_preview_addr', null, ['class' => 'form-control', 'placeholder' => '输入预展地点']) !!}
+						                    </div>
+						                    
+						                    <div class="form-group">
 						                    	{!! Form::label('asa_only_online', '仅限网拍') !!}
 						                    	{!! Form::select('asa_only_online', ['0' => '否', '1' => '是'], null, ['class' => 'form-control']) !!}
 						                    </div>

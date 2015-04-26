@@ -32,6 +32,7 @@ class HbAuctionsSeeder extends Seeder {
 	 				'preview_end_time' => $faker->dateTimeThisYear($max = 'now'),
 	 				'begin_time' => $faker->dateTimeThisYear($max = 'now'),
 	 				'end_time' => $faker->dateTimeThisYear($max = 'now'),
+	 				'asa_preview_addr' => $faker->text(10), 
 	 				'asa_addr' => $faker->text(10),
 	 				'asa_image' => 'http://fakeimg.pl/300x200/?text=logo',
 	 				'asa_only_online' => $index % 2,
