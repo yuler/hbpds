@@ -15,13 +15,15 @@ class CreateHbAuctionsTable extends Migration {
 		Schema::create('hb_auctions', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			
 			$table->string('auction_name',100);
 			$table->timestamp('preview_begin_time');
 			$table->timestamp('preview_end_time');
 			$table->timestamp('auction_begin_time');
 			$table->timestamp('auction_end_time');
 			$table->tinyInteger('lang')->nullable()->default(0);
+
+			$table->timestamps();
 		});
 	}
 

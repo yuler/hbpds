@@ -15,12 +15,14 @@ class CreateHbBannersTable extends Migration {
 		Schema::create('hb_banners', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			
 			$table->string('name',100);
 			$table->string('image_url',300);
 			$table->string('target_url',300);
 			$table->integer('order');
 			$table->integer('enable');
+
+			$table->timestamps();
 		});
 	}
 

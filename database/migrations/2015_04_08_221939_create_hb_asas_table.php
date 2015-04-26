@@ -15,7 +15,7 @@ class CreateHbAsasTable extends Migration {
 		Schema::create('hb_asas', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			
 
 			$table->string('asa_name',100);
 			$table->timestamp('preview_begin_time');
@@ -30,9 +30,14 @@ class CreateHbAsasTable extends Migration {
 			$table->string('asa_online_url',200);
 			$table->string('asa_online_logo',100);
 			$table->tinyInteger('lang');
+			$table->tinyInteger('asa_group');
 			$table->integer('auction_id')->unsigned();
 
+			$table->timestamps();
+			
 			$table->foreign('auction_id')->references('id')->on('hb_auctions')->onDelete('cascade');
+
+
 
 		});
 	}

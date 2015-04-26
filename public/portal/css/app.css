@@ -312,7 +312,7 @@ html body {
     #newIndex .left-menu li a, #newShow .left-menu li a {
       display: block;
       padding: 10px 0px;
-      margin: 20px 30px;
+      margin: 20px 25px;
       text-decoration: none;
       color: #333; }
       #newIndex .left-menu li a:hover, #newShow .left-menu li a:hover {

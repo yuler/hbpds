@@ -16,56 +16,33 @@
 				<div class="col-md-4 left-menu">
 					<h1>2015 年</h1>
 					<ul>
-						<li>
-							<h4>香港秋季拍賣會</h4>
-							<hr>
-							<div>
-								<h3>11月25-27日</h3>
-								<ul>
-									<li><a href="/auction/preview/asa/123">私人收藏</a></li>
-								</ul>
-							</div>
-							<hr>
-							<div>
-								<h3>11月25-27日</h3>
-								<ul>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-								</ul>
-							</div>
-							<hr>
-						</li>
-						<li>
-							<h4>香港春季拍賣會</h4>
-							<hr>
-							<div>
-								<h3>11月25-27日</h3>
-								<ul>
-									<li><a href="">私人收藏</a></li>
-								</ul>
-							</div>
-							<hr>
-							<div>
-								<h3>11月25-27日</h3>
-								<ul>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-									<li><a href="">名貴珠寶、手錶專場</a></li>
-								</ul>
-							</div>
-							<hr>
-						</li>
+						@foreach( $auctions as $auction)
+							<li>
+								<h4>{{ $auction['auction_name'] }}</h4>
+								<hr>
+								<div>
+									<h3>11月25-27日</h3>
+									<ul>
+										<li><a href="/auction/preview/asa/123">私人收藏</a></li>
+									</ul>
+								</div>
+								<hr>
+								<div>
+									<h3>11月25-27日</h3>
+									<ul>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+										<li><a href="">名貴珠寶、手錶專場</a></li>
+									</ul>
+								</div>
+								<hr>
+							</li>
+						@endforeach
 						<li>
 							<h1>歷史拍賣</h1>
 							<hr>

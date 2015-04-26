@@ -20,7 +20,7 @@ class HbNewsSeeder extends Seeder {
 			  'title' => $faker->text(10),
 			  'content' => $faker->text(50),
 			  'lang'=>'1',
-			  'published_at'=> $faker->dateTimeThisYear($max = 'now'),i
+			  'published_at'=> $faker->dateTimeThisYear($max = 'now'),
 			  'published' => $index % 2,
 			  'created_at' => $faker->dateTimeThisYear($max = 'now'),
 			  'updated_at' => $faker->dateTimeThisYear($max = 'now'),
