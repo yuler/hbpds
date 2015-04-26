@@ -334,8 +334,9 @@ html body {
 
 #auctionPreview .left-menu, #asaPreview .left-menu {
   padding-right: 50px; }
-  #auctionPreview .left-menu h1, #asaPreview .left-menu h1 {
-    color: #ffcc00; }
+  #auctionPreview .left-menu h1, #auctionPreview .left-menu h1 a, #asaPreview .left-menu h1, #asaPreview .left-menu h1 a {
+    color: #ffcc00;
+    text-decoration: none; }
   #auctionPreview .left-menu > ul, #asaPreview .left-menu > ul {
     padding: 0;
     margin: 0;

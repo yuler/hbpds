@@ -9,7 +9,7 @@ class PagesController extends Controller {
 
 	public function getIndex()
 	{
-		return view('portal.index');
+		return view('portal.index')->withSubnav('home');
 	}
 
 	public function getIntroduction(){

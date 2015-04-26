@@ -8,7 +8,7 @@
 				<li class="last">交通地址&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					隱私保護&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					<div class="wx">
-						<img class=""src="/imgs/wx.png">
+						<img class=""src="/imgs/wx.png" style="width:50px;">
 						<div class="wx-code">
 							<img src="/imgs/wx-code.png" alt="">
 						</div>

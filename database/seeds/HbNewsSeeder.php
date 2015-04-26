@@ -27,7 +27,7 @@ class HbNewsSeeder extends Seeder {
  			]);
 
 
- 			$hbAuction = HbAuction::create([
+ 			/*$hbAuction = HbAuction::create([
 			  'auction_name' => $faker->text(10)
  			]);
  			foreach(range(1, 30) as $index)
@@ -36,7 +36,7 @@ class HbNewsSeeder extends Seeder {
 	 				'asa_name'=>$faker->text(10),
 	 				'auction_id' => $hbAuction->id
 	 			]);
-	 		}
+	 		}*/
 		}
 	}
 

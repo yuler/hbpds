@@ -93,8 +93,9 @@ html body{
 #auctionPreview, #asaPreview {
 	.left-menu {
 		padding-right: 50px;
-		h1 {
+		h1 ,h1 a{
 			color:$themeColor;
+			text-decoration: none;
 		}
 		>ul {
 			padding: 0;

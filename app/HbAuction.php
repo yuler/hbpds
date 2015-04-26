@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use App\HbAsa;
+use Illuminate\Support\Facades\DB;
 
 class HbAuction extends Model {
 
@@ -30,11 +31,37 @@ class HbAuction extends Model {
 	protected $hidden = [];
 	//
 
-	public function asas()
+	/*public function asas()
+	{
+		//return $this->hasMany('App\HbAsa', 'auction_id', 'id');
+		return HbAsa::where('auction_id', '=', $this->id)
+					->where('asa_group', '=', $this->asa_group)
+					->orderBy('begin_time')
+					->get();
+	}*/
+
+	public function auctionGroup()
 	{
 		return HbAsa::where('auction_id','=',$this->id)
-					->groupBy('preview_begin_time')
-					->having('preview_begin_time', '<', '2015-3')
+					->select('asa_group', DB::raw('count(*) as total'), DB::raw('max(preview_begin_time) as beginDate'), DB::raw('max(preview_end_time) as endDate'))
+					->groupBy('asa_group')
+					->orderBy('preview_begin_time')
+					->get();
+	}
+
+	/*public function dateRange($asa_group)
+	{
+		return HbAsa::where('auction_id','=',$this->id)
+					->where('asa_group','=',$asa_group)
+					->orderBy('preview_begin_time')
+					->get();
+	}*/
+
+	public function asasByGroup($asa_group)
+	{
+		return HbAsa::where('auction_id','=',$this->id)
+					->where('asa_group','=',$asa_group)
+					->orderBy('preview_begin_time')
 					->get();
 	}
 
