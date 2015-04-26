@@ -87,7 +87,10 @@
 						                    	{!! Form::label('asa_online_logo', '网拍LOGO') !!}
 						                    	{!! Form::text('asa_online_logo', null, ['class' => 'form-control', 'placeholder' => '']) !!}
 						                    </div>
-
+											<div class="form-group">
+						                    	{!! Form::label('asa_group', '拍卖会分组') !!}
+						                      	{!! Form::text('asa_group', null, ['class' => 'form-control']) !!}
+						                    </div>
 						                    <div class="form-group">
 						                    	{!! Form::label('lang', '语言种类') !!}
 						                      	{!! Form::select('lang', ['0' => '中文繁体', '1' => '英文'], null, ['class' => 'form-control']) !!}
