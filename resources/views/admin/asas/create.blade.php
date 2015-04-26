@@ -95,7 +95,7 @@
 						
 
 				                    <input  name="auction_id"  type="hidden" id="auction_id" value="<?php echo $_GET["auction_id"]?>" />
-				                   
+				                   <button type="submit" class="btn btn-primary">提交</button>
 									{!! Form::close() !!}
 								</div><!-- end md-6-->
 
@@ -116,9 +116,7 @@
 
 		                </div><!-- /.box-body -->
 
-		                <div class="box-footer">
-		                    <button type="submit" class="btn btn-primary">Submit</button>
-		                </div>
+		             
 	                
 
               	</div><!-- /.box -->
