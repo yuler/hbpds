@@ -65,19 +65,22 @@
 
 					<div class="row productList">
 						@foreach($preview_asa->artworks() as $artwork)
-							{{dd($artwork)}}
 							<div class="col-md-4">
 								<a href="/artwork/123">
-									<img src="/imgs/n1.png" alt="">
+									@if(sizeof($artwork->atts) > 0)
+										<img src="{{ $artwork->atts[0]['att_path'] }}" alt="">
+									@else
+										<img src="/imgs/n1.png" alt="">
+									@endif
 									<div>
-										<p>LOT 1</p>
+										<p>{{ $artwork['art_code'] }}</p>
 										<p>估值： 900，000 HKD</p>
 									</div>
 								</a>
 								<div class="info">
-									<p>朝代：当代</p>
-									<p>作者：佚名</p>
-									<p>名称：汽车女司机</p>
+									<p>朝代: {{ $artwork['art_dynasty'] }}</p>
+									<p>作者： {{ $artwork['art_author'] }}</p>
+									<p>名称： {{ $artwork['art_name'] }}</p>
 								</div>
 							</div>
 						@endforeach
