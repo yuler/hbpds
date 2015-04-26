@@ -40,7 +40,7 @@ $router->group(['prefix' => 'admin'], function($router)
 		'artwork' => 'Admin\HbArtworksController',
 		'attachment' => 'Admin\HbAttachmentsController',
 
-		'ad' => 'Admin\HbBatchDestroyController',
+		'ad' => 'Admin\HbAdsController',
 		'banner' => 'Admin\HbBannersController',
 	]);
 

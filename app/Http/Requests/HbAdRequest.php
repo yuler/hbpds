@@ -22,7 +22,7 @@ class HbAuctionRequest extends Request {
 	public function rules()
 	{
 		return [
-			'auction_name' => 'required|min:1|max:100'
+			'name' => 'required|min:1|max:100'
         	
 		];
 	}

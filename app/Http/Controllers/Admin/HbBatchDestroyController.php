@@ -14,7 +14,10 @@ use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\DB;
 
 use App\HbBanner;
+use App\HbAd;
+
 class HbBatchDestroyController extends Controller {
+
 
 	// destroy news
 
@@ -77,5 +80,16 @@ DB::commit();
 		}else{
 			return response()->json(['success'=>'false','msg'=>'未输入删除附件ID']);
 		}
+	}
+
+		public function deleteAds(Request $request)
+	{
+		if($request->has('ids')){
+			HbAd::destroy($request->input('ids'));
+			Flash::success('删除成功');
+			return redirect()->back();
+		}
+		Flash::error('至少选中一条');
+		return redirect()->back();
 	}
 }
