@@ -24,7 +24,7 @@ Route::controllers([
 
 
 
-$router->group(['prefix' => 'admin'], function($router)
+$router->group(['prefix' => 'admin','middleware' => 'auth'], function($router)
 {
 	Route::get('/', 'Admin\PagesController@index');
 	
