@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbAsa;
+use App\HbArtwork;
 
 class PagesController extends Controller {
 
@@ -48,5 +49,14 @@ class PagesController extends Controller {
 	{
 		$asas = HbAsa::where('asa_only_online','=','1')->paginate(5);
 		return view('portal.online.index')->withAsas($asas)->withSubnav('online');
+	}
+
+	public function getSearch(Request $request)
+	{
+		$kw = $request->input('kw');
+		$hbArtwork = HbArtwork::where('art_lot', 'like', '%' . $kw . '%')
+				->orWhere('art_name', 'like', '%' . $kw . '%')
+				->get();
+		return view('portal.search.result')->withHbArtwork($hbArtwork);
 	}
 }

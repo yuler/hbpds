@@ -19,10 +19,10 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				
 				<ul class="nav navbar-nav navbar-right">
-					<form class="navbar-form navbar-left" role="search">
+					<form class="navbar-form navbar-left" role="search" action="/search">
 						<div class="input-group">
-							<input type="text" id="email" name="email" class="form-control" placeholder="{{ trans('header.search') }}">
-							<a type="submit" class="btn input-group-addon">
+							<input type="text" id="email" name="kw" class="form-control" placeholder="{{ trans('header.search') }}">
+							<a href="javascript:void(0);" class="btn input-group-addon" onclick="$('form').submit();">
 								&nbsp;&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;
 							</a>
 						</div>
