@@ -35,4 +35,9 @@ class HbArtwork extends Model {
 	{		
 		return $this->belongsToMany('App\HbAttachment','hb_art_atts','art_id','att_id');
 	}
+
+	public function asa()
+	{
+		return $this->belongsTo('App\HbAsa','asa_id','id');
+	}
 }

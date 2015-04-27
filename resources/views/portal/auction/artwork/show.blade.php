@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="container content">
-			<p>编号：{{ $artwork['art_lot'] }}</p>
+			<p>编号： LOT {{ $artwork['art_lot'] }}</p>
 			@if(sizeof($artwork->atts) > 0)
 				<div id="carousel-id" class="carousel slide" data-ride="carousel">
 				    <ol class="carousel-indicators">
@@ -37,7 +37,8 @@
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
 						<div class="col-md-4">
-							<h3>{{ $artwork['art_name'] }}</h3>  {{ $artwork['art_lot'] }}
+							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
+							&nbsp;&nbsp;&nbsp;&nbsp;LOT {{ $artwork['art_lot'] }}
 						</div>
 						@if(sizeof($artwork->atts) > 0)
 							<div class="col-md-8">
@@ -72,7 +73,7 @@
 			<hr>
 			<div class="row other-link">
 				<div class="col-md-10 col-md-offset-1">
-					<p>查看同专场其他商品</p>
+					<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
 				</div>
 			</div>
 			<hr>

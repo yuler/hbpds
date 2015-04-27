@@ -75,7 +75,7 @@
 					<div class="row productList">
 						@foreach($preview_asa->artworks() as $artwork)
 							<div class="col-md-4">
-								<a href="/artwork/123">
+								<a href="/artwork/{{$artwork['id']}}">
 									@if(sizeof($artwork->atts) > 0)
 										<img src="{{ $artwork->atts[0]['att_path'] }}" alt="">
 									@else

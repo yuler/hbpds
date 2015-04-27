@@ -11,11 +11,13 @@
 			</div>
 		</div>
 		<div class="container content">
-			<p>为你搜到&nbsp;&nbsp;{{ $kw }}&nbsp;&nbsp;结果&nbsp;{{ ($hb_artworks->total()) }}&nbsp;条</p>
+			<p style="text-align:left;">
+				为你找到&nbsp;&nbsp;<span style="background-color:#FF0">{{ $kw }}</span>&nbsp;&nbsp;结果&nbsp;{{ ($artworks->total()) }}&nbsp;个
+			</p>
 			<div class="row productList">
 				@foreach($artworks as $artwork)
 					<div class="col-md-3">
-						<a href="/artwork/123">
+						<a href="/artwork/{{$artwork['id']}}">
 							@if(sizeof($artwork->atts) > 0)
 								<img src="{{ $artwork->atts[0]['att_path'] }}" alt="">
 							@else
@@ -34,6 +36,8 @@
 					</div>
 				@endforeach
 			</div>
+
+			{!! $artworks->render() !!}
 		</div>
 	</div>
 @endsection
