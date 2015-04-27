@@ -400,3 +400,33 @@ hr {
 
 article {
   text-indent: 2em; }
+
+div.productList > div {
+  margin-bottom: 30px; }
+  div.productList > div a {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #999; }
+    div.productList > div a img {
+      width: 100%;
+      min-height: 230px;
+      height: 230px; }
+    div.productList > div a div {
+      padding-top: 20px;
+      border: 3px solid #eee;
+      border-top: 0px; }
+      div.productList > div a div p {
+        padding-left: 15px; }
+  div.productList > div > div {
+    display: none;
+    padding-top: 10px;
+    position: absolute;
+    top: 39%;
+    width: 89%;
+    background-color: rgba(0, 0, 0, 0.2); }
+    div.productList > div > div p {
+      padding-left: 15px;
+      color: white; }
+  div.productList > div:hover .info {
+    display: block; }

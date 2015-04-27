@@ -54,9 +54,9 @@ class PagesController extends Controller {
 	public function getSearch(Request $request)
 	{
 		$kw = $request->input('kw');
-		$hbArtwork = HbArtwork::where('art_lot', 'like', '%' . $kw . '%')
+		$artworks = HbArtwork::where('art_lot', 'like', '%' . $kw . '%')
 				->orWhere('art_name', 'like', '%' . $kw . '%')
-				->get();
-		return view('portal.search.result')->withHbArtwork($hbArtwork);
+				->paginate(8);
+		return view('portal.search.result')->withKw($kw)->withArtworks($artworks);
 	}
 }
