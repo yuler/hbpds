@@ -385,6 +385,9 @@ html body {
 hr {
   border: 1px solid #eee; }
 
+.container .content {
+  min-height: 700px; }
+
 .hb-btn {
   color: #6F6100;
   display: inline-block;

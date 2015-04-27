@@ -30,6 +30,7 @@ class HbAsa extends Model {
 	public function artworks()
 	{
 		return HbArtwork::where('asa_id','=',$this->id)
+						->orderBy('asa_lot')
 						->get();
 	}
 

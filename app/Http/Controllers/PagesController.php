@@ -6,12 +6,21 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\HbAsa;
 use App\HbArtwork;
+use App\HbBanner;
+use App\HbAd;
 
 class PagesController extends Controller {
 
 	public function getIndex()
 	{
-		return view('portal.index')->withSubnav('home');
+		$banners = HbBanner::where('enable','=','1')
+							->orderBy('order')
+							->get();
+
+		$ads = HbAd::where('enable','=','1')
+							->orderBy('order')
+							->get();
+		return view('portal.index')->withSubnav('home')->withBanners($banners)->withAds($ads);
 	}
 
 	public function getIntroduction(){

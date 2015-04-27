@@ -151,7 +151,8 @@ hr {
 	border: 1px solid #eee;
 }
 
-.container {
+.container .content{
+	min-height:700px;
 }
 
 .hb-btn {

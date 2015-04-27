@@ -4,35 +4,31 @@
 	<div id="index">
 		<div id="carousel-id" class="carousel slide" data-ride="carousel">
 		    <ol class="carousel-indicators">
-		        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-		        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-		        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+		    	@foreach($banners as $key => $banner)
+			        <li data-target="#carousel-id" data-slide-to="{{$key}}" class="{{ $key == 0 ? 'active' : ''}}"></li>
+		        @endforeach
 		    </ol>
 		    <div class="carousel-inner">
-		        <div class="item">
-		            <img src="/imgs/carousel.jpg">
-		        </div>
-		        <div class="item">
-		            <img src="/imgs/carousel.jpg">
-		        </div>
-		        <div class="item active">
-		            <img src="/imgs/carousel.jpg">
-		        </div>
+		    	@foreach($banners as $key => $banner)
+			        <div class="item {{ $key == 0 ? 'active' : ''}}">
+			        	<a href="{{$banner['target_url']}}" target="_blank">
+			            	<img src="{{$banner['image_url']}}" style="height:600px;">
+			            </a>
+			        </div>
+		        @endforeach
 		    </div>
 		    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 		    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 		</div>
 		
 		<div class="container product-list">
-			<div class="col-md-4">
-				<img src="/imgs/p1.png" alt="">
-			</div>
-			<div class="col-md-4">
-				<img src="/imgs/p2.png" alt="">
-			</div>
-			<div class="col-md-4">
-				<img src="/imgs/p3.png" alt="">
-			</div>
+			@foreach($ads as $key => $ad)
+				<div class="col-md-4">
+					<a href="{{$ad['target_url']}}" target="_blank">
+						<img src="{{ $ad['image_url'] }}" alt="">
+					</a>
+				</div>
+			@endforeach
 		</div>
 	</div>
 @endsection

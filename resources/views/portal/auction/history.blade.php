@@ -39,7 +39,7 @@
 						</div>
 					@empty
 					    <div class="row" style="border:0px;min-height:300px;">
-					    	<h1>占无历史拍卖记录</h1>
+					    	<h1>暂无历史拍卖记录</h1>
 					    </div>
 					@endforelse
 						
