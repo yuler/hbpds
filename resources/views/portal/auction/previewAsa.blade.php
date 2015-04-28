@@ -35,7 +35,7 @@
 														</span>
 													@endif
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="/auction/preview/asa/{{ $asa['id'] }}">{{ $asa['asa_name'] }}</a>
+													<a href="/auction/preview/asa/{{ $asa['id'] }}" style="display: inline-block;">{{ $asa['asa_name'] }}</a>
 												</li>
 											@endforeach
 										</ul>
