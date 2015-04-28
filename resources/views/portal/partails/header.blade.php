@@ -21,7 +21,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<form class="navbar-form navbar-left" role="search" action="/search">
 						<div class="input-group">
-							<input type="text" id="email" name="kw" class="form-control" placeholder="{{ trans('header.search') }}">
+							<input type="text" id="email" name="kw" class="form-control" placeholder="{{ trans('portal.header.search') }}">
 							<a href="javascript:void(0);" class="btn input-group-addon" onclick="$('form').submit();">
 								&nbsp;&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;
 							</a>
@@ -34,35 +34,36 @@
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">
-				<li class="{{ isset($subnav) && $subnav == 'home' ? 'active' : '' }}" ><a href="/">{{ trans('header.home') }}</a></li>
+				<li class="{{ isset($subnav) && $subnav == 'home' ? 'active' : '' }}" ><a href="/">{{ trans('portal.header.home') }}</a></li>
 				<li class="dropdown {{ isset($subnav) && $subnav == 'auction' ? 'active' : '' }}">
 					<a href="#">
-						拍賣日曆&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+						{{ trans('portal.header.auction-calendar') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/auction/preview">拍賣預展</a></li>
-						<li><a href="/auction/history">歷史拍賣</a></li>
+						<li><a href="/auction/preview">{{ trans('portal.header.auction-preview') }}</a></li>
+						<li><a href="/auction/history">{{ trans('portal.header.auction-history') }}</a></li>
 					</ul>
 				</li>
-				<li class="{{ isset($subnav) && $subnav == 'online' ? 'active' : '' }}"><a href="/online">網上拍賣</a></li>
+				<li class="{{ isset($subnav) && $subnav == 'online' ? 'active' : '' }}"><a href="/online">{{ trans('portal.header.auction-online') }}</a></li>
 				<li class="dropdown {{ isset($subnav) && $subnav == 'auctionNotice' ? 'active' : '' }}">
 					<a href="#">
-						拍賣須知&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+						{{ trans('portal.header.auction-notice') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/buy-service">購買服務</a></li>
-						<li><a href="/auction-guide">拍賣指南</a></li>
-						<li><a href="/transaction-read">成交必讀</a></li>
+						<li><a href="/buy-service">{{ trans('portal.header.buy-service') }}</a></li>
+						<li><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
+						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
+						<li><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</li>
 				<li class="dropdown {{ isset($subnav) && $subnav == 'about' ? 'active' : '' }}">
 					<a href="#">
-						關於我們&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+						{{ trans('portal.header.auction-calendar') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/introduction">橫濱香港簡介</a></li>
-						<li><a href="/contact">聯繫方式</a></li>
-						<li><a href="/new">新聞中心</a></li>
+						<li><a href="/introduction">{{ trans('portal.header.auction-calendar') }}</a></li>
+						<li><a href="/contact">{{ trans('portal.header.auction-calendar') }}</a></li>
+						<li><a href="/new">{{ trans('portal.header.auction-calendar') }}</a></li>
 					</ul>
 				</li>
 			</ul>
