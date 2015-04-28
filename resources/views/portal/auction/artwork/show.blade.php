@@ -28,8 +28,12 @@
 					        </div>
 				    	@endforeach
 				    </div>
-				    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><i class="fa fa-angle-left fa-4x"></i></a>
-				    <a class="right carousel-control" href="#carousel-id" data-slide="next"><i class="fa fa-angle-right fa-4x"></i></a>
+					@if(sizeof($artwork->prev()) > 0)
+				    	<a class="left carousel-control" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev"><i class="fa fa-angle-left fa-4x"></i></a>
+					@endif
+					@if(sizeof($artwork->next()) > 0)
+				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next"><i class="fa fa-angle-right fa-4x"></i></a>
+				    @endif
 				</div>
 			@endif
 

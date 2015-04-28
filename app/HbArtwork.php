@@ -40,4 +40,22 @@ class HbArtwork extends Model {
 	{
 		return $this->belongsTo('App\HbAsa','asa_id','id');
 	}
+
+	public function next()
+	{
+		$asa_id = $this->asa_id;
+		$art_lot = $this->art_lot;
+		return $this::where('asa_id', '=', $asa_id)
+			->where('art_lot', '<', $art_lot)
+			->get();
+	}
+
+	public function prev($value='')
+	{
+		$asa_id = $this->asa_id;
+		$art_lot = $this->art_lot;
+		return $this::where('asa_id', '=', $asa_id)
+			->where('art_lot', '>', $art_lot)
+			->get();
+	}
 }
