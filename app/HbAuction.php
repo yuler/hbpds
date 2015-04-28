@@ -43,7 +43,7 @@ class HbAuction extends Model {
 	public function auctionGroup()
 	{
 		return HbAsa::where('auction_id','=',$this->id)
-					->select('asa_group', DB::raw('count(*) as total'), DB::raw('max(preview_begin_time) as beginDate'), DB::raw('max(preview_end_time) as endDate'))
+					->select('asa_group', DB::raw('count(*) as total'), DB::raw('min(preview_begin_time) as beginDate'), DB::raw('max(preview_end_time) as endDate'))
 					->groupBy('asa_group')
 					->orderBy('preview_begin_time')
 					->get();
