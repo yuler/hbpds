@@ -23,7 +23,7 @@
 								@foreach( $auction->auctionGroup() as $group)
 									<div>
 										<h3>
-											{{ date('m月d日', strtotime($group['endDate'])) }}-{{ date('m月d日', strtotime($group['beginDate'])) }}
+											{{ date('m月d日', strtotime($group['beginDate'])) }}-{{ date('m月d日', strtotime($group['endDate'])) }}
 										</h3>
 										<ul>
 											@foreach( $auction->asasByGroup($group['asa_group']) as $asa)

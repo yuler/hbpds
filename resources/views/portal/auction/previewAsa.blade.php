@@ -28,6 +28,13 @@
 										<ul>
 											@foreach( $auction->asasByGroup($group['asa_group']) as $asa)
 												<li class="{{ $asa['id'] === $preview_asa['id'] ? 'active':''}}">
+													@if( date('Y-m-d H:i:s') > $asa['preview_begin_time'] && 
+														date('Y-m-d H:i:s') < $asa['preview_end_time'] )
+														<span style="float:left;margin-left:100px;background-image:url('/imgs/today_bg.png');height:35px;width:35px;">
+															<span style="line-height: 35px;color:white;font-size:14px;">今天&nbsp;</span>
+														</span>
+													@endif
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<a href="/auction/preview/asa/{{ $asa['id'] }}">{{ $asa['asa_name'] }}</a>
 												</li>
 											@endforeach

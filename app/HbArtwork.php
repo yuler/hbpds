@@ -46,7 +46,7 @@ class HbArtwork extends Model {
 		$asa_id = $this->asa_id;
 		$art_lot = $this->art_lot;
 		return $this::where('asa_id', '=', $asa_id)
-			->where('art_lot', '<', $art_lot)
+			->where('art_lot', '>', $art_lot)
 			->get();
 	}
 
@@ -55,7 +55,7 @@ class HbArtwork extends Model {
 		$asa_id = $this->asa_id;
 		$art_lot = $this->art_lot;
 		return $this::where('asa_id', '=', $asa_id)
-			->where('art_lot', '>', $art_lot)
+			->where('art_lot', '<', $art_lot)
 			->get();
 	}
 }
