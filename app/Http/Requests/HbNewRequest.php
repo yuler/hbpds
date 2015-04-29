@@ -23,7 +23,7 @@ class HbNewRequest extends Request {
 	{
 		return [
 			'title' => 'required|min:2|max:100',
-        	'content' => 'required|min:20|',
+        	'content' => 'required|min:2|',
 		];
 	}
 
