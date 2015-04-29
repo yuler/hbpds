@@ -115,6 +115,7 @@
 			                        			
 											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传宣传图</a>
 											<input name="upload" type="file" class="hide" id="uploadAvatar">
+											<div style="color:red">图片大小不能超过2M</div>
 										</form>
 								      </div>
 								    </div>
@@ -141,10 +142,12 @@ $('#uploadAvatar').fileupload({
         progress: function (e, data) {
         	$('#uploadAvatarProgress').fadeIn(1000);
     		var progress = parseInt(data.loaded / data.total * 100, 10);
+    		
             $('#uploadAvatarProgress .progress-bar').css(
                 'width',
                 progress + '%'
             );
+			//alert(progress);
         },
         success: function(result, textStatus, jqXHR){
 
