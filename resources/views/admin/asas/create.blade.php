@@ -88,6 +88,7 @@
 									<div class="form-group">
 				                    	{!! Form::label('asa_group', '拍卖会分组') !!}
 				                      	{!! Form::text('asa_group', null, ['class' => 'form-control']) !!}
+				                      	<div style="color:red">分组只能为数字，同一数字下会显示在同一个分组里</div>
 				                    </div>
 				                    <div class="form-group">
 				                    	{!! Form::label('lang', '语言种类') !!}
