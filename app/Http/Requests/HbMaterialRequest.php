@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class HbNewRequest extends Request {
+class HbMaterialRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.

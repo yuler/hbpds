@@ -33,10 +33,13 @@
                 <a href="/admin/new"><i class="fa fa-circle-o"></i> 新闻管理</a>
             </li>
             <li>
-                <a href="/admin/banner"><i class="fa fa-circle-o"></i> 广告管理</a>
+                <a href="/admin/banner"><i class="fa fa-circle-o"></i> 首页轮播广告管理</a>
             </li>
             <li>
-                <a href="/admin/ad"><i class="fa fa-circle-o"></i> 专场广告管理</a>
+                <a href="/admin/ad"><i class="fa fa-circle-o"></i> 首页专场广告管理</a>
+            </li>
+              <li>
+                <a href="/admin/material"><i class="fa fa-circle-o"></i> 参考资料管理</a>
             </li>
            <!--  <li class="active treeview">
               <a href="#">

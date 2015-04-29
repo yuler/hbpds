@@ -42,6 +42,7 @@ $router->group(['prefix' => 'admin','middleware' => 'auth'], function($router)
 
 		'ad' => 'Admin\HbAdsController',
 		'banner' => 'Admin\HbBannersController',
+		'material'=>'Admin\HbMaterialController',
 	]);
 
 
