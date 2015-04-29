@@ -22,8 +22,8 @@ class HbNewRequest extends Request {
 	public function rules()
 	{
 		return [
-			'title' => 'required|min:10|max:100',
-        	'content' => 'required|min:20|',
+			'title' => 'required',
+        	'content' => 'required',
 		];
 	}
 
