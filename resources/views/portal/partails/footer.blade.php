@@ -8,7 +8,7 @@
 				<li class="last">交通地址&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					隱私保護&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					<div class="wx">
-						<img class=""src="/imgs/wx.png" style="width:50px;">
+						<img class=""src="/imgs/wx.gif" style="width:50px;">
 						<div class="wx-code">
 							<img src="/imgs/wx-code.png" alt="">
 						</div>
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		<div class="container">
+		<div class="container" style="font-size:12px;">
 			<span>© 2015 Yokohama Kokusai Auction All Rights Reserved</span>
 			<img src="/imgs/logo-jp.png" alt="">
 		</div>

@@ -95,7 +95,7 @@ html body{
 	.left-menu {
 		padding-right: 50px;
 		h1 ,h1 a{
-			color:$themeColor;
+			color:$themeFontColor;
 			text-decoration: none;
 		}
 		>ul {
@@ -105,11 +105,11 @@ html body{
 			>li {
 				list-style-type: none;
 				h4 {
-					color: $themeColor;
+					color: $themeFontColor;
 				}
 				>div {
 					h3 {
-						color: $themeColor;
+						color: $themeFontColor;
 					}
 					>ul {
 						padding: 0;
@@ -125,7 +125,7 @@ html body{
 								padding-right: 20px;
 								display: block;
 								&:hover {
-									color:$themeColor;
+									color:$themeFontColor;
 								}
 							}
 						}
@@ -136,7 +136,7 @@ html body{
 
 		}
 		.active {
-			/*border-right: 5px solid $themeColor;*/
+			/*border-right: 5px solid $themeFontColor;*/
 			a {
 				border-right: 5px solid $themeColor;
 				font-size: 18px;

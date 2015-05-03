@@ -18,10 +18,10 @@
 		        @endforeach
 		    </div>
 		    <a class="left carousel-control" href="#carousel-id" data-slide="prev">
-		    	<span class="glyphicon glyphicon-chevron-left"></span>
+		    	<img src="/imgs/banner-left.gif" alt="" style="position: absolute;top: 50%;">
 		    </a>
 		    <a class="right carousel-control" href="#carousel-id" data-slide="next">
-		    	<span class="glyphicon glyphicon-chevron-right"></span>
+		    	<img src="/imgs/banner-right.gif" alt="" style="position: absolute;top: 50%;">
 		    </a>
 		</div>
 		

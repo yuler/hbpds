@@ -29,16 +29,22 @@
 				    	@endforeach
 				    </div>
 					@if(sizeof($artwork->prev()) > 0)
-				    	<a class="left carousel-control" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev"><i class="fa fa-angle-left fa-4x"></i></a>
+				    	<a class="left carousel-control" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev">
+				    		<span style="font-size:12px;right: 10%;">LOT&nbsp;&nbsp;{{$artwork['art_lot']}}</span>
+				    		<i class="fa fa-angle-left fa-4x"></i>
+				    	</a>
 					@endif
 					@if(sizeof($artwork->next()) > 0)
-				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next"><i class="fa fa-angle-right fa-4x"></i></a>
+				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
+				    		<i class="fa fa-angle-right fa-4x"></i>
+				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork['art_lot']}}</span>
+				    	</a>
 				    @endif
 				</div>
 			@endif
 
 			<div class="row info">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-10 col-md-offset-1" style="padding:0px;">
 					<div class="row">
 						<div class="col-md-4">
 							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
@@ -56,31 +62,28 @@
 							</div>
 						@endif
 					</div>
+					<hr>
+					<div class="row" style="padding-left:15px;">
+						<h3>估价: {{ $artwork['begin_price_hkd'] }} HKD</h3>
+						<h3>{{ $artwork['begin_price_rmb'] }} CNY</h3>
+					</div>
+					<hr>
+					<div class="row description" style="padding-left:15px;">
+						<h3>作品描述</h3>
+						<article>
+							{{ $artwork['art_sumarry'] }}作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述
+						</article>
+					</div>
+					<hr>
+					<div class="row other-link">
+						<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="padding-right:15px;float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
+					</div>
+					<hr>
 				</div>
 			</div>
-			<hr>
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<h3>估价: {{ $artwork['begin_price_hkd'] }} HKD</h3>
-					<h3>{{ $artwork['begin_price_rmb'] }} CNY</h3>
-				</div>
-			</div>
-			<hr>
-			<div class="row description">
-				<div class="col-md-10 col-md-offset-1">
-					<h3>作品描述</h3>
-					<article>
-						{{ $artwork['art_sumarry'] }}
-					</article>
-				</div>
-			</div>
-			<hr>
-			<div class="row other-link">
-				<div class="col-md-10 col-md-offset-1">
-					<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
-				</div>
-			</div>
-			<hr>
+			
+			
+			
 		</div>
 	</div>
 @endsection

@@ -6,7 +6,7 @@ footer {
 		ul {
 			padding: 0px;
 			li {
-				padding: 15px 0;
+				padding: 0px 0;
 				padding-right: 5%;
 				display: inline-block;
 				a {
@@ -19,6 +19,8 @@ footer {
 			li.last {
 				padding: 0px;
 				float: right;
+				margin-top: -12px;
+ 				position: absolute;
 			}
 			.wx {
 				display: inline-block;
@@ -32,7 +34,7 @@ footer {
 						display: block;
 						border: 2px solid #999;
 						position: fixed;
-						bottom: 22%;
+						bottom: 15%;
 						right: 22%;
 						z-index: 10;
 						background-color: white;

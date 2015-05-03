@@ -5,6 +5,9 @@
 		.carousel {
 			img {
 				width: 100%;
+				&:hover {
+					cursor:url('/imgs/wx.gif'),auto;
+				}
 			}
 			.left.carousel-control {
 				background-image: inherit;
@@ -12,7 +15,7 @@
 			}
 			.right.carousel-control {
 				background-image: inherit;
-				right: -15%;
+				right: -12%;
 			}
 			a .fa {
 				position: absolute;
@@ -20,6 +23,12 @@
 				z-index: 5;
 				display: inline-block;
 				color: #333;
+			}
+			a span {
+				color: #333;
+				position: absolute;
+				top: 57%;
+				z-index: 10;
 			}
 		}
 		.info {
@@ -57,6 +66,7 @@
 					display: inline-block;
 					color: #333;
 				}
+
 			}
 			div.description {
 				h3 {

@@ -75,7 +75,7 @@ footer .description {
   footer .description ul {
     padding: 0px; }
     footer .description ul li {
-      padding: 15px 0;
+      padding: 0px 0;
       padding-right: 5%;
       display: inline-block; }
       footer .description ul li a {
@@ -84,7 +84,9 @@ footer .description {
           text-decoration: underline; }
     footer .description ul li.last {
       padding: 0px;
-      float: right; }
+      float: right;
+      margin-top: -12px;
+      position: absolute; }
     footer .description ul .wx {
       display: inline-block; }
       footer .description ul .wx .wx-code {
@@ -96,7 +98,7 @@ footer .description {
           display: block;
           border: 2px solid #999;
           position: fixed;
-          bottom: 22%;
+          bottom: 15%;
           right: 22%;
           z-index: 10;
           background-color: white; }
@@ -182,7 +184,7 @@ footer .goto-top {
   margin-top: -50px; }
   #asaPreview .content h3.goOnline a {
     text-decoration: none;
-    color: #ffcc00; }
+    color: #c4a51c; }
 #asaPreview .content div.productList > div {
   margin-bottom: 30px; }
   #asaPreview .content div.productList > div a {
@@ -246,18 +248,25 @@ footer .goto-top {
   margin-bottom: 30px; }
   #artworkShow .content .carousel img {
     width: 100%; }
+    #artworkShow .content .carousel img:hover {
+      cursor: url('/imgs/wx.gif'), auto; }
   #artworkShow .content .carousel .left.carousel-control {
     background-image: inherit;
     left: -15%; }
   #artworkShow .content .carousel .right.carousel-control {
     background-image: inherit;
-    right: -15%; }
+    right: -12%; }
   #artworkShow .content .carousel a .fa {
     position: absolute;
     top: 50%;
     z-index: 5;
     display: inline-block;
     color: #333; }
+  #artworkShow .content .carousel a span {
+    color: #333;
+    position: absolute;
+    top: 57%;
+    z-index: 10; }
   #artworkShow .content .info {
     padding: 30px 0; }
     #artworkShow .content .info ul {
@@ -349,7 +358,7 @@ html body {
 #auctionPreview .left-menu, #asaPreview .left-menu {
   padding-right: 50px; }
   #auctionPreview .left-menu h1, #auctionPreview .left-menu h1 a, #asaPreview .left-menu h1, #asaPreview .left-menu h1 a {
-    color: #ffcc00;
+    color: #c4a51c;
     text-decoration: none; }
   #auctionPreview .left-menu > ul, #asaPreview .left-menu > ul {
     padding: 0;
@@ -358,9 +367,9 @@ html body {
     #auctionPreview .left-menu > ul > li, #asaPreview .left-menu > ul > li {
       list-style-type: none; }
       #auctionPreview .left-menu > ul > li h4, #asaPreview .left-menu > ul > li h4 {
-        color: #ffcc00; }
+        color: #c4a51c; }
       #auctionPreview .left-menu > ul > li > div h3, #asaPreview .left-menu > ul > li > div h3 {
-        color: #ffcc00; }
+        color: #c4a51c; }
       #auctionPreview .left-menu > ul > li > div > ul, #asaPreview .left-menu > ul > li > div > ul {
         padding: 0;
         margin: 0; }
@@ -375,9 +384,9 @@ html body {
             padding-right: 20px;
             display: block; }
             #auctionPreview .left-menu > ul > li > div > ul > li a:hover, #asaPreview .left-menu > ul > li > div > ul > li a:hover {
-              color: #ffcc00; }
+              color: #c4a51c; }
   #auctionPreview .left-menu .active, #asaPreview .left-menu .active {
-    /*border-right: 5px solid $themeColor;*/ }
+    /*border-right: 5px solid $themeFontColor;*/ }
     #auctionPreview .left-menu .active a, #asaPreview .left-menu .active a {
       border-right: 5px solid #ffcc00;
       font-size: 18px;
