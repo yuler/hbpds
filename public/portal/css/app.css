@@ -248,8 +248,7 @@ footer .goto-top {
   margin-bottom: 30px; }
   #artworkShow .content .carousel img {
     width: 100%; }
-    #artworkShow .content .carousel img:hover {
-      cursor: url('/imgs/wx.gif'), auto; }
+    #artworkShow .content .carousel img:hover { }
   #artworkShow .content .carousel .left.carousel-control {
     background-image: inherit;
     left: -15%; }
@@ -302,6 +301,7 @@ footer .goto-top {
       text-align: right; }
 
 html body {
+  cursor: url('/imgs/fangdajing.ico'), auto;
   font-size: 16px;
   font-family: "Microsoft Yahei"; }
   html body h1 {
