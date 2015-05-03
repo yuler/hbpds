@@ -1,25 +1,31 @@
 @extends('admin.app')
 
-
-	
-
 @section('content')
+
+<script type="text/javascript">
+	$(function(){
+		var pageNo = getQueryString('page');
+		if(pageNo!=null&&pageNo!=""){
+			$('#myTab a:last').tab('show')
+		}
+	})
+</script>
+
 	<div class="content-wrapper">
     	<!-- Content Header (Page header) -->
 	    <section class="content-header">
 	      <h1>
-	        新增广告
-	        <small>新增一个广告</small>
+	        修改广告
+	        <small>{{$ad->name}}</small>
 	      </h1>
 	      <ol class="breadcrumb">
 	        <li><a href="/admin"><i class="fa fa-dashboard"></i> Admin</a></li>
 	        <li><a href="/admin/ad"><i class="fa fa-newspaper-o"></i> 广告管理</a></li>
-	        <li class="active">新建</li>
+	        <li class="active">编辑</li>
 	      </ol>
 	    </section>
 
-	    <!-- Main content -->
-	      <section class="content">
+	   <section class="content">
 	      <!-- Main row -->
 	     	<div class="row">
 	      	  	<div class="box box-primary">
@@ -35,20 +41,20 @@
 							<div class="row">
 
 								<div class="col-md-6">
-									{!! Form::open(['route' => 'admin.ad.store', 'method' => 'post']) !!}
+   					   		 			 {!! Form::model($ad, ['route' => ['admin.ad.update', $ad->id ], 'method' => 'put']) !!}
 
 				                	<div class="form-group">
 				                    	{!! Form::label('name', '广告名称') !!}
 				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
 				                    </div>
-				                   
 				                    <div class="form-group">
-				                    	{!! Form::label('image_url', '拍卖专场') !!}
-				                    	{!! Form::text('asa_name', null, ['class' => 'form-control','placeholder' => '选择拍卖专场']) !!}
+				                    	{!! Form::label('target_url', '跳转页面') !!}
+				                    	{!! Form::text('target_url', null, ['class' => 'form-control', 'placeholder' => '输入跳转页面']) !!}
+				                    </div>
 
-<select class="js-example-data-ajax form-control">
-  <option value="3620194" selected="selected">select2/select2</option>
-</select>
+				                    <div class="form-group">
+				                    	{!! Form::label('image_url', '主图') !!}
+				                    	{!! Form::text('image_url', null, ['class' => 'form-control','placeholder' => '上传主图']) !!}
 				                    </div>
 				                     <div class="form-group">
 				                    	{!! Form::label('order', '顺序') !!}
@@ -63,7 +69,24 @@
 									{!! Form::close() !!}
 								</div><!-- end md-6-->
 
-								
+								<div class="col-sm-6">
+								    <div class="thumbnail">
+								      
+								      @if(isset($ad['image_url']))
+								      		<img id="yulan" src="{{$ad->image_url}}" >
+								      	@else
+								      		<img id="yulan" data-src="holder.js/100%x300" >
+								      	@endif
+
+								      <div class="caption">
+								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
+			                        			
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传主图</a>
+											<input name="upload" type="file" class="hide" id="uploadAvatar">
+										</form>
+								      </div>
+								    </div>
+								</div>
 
 			                 </div><!--end box-->
 
@@ -75,14 +98,9 @@
               	</div><!-- /.box -->
 	    	</div><!-- /.row (main row) -->
 	    </section><!-- /.content -->
-
-
-	    
 	</div><!-- /.content-wrapper -->
 	<br>
 	<br>
-
-
 
 <script type="text/javascript">
 $('#uploadAvatar').fileupload({
@@ -130,39 +148,6 @@ $('#uploadAvatar').fileupload({
 			}
 		})
 	});*/
-
-
-
-$(".js-data-example-ajax").select2({
-  ajax: {
-    url: "https://api.github.com/search/repositories",
-    dataType: 'json',
-    delay: 250,
-    data: function (params) {
-      return {
-        q: params.term, // search term
-        page: params.page
-      };
-    },
-    processResults: function (data, page) {
-      // parse the results into the format expected by Select2.
-      // since we are using custom formatting functions we do not need to
-      // alter the remote JSON data
-      return {
-        results: data.items
-      };
-    },
-    cache: true
-  },
-  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-  minimumInputLength: 1,
-  templateResult: formatRepo, // omitted for brevity, see the source of this page
-  templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
-});
-
-
 </script>
 
 @endsection
-
-

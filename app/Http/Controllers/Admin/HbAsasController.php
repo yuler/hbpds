@@ -148,4 +148,21 @@ class HbAsasController extends Controller {
 	}
 
 
+
+/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function find(Request $request)
+	{
+		if($request->has('asa_name'))
+		{	$asa_name=$request->input('asa_name');
+			return HbAsa::where('asa_name','=',$asa_name)->paginate(10)->toJson();
+		}else 
+		{
+				return HbAsa::paginate(10)->toJson();
+		}
+
+	}
 }
