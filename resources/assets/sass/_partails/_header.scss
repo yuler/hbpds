@@ -28,6 +28,7 @@ header {
 		border: 0px;
 		background-color: $menuBackgroundColor!important;
 		ul.navbar-left >li {
+			margin-left: -15px;
 			padding-right: 30px;
 			&:hover {
 				>a {
@@ -46,10 +47,12 @@ header {
 					border-bottom: 5px solid $themeColor;
 				}
 			}
-			&.active >a{
-				background-color: inherit!important;
-  				border-bottom: 5px solid $themeColor;
-  				padding-bottom: 10px;
+			&.active {
+				>a{
+					background-color: $themeFadeRgbaColor!important;
+	  				border-bottom: 5px solid $themeColor;
+	  				padding-bottom: 10px;
+	  			}
 			}
 			&.dropdown:hover .dropdown-menu {
 			    display: block;

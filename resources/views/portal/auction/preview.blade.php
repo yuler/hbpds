@@ -60,14 +60,20 @@
 							</div>
 							<div class="col-md-6">
 								<h3>{{ $asa['asa_name'] }}</h3>
-								@if(strlen($asa['asa_preview_addr']) == 0 || 
-									strlen($asa['asa_addr']) == 0 || 
-									['asa_addr'] == $asa['asa_preview_addr'])
-									<p>預展\拍賣会场</p>
-									<p>{{ $asa['asa_addr']}}</p>
+								@if($asa['asa_only_online'])
+									<a href="{{ $asa['asa_online_url'] }}">仅限网上拍卖</a>
+									<br>
+									<br>
 								@else
-									<p>預展会场：{{ $asa['asa_preview_addr']}}</p>
-									<p>拍賣会场：{{ $asa['asa_addr']}}</p>
+									@if(strlen($asa['asa_preview_addr']) == 0 || 
+										strlen($asa['asa_addr']) == 0 || 
+										['asa_addr'] == $asa['asa_preview_addr'])
+										<p>預展\拍賣会场</p>
+										<p>{{ $asa['asa_addr']}}</p>
+									@else
+										<p>預展会场：{{ $asa['asa_preview_addr']}}</p>
+										<p>拍賣会场：{{ $asa['asa_addr']}}</p>
+									@endif
 								@endif
 								
 								<p>{{ $asa['begin_time']}} 開拍</p>

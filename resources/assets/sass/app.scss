@@ -29,6 +29,7 @@ html body{
 		background-color: $subNavBackgroundColor;
 		.breadcrumb {
 			margin: 0px;
+			margin-left: -15px;
 			background-color: inherit;
 			li {
 				&:before{
