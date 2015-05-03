@@ -46,15 +46,8 @@ class HbArtworkController extends Controller {
 	 */
 	public function show($id)
 	{
-		$locale = \App::getLocale();
-		$lang = 0;
-		if($locale == 'zh-TW'){
-			$lang = 0;
-		}else {
-			$lang = 1;
-		}
 		$artwork = HbArtwork::find($id);
-		return view('portal.auction.artwork.show')->where('lang', '=', $lang)->withArtwork($artwork)->withSubnav('auction');
+		return view('portal.auction.artwork.show')->withArtwork($artwork)->withSubnav('auction');
 	}
 
 	/**
