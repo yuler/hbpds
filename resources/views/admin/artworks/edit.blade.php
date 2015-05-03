@@ -176,6 +176,7 @@
 								<div class="row">
 									<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传图片</a>
 									<input name="upload" type="file" class="hide" id="uploadAvatar" >
+									<div style="color:red">图片大小不能超过2M</div>
 								</div>
 								<div class="row" id="yulan">
 								@foreach ($attachements as $att)

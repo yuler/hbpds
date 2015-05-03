@@ -47,6 +47,9 @@ $router->group(['prefix' => 'admin','middleware' => 'auth'], function($router)
 
 
 });
+
+Route::get('/ajax/find','Admin\HbAsasController@find');
+
 Route::resources([
 	'new' => 'HbNewController',
 	'artwork' => 'HbArtworkController'
