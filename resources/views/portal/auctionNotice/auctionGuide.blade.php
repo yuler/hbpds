@@ -85,4 +85,10 @@
 			</div>
 		</div>
 	</div>
+
+	<style type="text/css">
+		p {
+	  		line-height: 2em;
+	  	}
+	</style>
 @endsection

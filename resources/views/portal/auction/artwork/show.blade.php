@@ -32,14 +32,14 @@
 				    </div>
 					@if(sizeof($artwork->prev()) > 0)
 				    	<a class="left carousel-control" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev">
-				    		<span style="font-size:12px;right: 10%;">LOT&nbsp;&nbsp;{{$artwork['art_lot']}}</span>
+				    		<span style="font-size:12px;right: 10%;">LOT&nbsp;&nbsp;{{$artwork->prev()['art_lot']}}</span>
 				    		<i class="fa fa-angle-left fa-4x"></i>
 				    	</a>
 					@endif
 					@if(sizeof($artwork->next()) > 0)
 				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
 				    		<i class="fa fa-angle-right fa-4x"></i>
-				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork['art_lot']}}</span>
+				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork->next()['art_lot']}}</span>
 				    	</a>
 				    @endif
 				</div>
