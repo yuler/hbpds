@@ -87,8 +87,9 @@ class PagesController extends Controller {
 		$word = str_replace(' ','',$word);
 		$word = str_replace('lot','',$word);
 		$artworks = HbArtwork::where('art_lot', 'like', '%' . $word . '%')
+				->where('lang', '=', $lang)
 				->orWhere('art_name', 'like', '%' . $kw . '%')
 				->paginate(8);
-		return view('portal.search.result')->where('lang', '=', $lang)->withKw($kw)->withArtworks($artworks);
+		return view('portal.search.result')->withKw($kw)->withArtworks($artworks);
 	}
 }
