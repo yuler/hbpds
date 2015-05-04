@@ -24,7 +24,9 @@
 				    <div class="carousel-inner">
 				    	@foreach($artwork->atts as $key => $att)
 				    		<div class="item {{ $key == 0 ? 'active' : ''}}">
-					            <img src="{{ $att['att_path']}}" style="height:500px;" href="/{{ $att['att_path']}}">
+				    			<a href="{{ $att['att_path']}}" target="_blank">
+					            	<img src="{{ $att['att_path']}}" style="height:500px;">
+					            </a>
 					        </div>
 				    	@endforeach
 				    </div>
