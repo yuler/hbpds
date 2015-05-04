@@ -27,6 +27,10 @@ return [
 		'transaction-read' => '成交必讀',
 		'auction-book' => '拍賣委託書',
 
+		'about' => '關於我們',
+		'introduction' => '橫濱簡介',
+		'contact' => '聯繫方式',
+		'new' => '新聞中心',
 	],
 
 	'拍賣預展' => '關於我們',

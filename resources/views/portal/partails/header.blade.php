@@ -58,12 +58,12 @@
 				</li>
 				<li class="dropdown {{ isset($subnav) && $subnav == 'about' ? 'active' : '' }}">
 					<a href="#">
-						{{ trans('portal.header.auction-calendar') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+						{{ trans('portal.header.about') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/introduction">{{ trans('portal.header.auction-calendar') }}</a></li>
-						<li><a href="/contact">{{ trans('portal.header.auction-calendar') }}</a></li>
-						<li><a href="/new">{{ trans('portal.header.auction-calendar') }}</a></li>
+						<li><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
+						<li><a href="/contact">{{ trans('portal.header.contact) }}</a></li>
+						<li><a href="/new">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</li>
 			</ul>

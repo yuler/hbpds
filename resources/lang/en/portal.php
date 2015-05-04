@@ -26,5 +26,9 @@ return [
 		'transaction-read' => 'Transaction Read',
 		'auction-book' => 'Auction Book',
 		
+		'about' => 'About',
+		'introduction' => 'Introduction',
+		'contact' => 'Contact',
+		'new' => 'News',
 	],
 ];
