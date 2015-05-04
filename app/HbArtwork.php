@@ -57,7 +57,6 @@ class HbArtwork extends Model {
 		$art_lot = $this->art_lot;
 		return $this::where('asa_id', '=', $asa_id)
 			->where('art_lot', '<', $art_lot)
-			->orderBy('art_lot')
 			->get();
 	}
 }
