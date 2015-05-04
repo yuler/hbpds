@@ -62,7 +62,7 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
-						<li><a href="/contact">{{ trans('portal.header.contact) }}</a></li>
+						<li><a href="/contact">{{ trans('portal.header.contact') }}</a></li>
 						<li><a href="/new">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</li>
