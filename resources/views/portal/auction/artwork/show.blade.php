@@ -55,8 +55,16 @@
 						@if(sizeof($artwork->atts) > 0)
 							<div class="col-md-8">
 								<ul class="clearfix">
-									@foreach($artwork->atts as $att)
-										<li><img src="{{ $att['att_path']}}" alt="" style="height:150px"></li>
+									@foreach($artwork->atts as $key => $att)
+										@if($key < 3)
+											<li>
+												<a href="#" data-target="#carousel-id" data-slide-to="{{$key}}" >
+													<img src="{{ $att['att_path']}}" alt="" style="height:150px">
+												</a>
+											</li>
+										@else
+											<li class="hide"><img src="{{ $att['att_path']}}" alt="" style="height:150px"></li>
+										@endif
 									@endforeach
 								</ul>
 								<a class="left carousel-control" href="#carousel-id" data-slide="prev"><i class="fa fa-angle-left fa-2x"></i></a>
