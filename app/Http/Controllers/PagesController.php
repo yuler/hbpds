@@ -75,6 +75,13 @@ class PagesController extends Controller {
 
 	public function getSearch(Request $request)
 	{
+		$locale = \App::getLocale();
+		$lang = 0;
+		if($locale == 'zh-TW'){
+			$lang = 0;
+		}else {
+			$lang = 1;
+		}
 		$kw = $request->input('kw');
 		$word = strtolower($kw);
 		$word = str_replace(' ','',$word);
@@ -82,6 +89,6 @@ class PagesController extends Controller {
 		$artworks = HbArtwork::where('art_lot', 'like', '%' . $word . '%')
 				->orWhere('art_name', 'like', '%' . $kw . '%')
 				->paginate(8);
-		return view('portal.search.result')->withKw($kw)->withArtworks($artworks);
+		return view('portal.search.result')->where('lang', '=', $lang)->withKw($kw)->withArtworks($artworks);
 	}
 }
