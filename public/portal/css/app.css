@@ -248,7 +248,8 @@ footer .goto-top {
   margin-bottom: 30px; }
   #artworkShow .content .carousel img {
     width: 100%; }
-    #artworkShow .content .carousel img:hover { }
+    #artworkShow .content .carousel img:hover {
+      cursor: url('/imgs/wx.gif'), auto; }
   #artworkShow .content .carousel .left.carousel-control {
     background-image: inherit;
     left: -15%; }
@@ -303,6 +304,8 @@ footer .goto-top {
 html body {
   font-size: 16px;
   font-family: "Microsoft Yahei"; }
+  html body p {
+    line-height: 2em; }
   html body h1 {
     font-size: 40px; }
 
