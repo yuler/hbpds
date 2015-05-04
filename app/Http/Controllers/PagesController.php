@@ -31,21 +31,34 @@ class PagesController extends Controller {
 		return view('portal.about.contact')->withSubnav('about');
 	}
 
-	public function getBuyService()
-	{	
-		session('subNav','auctionNotice');
-		return view('portal.auctionNotice.buyService')->withSubnav('auctionNotice');
-	}
-
 	public function getAuctionGuide()
 	{
-		session('subNav','auctionNotice');
 		return view('portal.auctionNotice.auctionGuide')->withSubnav('auctionNotice');
 	}
 
 	public function getTransactionRead()
 	{
 		return view('portal.auctionNotice.transactionRead')->withSubnav('auctionNotice');
+	}
+
+	public function getAuctionReference()
+	{
+		$locale = \App::getLocale();
+		$lang = 0;
+		if($locale == 'zh-TW'){
+			$lang = 0;
+		}else {
+			$lang = 1;
+		}
+		$materials = \App\HbMaterial::where('published','=','1')->where('lang', '=', $lang)->paginate(5);
+		foreach ($materials as $key => $material) {
+			$conent = $material->content;
+			$material->article = strip_tags($conent);
+			preg_match_all('/<img\s.*?>/', $conent, $imgList);
+			$imgList = array_slice($imgList[0], 0, 4);
+			$material->imgList = $imgList;
+		}
+		return view('portal.auctionNotice.auctionReference')->withMaterials($materials)->withSubnav('auctionNotice');
 	}
 
 	public function getAuctionBook()

@@ -22,9 +22,9 @@ return [
 		'auction-online' => '網上拍賣',
 
 		'auction-notice' => '拍賣須知',
-		'buy-service' => '購買服務',
-		'auction-guide' => '拍賣指南',
+		'auction-guide' => '拍賣規則',
 		'transaction-read' => '成交必讀',
+		'auction-reference' => '參考資料',
 		'auction-book' => '拍賣委託書',
 
 		'about' => '關於我們',

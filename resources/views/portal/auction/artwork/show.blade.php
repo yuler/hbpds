@@ -24,7 +24,7 @@
 				    <div class="carousel-inner">
 				    	@foreach($artwork->atts as $key => $att)
 				    		<div class="item {{ $key == 0 ? 'active' : ''}}">
-					            <img src="{{ $att['att_path']}}" style="height:500px;">
+					            <img src="{{ $att['att_path']}}" style="height:500px;" href="/{{ $att['att_path']}}">
 					        </div>
 				    	@endforeach
 				    </div>
@@ -71,7 +71,7 @@
 					<div class="row description" style="padding-left:15px;">
 						<h3>作品描述</h3>
 						<article>
-							{{ $artwork['art_sumarry'] }}作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述作品描述
+							{{ $artwork['art_sumarry'] }}
 						</article>
 					</div>
 					<hr>

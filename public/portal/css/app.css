@@ -354,6 +354,8 @@ html body {
     color: #ffcc00;
     width: 150px;
     z-index: 10px; }
+  #newIndex .content img, #newShow .content img {
+    max-width: 100%; }
 
 #auctionPreview .left-menu, #asaPreview .left-menu {
   padding-right: 50px; }

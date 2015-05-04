@@ -15,9 +15,9 @@
 			<div class="row">
 				<div class="col-md-2">
 					<ul class="left-menu">
-						<li><a href="/buy-service">購買服務</a></li>
 						<li><a href="/auction-guide">拍賣規則</a></li>
 						<li><a href="/transaction-read">成交必讀</a></li>
+						<li><a href="/auction-reference">參考資料</a></li>
 						<li class="active"><a href="/auction-book">拍卖委托书</a></li>
 					</ul>
 				</div>

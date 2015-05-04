@@ -52,7 +52,8 @@ Route::get('/ajax/find','Admin\HbAsasController@find');
 
 Route::resources([
 	'new' => 'HbNewController',
-	'artwork' => 'HbArtworkController'
+	'artwork' => 'HbArtworkController',
+	'material' => 'HbMaterialController'
 ]);
 
 $router->get('/auction/preview/asa/{id}', 'HbAuctionController@previewAsa');

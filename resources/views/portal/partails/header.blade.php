@@ -50,9 +50,9 @@
 						{{ trans('portal.header.auction-notice') }}&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/buy-service">{{ trans('portal.header.buy-service') }}</a></li>
 						<li><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
 						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
+						<li><a href="/auction-reference">{{ trans('portal.header.auction-reference') }}</a></li>
 						<li><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</li>
