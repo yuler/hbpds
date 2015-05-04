@@ -12,7 +12,7 @@
 				<a class="navbar-brand" href="/">
 					<img src="/imgs/logo.jpg" alt="logo" class="logo">
 					<img src="/imgs/logo-text.png" alt="logo" class="logo-text">
-					<p style="margin-left: 7px;margin-top: -10px;"><img src="/imgs/logo-t.jpg" alt="logo"></p>
+					<p style="margin-left: 7px;margin-top: -20px;"><img src="/imgs/logo-t.jpg" alt="logo"></p>
 				</a>
 			</div>
 		
