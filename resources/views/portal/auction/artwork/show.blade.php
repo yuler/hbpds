@@ -39,7 +39,7 @@
 					@if(sizeof($artwork->next()) > 0)
 				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
 				    		<i class="fa fa-angle-right fa-4x"></i>
-				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork->next()['art_lot']}}</span>
+				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork->next()[0]['art_lot']}}</span>
 				    	</a>
 				    @endif
 				</div>
