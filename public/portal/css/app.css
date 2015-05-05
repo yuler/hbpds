@@ -445,9 +445,16 @@ div.productList > div {
   div.productList > div:hover .info {
     display: block; }
 
+.sm-logo {
+  display: none; }
+
 @media (max-width: 767px) {
-  .navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, footer {
+  .navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
     display: none; }
+  .sm-logo {
+    display: block; }
+    .sm-logo img {
+      width: 100%; }
   .content img {
     width: 100% !important;
     height: 500px; }
