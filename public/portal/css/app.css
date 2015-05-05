@@ -444,3 +444,17 @@ div.productList > div {
       color: white; }
   div.productList > div:hover .info {
     display: block; }
+
+@media (max-width: 767px) {
+  .navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, footer {
+    display: none; }
+  .content img {
+    width: 100% !important;
+    height: 500px; }
+  .navbar-brand {
+    width: 100%; }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px; }
+  #artworkShow {
+    padding: 0; } }

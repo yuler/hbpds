@@ -47,15 +47,15 @@
 				</div>
 			@endif
 			<div class="row info">
-				<div class="col-md-10 col-md-offset-1" style="padding:0px;">
-					<hr>
+				<div class="col-md-10 col-md-offset-1 col-sm-12" style="padding:0px;">
+					<hr class="sm-hide">
 					<div class="row">
 						<div class="col-md-4">
 							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
 							&nbsp;&nbsp;&nbsp;&nbsp;LOT {{ $artwork['art_lot'] }}
 						</div>
 						@if(sizeof($artwork->atts) > 0)
-							<div class="col-md-8">
+							<div class="col-md-8 sm-hide">
 								<ul class="clearfix">
 									@foreach($artwork->atts as $key => $att)
 										@if($key < 3)
@@ -86,11 +86,11 @@
 							{{ $artwork['art_sumarry'] }}
 						</article>
 					</div>
-					<hr>
-					<div class="row other-link">
+					<hr class="sm-hide">
+					<div class="row other-link sm-hide">
 						<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="padding-right:15px;float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
 					</div>
-					<hr>
+					<hr class="sm-hide">
 				</div>
 			</div>
 			
