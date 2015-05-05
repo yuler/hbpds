@@ -225,7 +225,7 @@ div.productList {
 }
 @media (max-width: 767px) {
 	.navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
-		display: none;
+		display: none!important;
 	}
 	.sm-logo {
 		display: block;
