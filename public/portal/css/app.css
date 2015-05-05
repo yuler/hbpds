@@ -246,10 +246,8 @@ footer .goto-top {
 #artworkShow .content {
   margin-top: 30px;
   margin-bottom: 30px; }
-  #artworkShow .content .carousel img {
-    width: 100%; }
-    #artworkShow .content .carousel img:hover {
-      cursor: url('/imgs/wx.gif'), auto; }
+  #artworkShow .content .carousel img:hover {
+    cursor: url('/imgs/fangdajing.ico'), auto; }
   #artworkShow .content .carousel .left.carousel-control {
     background-image: inherit;
     left: -15%; }

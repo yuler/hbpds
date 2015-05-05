@@ -23,10 +23,12 @@
 				    </ol>
 				    <div class="carousel-inner">
 				    	@foreach($artwork->atts as $key => $att)
-				    		<div class="item {{ $key == 0 ? 'active' : ''}}">
-				    			<a href="{{ $att['att_path']}}" target="_blank">
-					            	<img src="{{ $att['att_path']}}" style="height:500px;">
-					            </a>
+				    		<div class="item {{ $key == 0 ? 'active' : ''}}" style="max-width:100%;height:500px;line-height: 500px;overflow: hidden;">
+				    			<center>
+					    			<a href="{{ $att['att_path']}}" target="_blank">
+						            	<img src="{{ $att['att_path']}}">
+						            </a>
+					            </center>
 					        </div>
 				    	@endforeach
 				    </div>
@@ -44,9 +46,9 @@
 				    @endif
 				</div>
 			@endif
-
 			<div class="row info">
 				<div class="col-md-10 col-md-offset-1" style="padding:0px;">
+					<hr>
 					<div class="row">
 						<div class="col-md-4">
 							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
