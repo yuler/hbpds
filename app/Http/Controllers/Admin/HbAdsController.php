@@ -23,7 +23,8 @@ class HbAdsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('admin.ads.create');
+		$asas = \App\HbAsa::all()->lists('asa_name', 'id');
+		return view('admin.ads.create')->withAsas($asas);
 	}
 
 	/**
@@ -49,7 +50,7 @@ class HbAdsController extends Controller {
 		
 		$ad->name = $request->input('name');
 		$ad->target_url=$request->input('target_url');
-		$ad->image_url=$request->input('image_url');
+		$ad->asa_id=$request->input('asa_id');
 		$ad->enable=$request->input('enable');
 		
 
@@ -78,11 +79,12 @@ class HbAdsController extends Controller {
 	 */
 	public function edit($id)
 	{
+		$asas = \App\HbAsa::all()->lists('asa_name', 'id');
 		$ad = HbAd::find($id);
 		//dd($hbAuction->asas);
 		//$asas = $hbAuction->asas;
 		
-		return view('admin.ads.edit')->withAd($ad);
+		return view('admin.ads.edit')->withAd($ad)->withAsas($asas);
 	}
 
 	
@@ -97,11 +99,11 @@ class HbAdsController extends Controller {
 	{
 		$ad = HbAd::find($id);
 
+		$ad->order=$request->input('order');
 		$ad->name = $request->input('name');
 		$ad->target_url=$request->input('target_url');
-		$ad->image_url=$request->input('image_url');
+		$ad->asa_id=$request->input('asa_id');
 		$ad->enable=$request->input('enable');
-		$ad->order=$request->input('order');
 		$ad->save();		
 
 		Flash::success('保存成功');

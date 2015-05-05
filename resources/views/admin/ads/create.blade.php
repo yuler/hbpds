@@ -41,16 +41,18 @@
 				                    	{!! Form::label('name', '广告名称') !!}
 				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
 				                    </div>
+
+				                    <div class="form-group">
+				                    	{!! Form::label('target_url', '跳转页面') !!}
+				                    	{!! Form::text('target_url', null, ['class' => 'form-control ', 'placeholder' => '跳转页面']) !!}
+				                    </div>
 				                   
 				                    <div class="form-group">
-				                    	{!! Form::label('image_url', '拍卖专场') !!}
-				                    	{!! Form::text('asa_name', null, ['class' => 'form-control','placeholder' => '选择拍卖专场']) !!}
-
-<select class="js-example-data-ajax form-control">
-  <option value="3620194" selected="selected">select2/select2</option>
-</select>
+				                    	{!! Form::label('asa_id', '拍卖专场') !!}
+										{!! Form::select('asa_id', $asas , null ,['class' => 'form-control' ]) !!}
 				                    </div>
-				                     <div class="form-group">
+
+				                    <div class="form-group">
 				                    	{!! Form::label('order', '顺序') !!}
 				                    	{!! Form::text('order', null, ['class' => 'form-control','placeholder' => '输入序号']) !!}
 				                    </div>
@@ -83,7 +85,11 @@
 	<br>
 
 
-
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script type="text/javascript">
+  $('select').select2();
+</script>
 <script type="text/javascript">
 $('#uploadAvatar').fileupload({
         url: '/admin/attachment?_token={{ Session::token() }}',
@@ -131,34 +137,6 @@ $('#uploadAvatar').fileupload({
 		})
 	});*/
 
-
-
-$(".js-data-example-ajax").select2({
-  ajax: {
-    url: "https://api.github.com/search/repositories",
-    dataType: 'json',
-    delay: 250,
-    data: function (params) {
-      return {
-        q: params.term, // search term
-        page: params.page
-      };
-    },
-    processResults: function (data, page) {
-      // parse the results into the format expected by Select2.
-      // since we are using custom formatting functions we do not need to
-      // alter the remote JSON data
-      return {
-        results: data.items
-      };
-    },
-    cache: true
-  },
-  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-  minimumInputLength: 1,
-  templateResult: formatRepo, // omitted for brevity, see the source of this page
-  templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
-});
 
 
 </script>

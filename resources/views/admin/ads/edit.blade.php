@@ -47,16 +47,18 @@
 				                    	{!! Form::label('name', '广告名称') !!}
 				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
 				                    </div>
+
 				                    <div class="form-group">
 				                    	{!! Form::label('target_url', '跳转页面') !!}
-				                    	{!! Form::text('target_url', null, ['class' => 'form-control', 'placeholder' => '输入跳转页面']) !!}
+				                    	{!! Form::text('target_url', null, ['class' => 'form-control ', 'placeholder' => '跳转页面']) !!}
+				                    </div>
+				                   
+				                    <div class="form-group">
+				                    	{!! Form::label('asa_id', '拍卖专场') !!}
+										{!! Form::select('asa_id', $asas , null ,['class' => 'form-control' ]) !!}
 				                    </div>
 
 				                    <div class="form-group">
-				                    	{!! Form::label('image_url', '主图') !!}
-				                    	{!! Form::text('image_url', null, ['class' => 'form-control','placeholder' => '上传主图']) !!}
-				                    </div>
-				                     <div class="form-group">
 				                    	{!! Form::label('order', '顺序') !!}
 				                    	{!! Form::text('order', null, ['class' => 'form-control','placeholder' => '输入序号']) !!}
 				                    </div>
@@ -101,7 +103,11 @@
 	</div><!-- /.content-wrapper -->
 	<br>
 	<br>
-
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script type="text/javascript">
+  $('select').select2();
+</script>
 <script type="text/javascript">
 $('#uploadAvatar').fileupload({
         url: '/admin/attachment?_token={{ Session::token() }}',
