@@ -246,10 +246,8 @@ footer .goto-top {
 #artworkShow .content {
   margin-top: 30px;
   margin-bottom: 30px; }
-  #artworkShow .content .carousel img {
-    width: 100%; }
-    #artworkShow .content .carousel img:hover {
-      cursor: url('/imgs/wx.gif'), auto; }
+  #artworkShow .content .carousel img:hover {
+    cursor: url('/imgs/fangdajing.ico'), auto; }
   #artworkShow .content .carousel .left.carousel-control {
     background-image: inherit;
     left: -15%; }
@@ -446,3 +444,24 @@ div.productList > div {
       color: white; }
   div.productList > div:hover .info {
     display: block; }
+
+.sm-logo {
+  display: none; }
+
+@media (max-width: 767px) {
+  .navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
+    display: none !important; }
+  .sm-logo {
+    display: block; }
+    .sm-logo img {
+      width: 100%; }
+  .content img {
+    width: 100% !important;
+    height: 500px; }
+  .navbar-brand {
+    width: 100%; }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px; }
+  #artworkShow {
+    padding: 0; } }

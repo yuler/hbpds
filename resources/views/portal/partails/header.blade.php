@@ -15,7 +15,7 @@
 					<p style="margin-left: 7px;margin-top: -10px;"><img src="/imgs/logo-t.jpg" alt="logo"></p>
 				</a>
 			</div>
-		
+			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				
@@ -32,6 +32,9 @@
 			</div><!-- /.navbar-collapse -->
 		</div>
 	</nav>
+	<div class="sm-logo">
+		<img src="/imgs/sm-logo.png" alt="">
+	</div>
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">

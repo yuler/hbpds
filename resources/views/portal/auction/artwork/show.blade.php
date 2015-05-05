@@ -23,37 +23,39 @@
 				    </ol>
 				    <div class="carousel-inner">
 				    	@foreach($artwork->atts as $key => $att)
-				    		<div class="item {{ $key == 0 ? 'active' : ''}}">
-				    			<a href="{{ $att['att_path']}}" target="_blank">
-					            	<img src="{{ $att['att_path']}}" style="height:500px;">
-					            </a>
+				    		<div class="item {{ $key == 0 ? 'active' : ''}}" style="max-width:100%;height:500px;line-height: 500px;overflow: hidden;">
+				    			<center>
+					    			<a href="{{ $att['att_path']}}" target="_blank">
+						            	<img src="{{ $att['att_path']}}">
+						            </a>
+					            </center>
 					        </div>
 				    	@endforeach
 				    </div>
 					@if(sizeof($artwork->prev()) > 0)
-				    	<a class="left carousel-control" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev">
+				    	<a class="left carousel-control sm-hide" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev">
 				    		<span style="font-size:12px;right: 10%;">LOT&nbsp;&nbsp;{{$artwork->prev()[0]['art_lot']}}</span>
 				    		<i class="fa fa-angle-left fa-4x"></i>
 				    	</a>
 					@endif
 					@if(sizeof($artwork->next()) > 0)
-				    	<a class="right carousel-control" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
+				    	<a class="right carousel-control sm-hide" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
 				    		<i class="fa fa-angle-right fa-4x"></i>
 				    		<span style="font-size:12px;left: 30%;">LOT&nbsp;&nbsp;{{$artwork->next()[0]['art_lot']}}</span>
 				    	</a>
 				    @endif
 				</div>
 			@endif
-
 			<div class="row info">
-				<div class="col-md-10 col-md-offset-1" style="padding:0px;">
+				<div class="col-md-10 col-md-offset-1 col-sm-12" style="padding:0px;">
+					<hr class="sm-hide">
 					<div class="row">
 						<div class="col-md-4">
 							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
 							&nbsp;&nbsp;&nbsp;&nbsp;LOT {{ $artwork['art_lot'] }}
 						</div>
 						@if(sizeof($artwork->atts) > 0)
-							<div class="col-md-8">
+							<div class="col-md-8 sm-hide">
 								<ul class="clearfix">
 									@foreach($artwork->atts as $key => $att)
 										@if($key < 3)
@@ -84,11 +86,11 @@
 							{{ $artwork['art_sumarry'] }}
 						</article>
 					</div>
-					<hr>
-					<div class="row other-link">
+					<hr class="sm-hide">
+					<div class="row other-link sm-hide">
 						<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="padding-right:15px;float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
 					</div>
-					<hr>
+					<hr class="sm-hide">
 				</div>
 			</div>
 			

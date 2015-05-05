@@ -219,3 +219,32 @@ div.productList {
 		};
 	}
 }
+
+.sm-logo {
+	display: none;
+}
+@media (max-width: 767px) {
+	.navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
+		display: none!important;
+	}
+	.sm-logo {
+		display: block;
+		img {
+			width: 100%;
+		}
+	}
+	.content img {
+		width: 100%!important;
+		height: 500px;
+	}
+	.navbar-brand {
+		width: 100%;
+	}
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	#artworkShow {
+		padding: 0;
+	}
+}
