@@ -29,4 +29,8 @@ class HbAd extends Model {
 	protected $hidden = [];
 	//
 
+	public function asa()
+	{
+		return $this->hasOne('App\HbAsa','id','asa_id');
+	}
 }
