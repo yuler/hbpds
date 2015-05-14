@@ -47,12 +47,12 @@
 				                    	{!! Form::label('name', '广告名称') !!}
 				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
 				                    </div>
-
+<!--
 				                    <div class="form-group">
 				                    	{!! Form::label('target_url', '跳转页面') !!}
 				                    	{!! Form::text('target_url', null, ['class' => 'form-control ', 'placeholder' => '跳转页面']) !!}
 				                    </div>
-				                   
+-->				                   
 				                    <div class="form-group">
 				                    	{!! Form::label('asa_id', '拍卖专场') !!}
 										{!! Form::select('asa_id', $asas , null ,['class' => 'form-control' ]) !!}
@@ -70,7 +70,7 @@
 				                   <button type="submit" class="btn btn-primary">提交</button>
 									{!! Form::close() !!}
 								</div><!-- end md-6-->
-
+<!--
 								<div class="col-sm-6">
 								    <div class="thumbnail">
 								      
@@ -89,6 +89,7 @@
 								      </div>
 								    </div>
 								</div>
+-->
 
 			                 </div><!--end box-->
 
