@@ -49,8 +49,8 @@
 					<h1>{{ $preview_asa['asa_name'] }}</h1>
 					
 					@if(strlen($preview_asa['asa_preview_addr']) == 0 || 
-						strlen($asa['asa_addr']) == 0 || 
-						['asa_addr'] == $asa['asa_preview_addr'])
+						strlen($preview_asa['asa_addr']) == 0 || 
+						['asa_addr'] == $preview_asa['asa_preview_addr'])
 						<p>預展\拍賣会场</p>
 						<p>{{ $preview_asa['asa_addr']}}</p>
 					@else

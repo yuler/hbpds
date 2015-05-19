@@ -26,7 +26,7 @@
 				    		<div class="item {{ $key == 0 ? 'active' : ''}}" style="max-width:100%;height:500px;line-height: 500px;overflow: hidden;">
 				    			<center>
 					    			<a href="{{ $att['att_path']}}" target="_blank">
-						            	<img src="{{ $att['att_path']}}">
+						            	<img src="{{ $att['att_path']}}" style="max-height:500px">
 						            </a>
 					            </center>
 					        </div>

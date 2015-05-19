@@ -15,14 +15,14 @@ class CreateHbAdsTable extends Migration {
 		Schema::create('hb_ads', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('asa_id')->unsigned();
+			#$table->integer('asa_id')->unsigned();
 			$table->integer('order');
 			$table->integer('enable');
 			$table->string('target_url',300);
 			$table->string('name',300);
 			$table->timestamps();
 
-			$table->foreign('asa_id')->references('id')->on('hb_asas')->onDelete('cascade');
+			#$table->foreign('asa_id')->references('id')->on('hb_asas')->onDelete('cascade');
 
 		});
 	}

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\HbNew;
+use App\HbArtwork;
 use App\HbAuction;
 use App\HbArtAtt;
 use App\HbAsa;
@@ -98,6 +99,16 @@ DB::commit();
 	{
 		if($request->has('ids')){
 			HbAd::destroy($request->input('ids'));
+			Flash::success('删除成功');
+			return redirect()->back();
+		}
+		Flash::error('至少选中一条');
+		return redirect()->back();
+	}
+	public function deleteArtworks(Request $request)
+	{
+		if($request->has('ids')){
+			HbArtwork::destroy($request->input('ids'));
 			Flash::success('删除成功');
 			return redirect()->back();
 		}

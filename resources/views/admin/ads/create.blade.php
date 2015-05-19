@@ -1,7 +1,6 @@
 @extends('admin.app')
 
 
-	
 
 @section('content')
 	<div class="content-wrapper">
@@ -41,18 +40,16 @@
 				                    	{!! Form::label('name', '广告名称') !!}
 				                    	{!! Form::text('name', null, ['class' => 'form-control ', 'placeholder' => '输入广告名称']) !!}
 				                    </div>
-<!--
 				                    <div class="form-group">
 				                    	{!! Form::label('target_url', '跳转页面') !!}
-				                    	{!! Form::text('target_url', null, ['class' => 'form-control ', 'placeholder' => '跳转页面']) !!}
-				                    </div>
-				                   -->
-				                    <div class="form-group">
-				                    	{!! Form::label('asa_id', '拍卖专场') !!}
-										{!! Form::select('asa_id', $asas , null ,['class' => 'form-control' ]) !!}
+				                    	{!! Form::text('target_url', null, ['class' => 'form-control', 'placeholder' => '输入跳转页面']) !!}
 				                    </div>
 
 				                    <div class="form-group">
+				                    	{!! Form::label('image_url', '主图') !!}
+				                    	{!! Form::text('image_url', null, ['class' => 'form-control','placeholder' => '上传主图']) !!}
+				                    </div>
+				                     <div class="form-group">
 				                    	{!! Form::label('order', '顺序') !!}
 				                    	{!! Form::text('order', null, ['class' => 'form-control','placeholder' => '输入序号']) !!}
 				                    </div>
@@ -65,7 +62,18 @@
 									{!! Form::close() !!}
 								</div><!-- end md-6-->
 
-								
+								<div class="col-sm-6">
+								    <div class="thumbnail">
+								      <img id="yulan" data-src="holder.js/100%x300" alt="上传宣" >
+								      <div class="caption">
+								      	<form action="/admin/attachment" id="uploadAvatarForm" method="post">
+			                        			
+											<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传主图</a>
+											<input name="upload" type="file" class="hide" id="uploadAvatar">
+										</form>
+								      </div>
+								    </div>
+								</div>
 
 			                 </div><!--end box-->
 
@@ -83,13 +91,6 @@
 	</div><!-- /.content-wrapper -->
 	<br>
 	<br>
-
-
-<link href="/cdn/select2.min.css" rel="stylesheet" />
-<script src="/cdn/select2.min.js"></script>
-<script type="text/javascript">
-  $('select').select2();
-</script>
 <script type="text/javascript">
 $('#uploadAvatar').fileupload({
         url: '/admin/attachment?_token={{ Session::token() }}',
@@ -136,9 +137,6 @@ $('#uploadAvatar').fileupload({
 			}
 		})
 	});*/
-
-
-
 </script>
 
 @endsection

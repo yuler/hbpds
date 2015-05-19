@@ -22,8 +22,8 @@ class CreateHbArtworksTable extends Migration {
 			$table->string('art_size',50);
 			$table->string('art_material',40);
 			$table->string('art_age',20);
-			$table->double('art_price_hkd',10,10);
-			$table->double('art_price_rmb',10,10);
+			$table->double('art_price_hkd',20,2);
+			$table->double('art_price_rmb',20,2);
 			$table->text('author_sumarry');
 			$table->string('art_inscription',100);
 			$table->string('art_tizhi',100);
@@ -41,10 +41,10 @@ class CreateHbArtworksTable extends Migration {
 
 
 			$table->integer('art_lot');
-			$table->double('begin_price_hkd',10,10);
-			$table->double('end_price_hkd',10,10);
-			$table->double('begin_price_rmb',10,10);
-			$table->double('end_price_rmb',10,10);
+			$table->double('begin_price_hkd',20,2);
+			$table->double('end_price_hkd',20,2);
+			$table->double('begin_price_rmb',20,2);
+			$table->double('end_price_rmb',20,2);
 			$table->text('art_sumarry');
 
 			$table->string('art_dynasty',20);

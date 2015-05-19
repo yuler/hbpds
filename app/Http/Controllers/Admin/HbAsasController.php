@@ -53,7 +53,7 @@ class HbAsasController extends Controller {
 		$hbAsa->lang = $request->input('lang');
 		$hbAsa->preview_begin_time = $request->input('preview_begin_time');
 		$hbAsa->preview_end_time = $request->input('preview_end_time');
-		$hbAsa->begin_time = $request->input('$request->begin_time');
+		$hbAsa->begin_time = $request->input('begin_time');
 		$hbAsa->end_time = $request->input('end_time');
 		$hbAsa->asa_preview_addr = $request->input('asa_preview_addr');
 		$hbAsa->asa_group = $request->input('asa_group');
@@ -120,7 +120,7 @@ class HbAsasController extends Controller {
 		$hbAsa->lang = $request->input('lang');
 		$hbAsa->preview_begin_time = $request->input('preview_begin_time');
 		$hbAsa->preview_end_time = $request->input('preview_end_time');
-		$hbAsa->begin_time = $request->input('$request->begin_time');
+		$hbAsa->begin_time = $request->input('begin_time');
 		$hbAsa->end_time = $request->input('end_time');
 		$hbAsa->asa_preview_addr = $request->input('asa_preview_addr');
 		$hbAsa->asa_group = $request->input('asa_group');
