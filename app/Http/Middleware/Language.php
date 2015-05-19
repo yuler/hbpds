@@ -18,10 +18,10 @@ class Language {
 	 */
 	public function handle($request, Closure $next)
 	{
-		// Set the language
 	    if(!session()->has('locale'))
         {
-            session()->put('locale', $request->getPreferredLanguage($this->languages));
+            // session()->put('locale', $request->getPreferredLanguage($this->languages));
+            session()->put('locale', 'zh-TW');
         }
         app()->setLocale(session('locale'));
 

@@ -6,7 +6,7 @@
 			<div class="container">
 				<ol class="breadcrumb">
 				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="/">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/auction/preview">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li class="active">拍賣預展</li>
 				</ol>
 			</div>

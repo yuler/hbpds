@@ -19,6 +19,7 @@ class CreateHbAdsTable extends Migration {
 			$table->integer('order');
 			$table->integer('enable');
 			$table->string('target_url',300);
+			$table->string('image_url',300);
 			$table->string('name',300);
 			$table->timestamps();
 

@@ -29,7 +29,7 @@
 			@foreach($ads as $key => $ad)
 				<div class="col-md-4">
 					<a href="{{$ad['target_url']}}" target="_blank" style="height:270px;">
-						<img src="{{ $ad->asa['asa_image'] }}" alt="">
+						<img src="{{ $ad['image_url'] }}" alt="">
 					</a>
 				</div>
 			@endforeach

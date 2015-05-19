@@ -51,7 +51,7 @@ class HbAdsController extends Controller {
 		$ad->image_url = $request->input('image_url');
 		$ad->name = $request->input('name');
 		$ad->target_url=$request->input('target_url');
-		$ad->asa_id=$request->input('asa_id');
+		// $ad->asa_id=$request->input('asa_id');
 		$ad->enable=$request->input('enable');
 		
 
@@ -104,7 +104,7 @@ class HbAdsController extends Controller {
 		$ad->name = $request->input('name');
 		$ad->image_url=$request->input('image_url');
 		$ad->target_url=$request->input('target_url');
-		$ad->asa_id=$request->input('asa_id');
+		// $ad->asa_id=$request->input('asa_id');
 		$ad->enable=$request->input('enable');
 		$ad->save();		
 

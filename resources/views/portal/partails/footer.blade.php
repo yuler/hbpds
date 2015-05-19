@@ -19,7 +19,7 @@
 	</div>
 	<div class="copy">
 		<div class="container" style="font-size:12px;">
-			<span>© 2015 Yokohama Kokusai Auction All Rights Reserved</span>
+			<span>&copy; 2015 Yokohama International Auction (HK) Co. Ltd. All Rights Reserved</span>
 			<img src="/imgs/logo-jp.png" alt="">
 		</div>
 	</div>
