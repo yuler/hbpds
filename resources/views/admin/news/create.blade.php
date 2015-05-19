@@ -33,7 +33,7 @@
 		                    	{!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => '输入新闻标题']) !!}
 		                    </div>
 		                    <div class="form-group">
-		                    	{!! Form::label('content', '新闻标题') !!}
+		                    	{!! Form::label('content', '新闻内容') !!}
 		                    	{!! Form::textarea('content', null, ['class' => 'simditor', 'placeholder' => '输入新闻内容,支持拖拽上传图片。']) !!}
 		                    </div>
 		                    <div class="form-group">
