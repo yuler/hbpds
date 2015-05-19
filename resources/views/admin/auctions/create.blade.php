@@ -54,12 +54,12 @@
 		                    </div>
  							<div class="form-group">
 		                    	{!! Form::label('auction_addr', '拍卖地点') !!}
-		                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
+		                    	{!! Form::text('auction_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
 		                    </div>
 
 		                    <div class="form-group">
 		                    	{!! Form::label('auction_preview_addr', '预展地点') !!}
-		                    	{!! Form::text('asa_preview_addr', null, ['class' => 'form-control', 'placeholder' => '输入预展地点']) !!}
+		                    	{!! Form::text('auction_preview_addr', null, ['class' => 'form-control', 'placeholder' => '输入预展地点']) !!}
 		                    </div>
 
 		                    <div class="form-group">
