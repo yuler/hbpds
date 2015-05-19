@@ -28,7 +28,7 @@ return [
 		'auction-book' => '拍賣委託書',
 
 		'about' => '關於我們',
-		'introduction' => '橫濱簡介',
+		'introduction' => '公司簡介',
 		'contact' => '聯繫方式',
 		'new' => '新聞中心',
 	],

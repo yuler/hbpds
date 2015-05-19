@@ -36,7 +36,7 @@ class HbAuctionController extends Controller {
 			$lang = 1;
 		}
 
-		$auctions = HbAuction::whereBetween('preview_begin_time', [Carbon::now()->year, Carbon::now()])->where('lang', '=', $lang)->orderBy('preview_begin_time')->get();
+		$auctions = HbAuction::where('preview_begin_time', '>' ,[Carbon::now()->year])->where('lang', '=', $lang)->orderBy('preview_begin_time')->get();
 		$asas = HbAsa::whereBetween('preview_begin_time', [Carbon::now()->year, Carbon::now()])->where('lang', '=', $lang)->orderBy('preview_begin_time')->get();
 		$previewAsa = HbAsa::find($id);
 		return view('portal.auction.previewAsa')->withAuctions($auctions)->withAsas($asas)->withSubnav('auction')->withPreviewAsa($previewAsa);
