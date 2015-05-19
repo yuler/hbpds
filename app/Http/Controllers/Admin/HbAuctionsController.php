@@ -47,6 +47,8 @@ class HbAuctionsController extends Controller {
 		$hbAuction->auction_begin_time = $request->input('auction_begin_time');
 		$hbAuction->auction_end_time = $request->input('auction_end_time');
 		$hbAuction->lang = $request->input('lang');
+		$hbAuction->auction_addr=$request->input('auction_addr');
+		$hbAuction->auction_preview_addr=$request->input('auction_preview_addr');
 
 		$hbAuction->save();		
 		Flash::success('保存成功');
@@ -103,7 +105,8 @@ class HbAuctionsController extends Controller {
 		$hbAuction->auction_begin_time = $request->input('auction_begin_time');
 		$hbAuction->auction_end_time = $request->input('auction_end_time');
 		$hbAuction->lang = $request->input('lang');
-
+		$hbAuction->auction_addr=$request->input('auction_addr');
+		$hbAuction->auction_preview_addr=$request->input('auction_preview_addr');
 		$hbAuction->save();		
 
 		Flash::success('保存成功');

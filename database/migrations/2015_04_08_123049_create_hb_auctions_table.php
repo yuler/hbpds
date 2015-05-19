@@ -23,6 +23,8 @@ class CreateHbAuctionsTable extends Migration {
 			$table->timestamp('auction_end_time');
 			$table->tinyInteger('lang')->nullable()->default(0);
 
+			$table->string('auction_addr',100);
+			$table->string('auction_preview_addr',100);
 			$table->timestamps();
 		});
 	}

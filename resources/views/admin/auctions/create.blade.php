@@ -52,6 +52,15 @@
 
 		                    	{!! Form::text('auction_end_time', null, ['class' => 'form-control','onFocus'=>'WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\'})', 'placeholder' => '选择拍卖结束时间']) !!}
 		                    </div>
+ 							<div class="form-group">
+		                    	{!! Form::label('auction_addr', '拍卖地点') !!}
+		                    	{!! Form::text('asa_addr', null, ['class' => 'form-control', 'placeholder' => '输入拍卖地点']) !!}
+		                    </div>
+
+		                    <div class="form-group">
+		                    	{!! Form::label('auction_preview_addr', '预展地点') !!}
+		                    	{!! Form::text('asa_preview_addr', null, ['class' => 'form-control', 'placeholder' => '输入预展地点']) !!}
+		                    </div>
 
 		                    <div class="form-group">
 		                    	{!! Form::label('lang', '语言种类') !!}
