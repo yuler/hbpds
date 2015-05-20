@@ -27,16 +27,16 @@
 					<p>地址： 中国香港湾仔轩尼诗道302-308号集成中心2305 </p>
 					<p>电话： (852) 2786 3648 </p>
 					<p>传真： (852) 2786 3877</p>
-					<p>網站： www.ykhkauction.com</p>
-					<p>郵箱： info@ykauction.com</p>
+					<p>網站： <a href='http://www.ykauction.com' target='_blank' style='color:#0000FF'>www.ykauction.com</a></p>
+					<p>郵箱： <a href='mailto:info@ykauction.com' style='color:#0000FF'>info@ykauction.com</a></p>
 					<br>
 					
 					<h3>日本株式会社横滨国际拍卖</h3>
 					<p>地址： 〒231-0023  日本国神奈川県横浜市中区山下町84番5 メトロタワー山下町５階B</p>
 					<p>电话： (81) 45 228 8639</p>
 					<p>传真： (81) 45 228 8638</p>
-					<p>網站： www.ykhkauction.com</p>
-					<p>郵箱： info@ykauction.com</p>
+					<p>網站： <a href='http://www.ykauction.com' target='_blank' style='color:#0000FF'>www.ykauction.com</a></p>
+					<p>郵箱： <a href='mailto:info@ykauction.com' style='color:#0000FF'>info@ykauction.com</a></p>
 					<br>
 
 					<h3>日本株式会社横滨国际拍卖北京代表处</h3>
