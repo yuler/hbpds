@@ -92,7 +92,7 @@
 									@endif
 									<div>
 										<p>LOT {{ $artwork['art_lot'] }}</p>
-										<p>估值： 900，000 HKD</p>
+										<p>估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
 									</div>
 								</a>
 								<div class="info">
