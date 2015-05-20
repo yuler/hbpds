@@ -5,8 +5,9 @@
 			<ul class="clearfix">
 				<li>{{ trans('portal.footer.address') }}</li>
 				<li>{{ trans('portal.footer.mail') }}：<a href="mailto:info@ykauction.com">info@ykauction.com</a></li>
-				<li class="last">交通地址&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-					隱私保護&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<li class="last">
+					<a href="/map">{{ trans('portal.footer.map') }}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+					<a href="/privacy">{{ trans('portal.footer.privacy') }}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					<div class="wx">
 						<img class=""src="/imgs/wx.gif" style="width:50px;">
 						<div class="wx-code">

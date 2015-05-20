@@ -21,9 +21,9 @@ return [
 		'auction-online' => 'ONLINE AUCTION',
 
 		'auction-notice' => 'SERVICES',
-		'buy-service' => 'Terms & Conditions',
-		'auction-guide' => 'Bidders Note',
-		'transaction-read' => 'References',
+		'auction-guide' => 'Terms & Conditions',
+		'transaction-read' => 'Bidder\'s Note',
+		'auction-reference' => 'References',
 		'auction-book' => 'Absentee and Phone Bid Form',
 		
 		'about' => 'ABOUT US',
@@ -36,5 +36,7 @@ return [
 		'company' => 'Yokohama International Auction (HK) Co. Ltd.',
 		'address' => 'Unit 05,23/F, CC Wu Building NO.302-308 Hennessy Rd. Wan Chai, Hong Kong',
 		'mail' => 'Email',
+		'map' => 'Site Map',
+		'privacy' => 'Privacy Policy'
 	]
 ];
