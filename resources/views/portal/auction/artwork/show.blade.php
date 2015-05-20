@@ -50,8 +50,8 @@
 				<div class="col-md-10 col-md-offset-1 col-sm-12" style="padding:0px;">
 					<hr class="sm-hide">
 					<div class="row">
-						<div class="col-md-4">
-							<h3 style="display:inline-block;">{{ $artwork['art_name'] }}</h3>  
+						<div class="col-md-4" style="margin-top:35px;">
+							<h2 style="display:inline-block;">{{ $artwork['art_name'] }}</h2>  
 							&nbsp;&nbsp;&nbsp;&nbsp;LOT {{ $artwork['art_lot'] }}
 						</div>
 						@if(sizeof($artwork->atts) > 0)
@@ -75,27 +75,44 @@
 						@endif
 					</div>
 					<hr>
-					<div class="row" style="padding-left:15px;">
-						<h3>估价: {{ $artwork['begin_price_hkd'] }} HKD</h3>
-						<h3>{{ $artwork['begin_price_rmb'] }} CNY</h3>
+					<div class="row" style="padding-left:15px;font-family: 华文细黑;">
+						<h3 style="margin:0;line-height:40px;">{{ $artwork['art_age'] }}</h3>
+						<h3 style="margin:0;line-height:40px;">{{ $artwork['art_author'] }}</h3>
+						<br>
+						<p style="line-height:30px;">{{ $artwork['art_name'] }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $artwork['art_material'] }}</p>
+						<p style="line-height:30px;">{{ $artwork['art_size'] }} ({{ $artwork['art_code'] }})</p>
+						<br>
+						<p style="line-height:24px;">{{ $artwork['art_seal'] }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $artwork['art_tizhi'] }}</p>
+						<p style="line-height:24px;">{{ $artwork['art_annotation']}}</p>
+						<br>
+						<p style="line-height:30px;">{{ $artwork['art_source']}}</p>
+						<p style="line-height:30px;">{{ $artwork['art_publish']}}</p>
+						<br>
+						<p style="line-height:30px;">估價：</p>
+						<p style="line-height:30px;">HKD: {{ number_format($artwork['begin_price_hkd']) }}-{{ number_format($artwork['end_price_hkd']) }}</p>
+						<p style="line-height:30px;">CNY: {{ number_format($artwork['begin_price_rmb']) }}-{{ number_format($artwork['end_price_rmb']) }}</p>
+						<br>
+						<p style="line-height:30px;">成交價</p>
+						<p style="line-height:30px;">HKD: {{ number_format($artwork['art_price_hkd']) }}</p>
+						<p style="line-height:30px;">CNY: {{ number_format($artwork['art_price_rmb']) }}</p>
 					</div>
-					<hr>
-					<div class="row description" style="padding-left:15px;">
-						<h3>作品描述</h3>
-						<article>
-							{{ $artwork['art_sumarry'] }}
-						</article>
+					<br>
+					<div class="row description" style="padding-left:15px;line-height:30px;">
+						{!! $artwork['art_sumarry'] !!}
 					</div>
 					<hr class="sm-hide">
 					<div class="row other-link sm-hide">
-						<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="padding-right:15px;float:right;color:black;text-decoration: none;">查看同专场其他商品</a>
+						<a href="/auction/preview/asa/{{$artwork->asa['id']}}" style="padding-right:15px;float:right;color:black;text-decoration: none;font-family: 华文细黑;">查看同专场其他商品</a>
 					</div>
 					<hr class="sm-hide">
 				</div>
 			</div>
-			
-			
-			
 		</div>
 	</div>
+
+	<style type="text/css">
+		.description{
+			font-family: 华文细黑;
+		}
+	</style>
 @endsection
