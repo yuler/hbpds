@@ -40,7 +40,7 @@ class CreateHbArtworksTable extends Migration {
 			$table->string('art_source',100);
 
 
-			$table->integer('art_lot');
+			$table->string('art_lot',10);
 			$table->double('begin_price_hkd',20,2);
 			$table->double('end_price_hkd',20,2);
 			$table->double('begin_price_rmb',20,2);
