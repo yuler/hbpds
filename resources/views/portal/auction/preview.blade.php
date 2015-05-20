@@ -19,6 +19,8 @@
 						@foreach( $auctions as $auction)
 							<li>
 								<h4>{{ $auction['auction_name'] }}</h4>
+								<h6 style="color:#999;">拍賣會場：{{ $auction['auction_addr'] }}</h6>
+								<h6 style="color:#999;">預展會場：{{ $auction['auction_preview_addr'] }}</h6>
 								<hr>
 								@foreach( $auction->auctionGroup() as $group)
 									<div>
@@ -60,7 +62,7 @@
 							</div>
 							<div class="col-md-6">
 								<h3>{{ $asa['asa_name'] }}</h3>
-								@if($asa['asa_only_online'])
+								<!-- @if($asa['asa_only_online'])
 									<a href="{{ $asa['asa_online_url'] }}">仅限网上拍卖</a>
 									<br>
 									<br>
@@ -74,10 +76,12 @@
 										<p>預展会场：{{ $asa['asa_preview_addr']}}</p>
 										<p>拍賣会场：{{ $asa['asa_addr']}}</p>
 									@endif
-								@endif
-								
-								<p>{{ $asa['begin_time']}} 開拍</p>
-								<p>{{ $asa['preview_begin_time']}} 預覽</p>
+								@endif -->
+								<br>
+								<br>
+								<p>{{ date('Y-m-d H:i', strtotime($asa['begin_time'])) }}&nbsp;&nbsp;開拍</p>
+								<br>
+								<p>{{ date('Y-m-d H:i', strtotime($asa['preview_begin_time'])) }}&nbsp;&nbsp;預覽</p>
 							</div>
 						</div>
 					@endforeach

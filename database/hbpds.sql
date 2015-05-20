@@ -218,6 +218,8 @@ CREATE TABLE `hb_auctions` (
   `lang` tinyint(4) DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `auction_addr` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `auction_preview_addr` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -228,7 +230,7 @@ CREATE TABLE `hb_auctions` (
 
 LOCK TABLES `hb_auctions` WRITE;
 /*!40000 ALTER TABLE `hb_auctions` DISABLE KEYS */;
-INSERT INTO `hb_auctions` VALUES (1,'橫濱國際香港春季拍賣會','2015-05-29 02:00:00','2015-05-29 11:00:00','2015-05-30 02:00:00','2015-05-30 11:00:00',0,'2015-04-26 07:32:43','2015-05-19 07:23:58');
+INSERT INTO `hb_auctions` VALUES (1,'橫濱國際香港春季拍賣會','2015-05-29 02:00:00','2015-05-29 11:00:00','2015-05-30 02:00:00','2015-05-30 11:00:00',0,'2015-04-26 07:32:43','2015-05-19 07:23:58','香港灣仔港灣道1號香港萬麗海景酒店8樓宴會廳','香港灣仔港灣道1號香港萬麗海景酒店8樓宴會廳');
 /*!40000 ALTER TABLE `hb_auctions` ENABLE KEYS */;
 UNLOCK TABLES;
 
