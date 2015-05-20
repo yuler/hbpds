@@ -157,14 +157,16 @@
 								      <tr>
 								      	<th><input type="checkbox" class="minimal"></th>
 								        
-								        <th>拍品名称</th>
-								        <th>编号</th>
+								        <th>LOT NO.</th>
+								        <th>拍品名稱</th>
+								        <th>年代</th>
 								        <th>作者</th>
 								        <th>尺寸</th>
 								        <th>材质</th>
 								        <th>年代</th>
-								        <th>价格HKD</th>
-								        <th>价格RMB</th>
+								        <th>估價最高价HKD</th>
+								        <th>成交价HKD</th>
+								        
 								       <!--  <th>作者简介</th>
 								        <th>款识</th>
 								        <th>题识</th>
@@ -200,14 +202,15 @@
 								    @foreach ($artworks as $artwork)
 								        <tr>
 										    <td><input type="checkbox" class="minimal" name="ids[]" value="{{ $artwork->id }}"></td>
+								            <td>{{ $artwork->art_lot}}</td>
 								            <td>{{ str_limit($artwork->art_name,$limit = 20, $end = '...') }}</td>
 								            <td>{{ $artwork->art_code}}</td>
 								            <td>{{ $artwork->art_author }}</td>
 								            <td>{{ $artwork->art_size }}</td>
 								            <td>{{ $artwork->art_material }}</td>
 								            <td>{{ $artwork->art_age }}</td>
-								            <td>{{ $artwork->art_price_hkd }}</td>
-								            <td>{{ $artwork->art_price_rmb}}</td>
+								            <td>{{ $artwork->begin_price_hkd }}</td>
+								            <td>{{ $artwork->art_price_hkd}}</td>
 								            
 								            <!-- <td>{{ $artwork->author_sumarry}}</td>
 								            <td>{{ $artwork->art_inscription}}</td>
