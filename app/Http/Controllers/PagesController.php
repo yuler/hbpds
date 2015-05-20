@@ -92,4 +92,15 @@ class PagesController extends Controller {
 				->paginate(8);
 		return view('portal.search.result')->withKw($kw)->withArtworks($artworks);
 	}
+
+
+	public function getMap($value='')
+	{
+		return view('portal.map')
+	}
+
+	public function getPrivacy($value='')
+	{
+		return view('portal.privacy')
+	}
 }
