@@ -38,6 +38,10 @@ class HbAttachmentsController extends Controller {
 	{
 
 		$file = $request->file('upload');
+		if($file->getSize() > 5*1024*1024){
+			return response()->json(['success'=>'true','msg'=>'上傳文件不能大於 5M');
+		}
+
 		$serverName = Str::random() . '.' . $file->getClientOriginalExtension();
 		$serverPath = env('UPLOAD_PATH') .'/'. date('Y',time()) . '/'
 			. date('m',time()) . '/' . date('d',time());
@@ -49,7 +53,10 @@ class HbAttachmentsController extends Controller {
 			$attachment->att_type = $request->input('att_type');
 		$attachment->att_path = $serverPath . '/' . $serverName;
 		
+
+
 		$attachment->save();
+
 
         return response()->json(['success'=>'true','msg'=>'上传失败','file_path' => $attachment->att_path,'file_name'=>$attachment->att_name,'att_id'=>$attachment->id ]);
 	}
