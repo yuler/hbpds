@@ -81,7 +81,7 @@
 								<br>
 								<p>{{ date('Y-m-d H:i', strtotime($asa['begin_time'])) }}&nbsp;&nbsp;開拍</p>
 								<br>
-								<p>{{ date('Y-m-d H:i', strtotime($asa['preview_begin_time'])) }}&nbsp;&nbsp;預覽</p>
+								<!-- <p>{{ date('Y-m-d H:i', strtotime($asa['preview_begin_time'])) }}&nbsp;&nbsp;預覽</p> -->
 							</div>
 						</div>
 					@endforeach
