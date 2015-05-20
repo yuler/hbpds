@@ -96,11 +96,11 @@ class PagesController extends Controller {
 
 	public function getMap($value='')
 	{
-		return view('portal.map')
+		return view('portal.map');
 	}
 
 	public function getPrivacy($value='')
 	{
-		return view('portal.privacy')
+		return view('portal.privacy');
 	}
 }
