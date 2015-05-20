@@ -22,7 +22,7 @@ return [
 
 		'auction-notice' => 'SERVICES',
 		'buy-service' => 'Terms & Conditions',
-		'auction-guide' => 'Bidder\'s Note',
+		'auction-guide' => 'Bidders Note',
 		'transaction-read' => 'References',
 		'auction-book' => 'Absentee and Phone Bid Form',
 		
