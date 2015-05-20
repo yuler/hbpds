@@ -73,7 +73,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="/lang/zh-TW" class="{{ session('locale') == 'zh-TW' ? 'active' : '' }}">繁體</a>
+					<a href="/lang/zh-TW" class="{{ session('locale') == 'zh-TW' ? 'active' : '' }}">中文</a>
 					|
 					<a href="/lang/en" class="{{ session('locale') == 'en' ? 'active' : '' }}" >English</a>
 				</li>
