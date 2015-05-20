@@ -12,23 +12,29 @@ return [
 
 		'search' => 'Product name or LOT number',
 
-		'home' => 'Home',
+		'home' => 'HOME',
 
-		'auction-calendar' => 'Auction Calendar',
-		'auction-preview' => 'Auction Preview',
-		'auction-history' => 'Auction History',
+		'auction-calendar' => 'CALENDAR',
+		'auction-preview' => 'Preview',
+		'auction-history' => 'Results',
 
-		'auction-online' => 'Auction Online',
+		'auction-online' => 'ONLINE AUCTION',
 
-		'auction-notice' => 'Auction Notice',
-		'buy-service' => 'Buy Service',
-		'auction-guide' => 'Auction Guide',
-		'transaction-read' => 'Transaction Read',
-		'auction-book' => 'Auction Book',
+		'auction-notice' => 'SERVICES',
+		'buy-service' => 'Terms & Conditions',
+		'auction-guide' => 'Bidder\'s Note',
+		'transaction-read' => 'References',
+		'auction-book' => 'Absentee and Phone Bid Form',
 		
-		'about' => 'About',
-		'introduction' => 'Introduction',
-		'contact' => 'Contact',
-		'new' => 'News',
+		'about' => 'ABOUT US',
+		'introduction' => 'About Us',
+		'contact' => 'Contact Us',
+		'new' => 'Press Release',
 	],
+
+	'footer' => [
+		'company' => 'Yokohama International Auction (HK) Co. Ltd.',
+		'address' => 'Unit 05,23/F, CC Wu Building NO.302-308 Hennessy Rd. Wan Chai, Hong Kong',
+		'mail' => 'Email',
+	]
 ];
