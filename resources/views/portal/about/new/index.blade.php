@@ -5,9 +5,9 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li><a href="#">關於我們&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li class="active">新聞中心</li>
+				  <li><a href="/">{{ trans('portal.header.home') }}&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="#">{{ trans('portal.header.about') }}&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li class="active">{{ trans('portal.header.new') }}</li>
 				</ol>
 			</div>
 		</div>
@@ -15,9 +15,9 @@
 			<div class="row">
 				<div class="col-md-2">
 					<ul class="left-menu">
-						<li><a href="/introduction">橫濱香港簡介</a></li>
-						<li><a href="/contact">聯繫方式</a></li>
-						<li class="active"><a href="">新聞中心</a></li>
+						<li><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
+						<li><a href="/contact">{{ trans('portal.header.contact') }}</a></li>
+						<li class="active"><a href="">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 content">

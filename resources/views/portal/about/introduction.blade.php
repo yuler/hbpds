@@ -5,8 +5,8 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-				  <li><a href="#">關於我們&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="/">{{ trans('portal.header.home') }}&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
+				  <li><a href="#">{{ trans('portal.header.about') }}&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
 				  <li class="active">{{ trans('portal.header.introduction') }}</li>
 				</ol>
 			</div>
@@ -16,8 +16,8 @@
 				<div class="col-md-2">
 					<ul class="left-menu">
 						<li class="active"><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
-						<li><a href="/contact">聯繫方式</a></li>
-						<li><a href="/new">新聞中心</a></li>
+						<li><a href="/contact">{{ trans('portal.header.contact') }}</a></li>
+						<li><a href="/new">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 content">

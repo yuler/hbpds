@@ -5,9 +5,9 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="#">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="#">拍賣須知</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li class="active">購買服務</li>
+				  <li><a href="#">{{ trans('portal.header.home') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="#">{{ trans('portal.header.auction-notice') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li class="active">{{ trans('portal.header.auction-reference') }}</li>
 				</ol>
 			</div>
 		</div>
@@ -15,10 +15,10 @@
 			<div class="row">
 				<div class="col-md-2">
 					<ul class="left-menu">
-						<li><a href="/auction-guide">拍賣規則</a></li>
-						<li><a href="/transaction-read">成交必讀</a></li>
-						<li class="active"><a href="/auction-reference">參考資料</a></li>
-						<li><a href="/auction-book">拍卖委托书</a></li>
+						<li><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
+						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
+						<li class="active"><a href="/auction-reference">{{ trans('portal.header.auction-reference') }}</a></li>
+						<li><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 content">

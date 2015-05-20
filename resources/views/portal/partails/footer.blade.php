@@ -3,8 +3,14 @@
 		<div class="container">
 			<p>{{ trans('portal.footer.company') }}</p>
 			<ul class="clearfix">
-				<li>{{ trans('portal.footer.address') }}</li>
-				<li>{{ trans('portal.footer.mail') }}：<a href="mailto:info@ykauction.com">info@ykauction.com</a></li>
+				<li style="padding-right: 2%;">{{ trans('portal.footer.address') }}</li>
+				<li style="padding-right: 2%;">{{ trans('portal.footer.tel') }}： +852 2786 3648</li>
+				<li style="padding-right: 2%;">{{ trans('portal.footer.fax') }}： +852 2786 3877</li>
+				@if(app()->getLocale() == 'en')
+					<br>
+					<br>
+				@endif
+				<li style="padding-right: 2%;">{{ trans('portal.footer.mail') }}：<a href="mailto:info@ykauction.com">info@ykauction.com</a></li>
 				<li class="last">
 					<a href="/map">{{ trans('portal.footer.map') }}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 					<a href="/privacy">{{ trans('portal.footer.privacy') }}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

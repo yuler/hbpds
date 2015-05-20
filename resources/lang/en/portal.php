@@ -35,6 +35,8 @@ return [
 	'footer' => [
 		'company' => 'Yokohama International Auction (HK) Co. Ltd.',
 		'address' => 'Unit 05,23/F, CC Wu Building NO.302-308 Hennessy Rd. Wan Chai, Hong Kong',
+		'tel' => 'Phone',
+		'fax' => 'Fax',
 		'mail' => 'Email',
 		'map' => 'Site Map',
 		'privacy' => 'Privacy Policy'

@@ -5,9 +5,9 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="/auction/preview">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li class="active">拍賣預展</li>
+				  <li><a href="/">{{ trans('portal.header.home') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/auction/preview">{{ trans('portal.header.auction-calendar') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li class="active">{{ trans('portal.header.auction-preview') }}</li>
 				</ol>
 			</div>
 		</div>
@@ -47,8 +47,8 @@
 						@endforeach
 					</ul>
 					<hr>
-					<h1><a href="/auction/history">歷史拍賣</a></h1>
-					<hr>
+					<!-- <h1><a href="/auction/history">歷史拍賣</a></h1>
+					<hr> -->
 				</div>
 				<div class="col-md-8 content">
 					@foreach($asas as $asa)
