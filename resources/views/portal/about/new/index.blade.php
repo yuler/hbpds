@@ -28,7 +28,7 @@
 								<div class="data">
 									{{ date('Y-m-d', strtotime($new->published_at)) }}
 								</div>
-								<div class="html">
+								<div class="html" style="min-width:800px;">
 									<p><a href="/new/{{ $new->id }}">{{ $new->title }}</a></p>
 									<article>
 									{{ str_limit($new->article, $limit = 100, $end = '...') }}

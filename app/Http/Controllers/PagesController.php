@@ -103,4 +103,9 @@ class PagesController extends Controller {
 	{
 		return view('portal.privacy');
 	}
+
+	public function getDownloadBook($value='')
+	{
+		return response()->download(public_path('/download/book.pdf'), '拍賣委託書.pdf');
+	}
 }

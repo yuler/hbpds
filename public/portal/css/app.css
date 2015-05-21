@@ -193,9 +193,7 @@ footer .goto-top {
     text-decoration: none;
     color: #999; }
     #asaPreview .content div.productList > div a img {
-      width: 100%;
-      min-height: 230px;
-      height: 230px; }
+      }
     #asaPreview .content div.productList > div a div {
       padding-top: 20px;
       border: 3px solid #eee;
@@ -207,7 +205,7 @@ footer .goto-top {
     padding-top: 10px;
     position: absolute;
     top: 39%;
-    width: 88%;
+    width: 85.5%;
     background-color: rgba(0, 0, 0, 0.2); }
     #asaPreview .content div.productList > div > div p {
       padding-left: 15px;
@@ -423,9 +421,7 @@ div.productList > div {
     text-decoration: none;
     color: #999; }
     div.productList > div a img {
-      width: 100%;
-      min-height: 230px;
-      height: 230px; }
+       }
     div.productList > div a div {
       padding-top: 20px;
       border: 3px solid #eee;
