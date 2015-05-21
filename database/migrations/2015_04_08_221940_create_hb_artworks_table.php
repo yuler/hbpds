@@ -17,7 +17,7 @@ class CreateHbArtworksTable extends Migration {
 			$table->increments('id');
 			
 			$table->string('art_code',20);
-			$table->string('art_author',20);
+			$table->string('art_author',200);
 			$table->string('art_name',200);
 			$table->string('art_size',50);
 			$table->string('art_material',40);
@@ -26,12 +26,12 @@ class CreateHbArtworksTable extends Migration {
 			$table->double('art_price_rmb',20,2);
 			$table->text('author_sumarry');
 			$table->string('art_inscription',100);
-			$table->string('art_tizhi',100);
+			$table->text('art_tizhi');
 			$table->string('art_mark',100);
-			$table->string('art_seal',100);
+			$table->text('art_seal');
 			$table->string('art_collection_seal',100);
 			$table->string('art_publish',200);
-			$table->string('art_annotation',1000);
+			$table->text('art_annotation');
 			$table->string('art_signature',200);
 			$table->string('art_phase',500);
 			$table->string('art_reference',200);

@@ -68,16 +68,16 @@
 
  								<div class="form-group">
 			                    	{!! Form::label('art_seal', '鈐印（多為書畫） ') !!}
-			                    	{!! Form::text('art_seal', null, ['class' => 'form-control', 'placeholder' => '输入钤印']) !!}
+		                    		{!! Form::textarea('art_seal', null, ['class' => 'simditor', 'placeholder' => '']) !!}
 			                    </div>
 	 							<div class="form-group">
 			                    	{!! Form::label('art_tizhi', '題識（款識）   ') !!}
-			                    	{!! Form::text('art_tizhi', null, ['class' => 'form-control', 'placeholder' => '输入题识']) !!}
+		                    		{!! Form::textarea('art_tizhi', null, ['class' => 'simditor', 'placeholder' => '']) !!}
 			                    </div>
 			                 
 			                   <div class="form-group">
 			                    	{!! Form::label('art_annotation', '釋文') !!}
-			                    	{!! Form::text('art_annotation', null, ['class' => 'form-control', 'placeholder' => '输入释文']) !!}
+		                    		{!! Form::textarea('art_annotation', null, ['class' => 'simditor', 'placeholder' => '']) !!}
 			                    </div>
  								<div class="form-group">
 			                    	{!! Form::label('art_source', '來源') !!}
@@ -141,7 +141,7 @@
 								<div class="row">
 									<a id="dianji" href="javascript:void(0);" class="btn btn-primary" onclick="$('#uploadAvatar').trigger('click');">上传图片</a>
 									<input name="upload" type="file" class="hide" id="uploadAvatar" >
-									<div style="color:red">图片大小不能超过2M</div>
+									<div style="color:red">图片大小不能超过5M</div>
 								</div>
 								<div class="row" id="yulan">
 								  

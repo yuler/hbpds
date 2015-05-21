@@ -56,24 +56,26 @@
 			                    	{!! Form::text('art_size', null, ['class' => 'form-control','placeholder' => '输入尺寸']) !!}
 			                    </div>
 
-	 							<div class="form-group">
-			                    	{!! Form::label('art_code', '年作 （多為書畫）') !!}
-			                    	{!! Form::text('art_code', null, ['class' => 'form-control', 'placeholder' => '输入编号']) !!}
-			                    </div>
 
- 								<div class="form-group">
-			                    	{!! Form::label('art_seal', '鈐印（多為書畫） ') !!}
-			                    	{!! Form::text('art_seal', null, ['class' => 'form-control', 'placeholder' => '输入钤印']) !!}
-			                    </div>
-	 							<div class="form-group">
-			                    	{!! Form::label('art_tizhi', '題識（款識）   ') !!}
-			                    	{!! Form::text('art_tizhi', null, ['class' => 'form-control', 'placeholder' => '输入题识']) !!}
-			                    </div>
-			                 
-			                   <div class="form-group">
-			                    	{!! Form::label('art_annotation', '釋文') !!}
-			                    	{!! Form::text('art_annotation', null, ['class' => 'form-control', 'placeholder' => '输入释文']) !!}
-			                    </div>
+ <div class="form-group">
+                                                {!! Form::label('art_code', '年作 （多為書畫）') !!}
+                                                {!! Form::text('art_code', null, ['class' => 'form-control', 'placeholder' => '输入编号']) !!}
+                                            </div>
+
+                                                                <div class="form-group">
+                                                {!! Form::label('art_seal', '鈐印（多為書畫） ') !!}
+                                                {!! Form::textarea('art_seal', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+                                            </div>
+                                                                <div class="form-group">
+                                                {!! Form::label('art_tizhi', '題識（款識）   ') !!}
+                                                {!! Form::textarea('art_tizhi', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+                                            </div>
+
+                                           <div class="form-group">
+                                                {!! Form::label('art_annotation', '釋文') !!}
+                                                {!! Form::textarea('art_annotation', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+                                            </div>
+
  								<div class="form-group">
 			                    	{!! Form::label('art_source', '來源') !!}
 			                    	{!! Form::text('art_source', null, ['class' => 'form-control', 'placeholder' => '输入来源']) !!}
