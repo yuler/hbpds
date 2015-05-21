@@ -89,11 +89,11 @@
 									<div style="width:228px;height:228px;border-top:3px solid #eee;padding:0px;">
 										@if(sizeof($artwork->atts) > 0)
 											<center style="line-height: 228px;">
-												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height:auto;width:inherit;">
+												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height:auto;width:inherit;" onload="AutoResizeImage(0,0,this)">
 											</center>
 										@else
 											<center style="line-height: 228px;">
-												<img src="/imgs/n1.png" alt="" style="max-width:100%;height:auto;width:inherit;">
+												<img src="/imgs/n1.png" alt="" style="max-width:100%;height:auto;width:inherit;" onload="AutoResizeImage(0,0,this)">
 											</center>
 										@endif
 									</div>
@@ -114,4 +114,33 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		function AutoResizeImage(maxWidth,maxHeight,objImg){
+		var img = new Image();
+		img.src = objImg.src;
+		var hRatio;
+		var wRatio;
+		var Ratio = 1;
+		var w = img.width;
+		var h = img.height;
+		wRatio = maxWidth / w;
+		hRatio = maxHeight / h;
+		if (maxWidth ==0 && maxHeight==0){
+		Ratio = 1;
+		}else if (maxWidth==0){//
+		if (hRatio<1) Ratio = hRatio;
+		}else if (maxHeight==0){
+		if (wRatio<1) Ratio = wRatio;
+		}else if (wRatio<1 || hRatio<1){
+		Ratio = (wRatio<=hRatio?wRatio:hRatio);
+		}
+		if (Ratio<1){
+		w = w * Ratio;
+		h = h * Ratio;
+		}
+		objImg.height = h;
+		objImg.width = w;
+		}
+	</script>
 @endsection
