@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\HbNew;
 use App\HbArtwork;
+use App\HbMaterial;
 use App\HbAuction;
 use App\HbArtAtt;
 use App\HbAsa;
@@ -33,10 +34,10 @@ class HbBatchDestroyController extends Controller {
 		return redirect()->back();
 	}
 
-	public function deleteMaterials(Request $request)
+	public function deleteMaterial(Request $request)
 	{
 		if($request->has('ids')){
-			HbNew::destroy($request->input('ids'));
+			HbMaterial::destroy($request->input('ids'));
 			Flash::success('删除成功');
 			return redirect()->back();
 		}
