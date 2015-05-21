@@ -68,16 +68,16 @@
 
  								<div class="form-group">
 			                    	{!! Form::label('art_seal', '鈐印（多為書畫） ') !!}
-		                    		{!! Form::textarea('art_seal', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_seal', null, ['class' => 'form-control','id'=>'dd', 'placeholder' => '']) !!}
 			                    </div>
 	 							<div class="form-group">
 			                    	{!! Form::label('art_tizhi', '題識（款識）   ') !!}
-		                    		{!! Form::textarea('art_tizhi', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_tizhi', null, ['class' => 'form-control', 'placeholder' => '']) !!}
 			                    </div>
 			                 
 			                   <div class="form-group">
 			                    	{!! Form::label('art_annotation', '釋文') !!}
-		                    		{!! Form::textarea('art_annotation', null, ['class' => 'simditor', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_annotation', null, ['class' => 'form-control', 'placeholder' => '']) !!}
 			                    </div>
  								<div class="form-group">
 			                    	{!! Form::label('art_source', '來源') !!}
