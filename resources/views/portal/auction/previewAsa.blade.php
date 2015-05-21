@@ -102,11 +102,6 @@
 										<p>估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
 									</div>
 								</a>
-								<div class="info">
-									<p>{{ $artwork['art_dynasty'] }}</p>
-									<p>{{ $artwork['art_author'] }}</p>
-									<p>{{ $artwork['art_name'] }}</p>
-=======
 								<div class="info" style="margin:3px;height: 100px;">
 									<p>朝代： {{ $artwork['art_dynasty'] }}</p>
 									<p>作者： {{ $artwork['art_author'] }}</p>
