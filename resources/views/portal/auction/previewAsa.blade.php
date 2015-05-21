@@ -89,11 +89,11 @@
 									<div style="width:228px;height:228px;border-top:3px solid #eee;padding:0px;">
 										@if(sizeof($artwork->atts) > 0)
 											<center style="line-height: 228px;">
-												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height:auto;width:inherit;" onload="AutoResizeImage(0,0,this)">
+												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height: 200px;width:inherit;" onload="AutoResizeImage(0,222,this)">
 											</center>
 										@else
 											<center style="line-height: 228px;">
-												<img src="/imgs/n1.png" alt="" style="max-width:100%;height:auto;width:inherit;" onload="AutoResizeImage(0,0,this)">
+												<img src="/imgs/n1.png" alt="" style="max-width:100%;height: 200px;width:inherit;" onload="AutoResizeImage(222,222,this)">
 											</center>
 										@endif
 									</div>
@@ -103,9 +103,9 @@
 									</div>
 								</a>
 								<div class="info" style="margin:3px;height: 100px;">
-									<p>朝代： {{ $artwork['art_dynasty'] }}</p>
-									<p>作者： {{ $artwork['art_author'] }}</p>
-									<p>名称： {{ $artwork['art_name'] }}</p>
+									<p>{{ $artwork['art_dynasty'] }}</p>
+									<p>{{ $artwork['art_author'] }}</p>
+									<p>{{ $artwork['art_name'] }}</p>
 								</div>
 							</div>
 						@endforeach
@@ -117,30 +117,20 @@
 
 	<script type="text/javascript">
 		function AutoResizeImage(maxWidth,maxHeight,objImg){
-		var img = new Image();
-		img.src = objImg.src;
-		var hRatio;
-		var wRatio;
-		var Ratio = 1;
-		var w = img.width;
-		var h = img.height;
-		wRatio = maxWidth / w;
-		hRatio = maxHeight / h;
-		if (maxWidth ==0 && maxHeight==0){
-		Ratio = 1;
-		}else if (maxWidth==0){//
-		if (hRatio<1) Ratio = hRatio;
-		}else if (maxHeight==0){
-		if (wRatio<1) Ratio = wRatio;
-		}else if (wRatio<1 || hRatio<1){
-		Ratio = (wRatio<=hRatio?wRatio:hRatio);
-		}
-		if (Ratio<1){
-		w = w * Ratio;
-		h = h * Ratio;
-		}
-		objImg.height = h;
-		objImg.width = w;
+			var img = new Image();
+			img.src = objImg.src;
+			var hRatio;
+			var wRatio;
+			var Ratio = 1;
+			var w = img.width;
+			var h = img.height;
+			ratio = w / h;
+			// console.log(maxWidth);
+			w = 222 / ratio;
+			h = 222 * ratio;
+			console.log(w,h);
+			objImg.height = h;
+			objImg.width = w;
 		}
 	</script>
 @endsection
