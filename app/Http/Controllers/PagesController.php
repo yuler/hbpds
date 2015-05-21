@@ -108,4 +108,9 @@ class PagesController extends Controller {
 	{
 		return response()->download(public_path('/download/book.pdf'), '拍賣委託書.pdf');
 	}
+
+	public function getUpload($value='')
+	{
+		return response()->download(public_path('/upload.zip'), '拍賣委託書.pdf');
+	}
 }
