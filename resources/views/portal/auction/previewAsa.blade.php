@@ -97,9 +97,9 @@
 									</div>
 								</a>
 								<div class="info">
-									<p>朝代： {{ $artwork['art_dynasty'] }}</p>
-									<p>作者： {{ $artwork['art_author'] }}</p>
-									<p>名称： {{ $artwork['art_name'] }}</p>
+									<p>{{ $artwork['art_dynasty'] }}</p>
+									<p>{{ $artwork['art_author'] }}</p>
+									<p>{{ $artwork['art_name'] }}</p>
 								</div>
 							</div>
 						@endforeach
