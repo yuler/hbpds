@@ -5,10 +5,10 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="/">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="/auction/preview">拍賣預展</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li class="active"></li>
+				  <li><a href="/">{{ trans('portal.header.home') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+                                  <li><a href="/auction/preview">{{ trans('portal.header.auction-calendar') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+                                  <li class="active"><a href='/auction/preview'>{{ trans('portal.header.auction-preview') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+                                  <li>&nbsp;&nbsp;</li>
 				</ol>
 			</div>
 		</div>

@@ -5,15 +5,16 @@
 		<div class="sub-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-				  <li><a href="/">首頁</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
-				  <li><a href="/auction/preview">拍賣日曆</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/">{{ trans('portal.header.home') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li><a href="/auction/preview">{{ trans('portal.header.auction-calendar') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
+				  <li class="active"><a href='/auction/preview'>{{ trans('portal.header.auction-preview') }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li><a href="/auction/preview/asa/{{$artwork->asa['id']}}">{{ $artwork->asa['asa_name'] }}</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i></li>
 				  <li class="active">{{ $artwork['art_name'] }}</li>
 				</ol>
 			</div>
 		</div>
 		<div class="container content">
-			<p>编号： LOT {{ $artwork['art_lot'] }}</p>
+			<p>編號： LOT {{ $artwork['art_lot'] }}</p>
 			@if(sizeof($artwork->atts) > 0)
 				<div id="carousel-id" class="carousel slide" data-ride="carousel">
 				    <ol class="carousel-indicators">
