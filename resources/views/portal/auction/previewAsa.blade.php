@@ -85,12 +85,18 @@
 					<div class="row productList">
 						@foreach($preview_asa->artworks() as $artwork)
 							<div class="col-md-4">
-								<a href="/artwork/{{$artwork['id']}}">
-									@if(sizeof($artwork->atts) > 0)
-										<img src="{{ $artwork->atts[0]['att_path'] }}" alt="">
-									@else
-										<img src="/imgs/n1.png" alt="">
-									@endif
+								<a href="/artwork/{{$artwork['id']}}" style="display:block;">
+									<div style="width:228px;height:228px;border-top:3px solid #eee;padding:0px;">
+										@if(sizeof($artwork->atts) > 0)
+											<center style="line-height: 228px;">
+												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height:auto;width:inherit;">
+											</center>
+										@else
+											<center style="line-height: 228px;">
+												<img src="/imgs/n1.png" alt="" style="max-width:100%;height:auto;width:inherit;">
+											</center>
+										@endif
+									</div>
 									<div>
 										<p>LOT {{ $artwork['art_lot'] }}</p>
 										<p>估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
@@ -100,6 +106,11 @@
 									<p>{{ $artwork['art_dynasty'] }}</p>
 									<p>{{ $artwork['art_author'] }}</p>
 									<p>{{ $artwork['art_name'] }}</p>
+=======
+								<div class="info" style="margin:3px;height: 100px;">
+									<p>朝代： {{ $artwork['art_dynasty'] }}</p>
+									<p>作者： {{ $artwork['art_author'] }}</p>
+									<p>名称： {{ $artwork['art_name'] }}</p>
 								</div>
 							</div>
 						@endforeach

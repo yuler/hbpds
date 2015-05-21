@@ -23,6 +23,7 @@
 				</div>
 				<div class="col-md-10 content">
 					<h1>拍卖委托书</h1>
+					<p><a href="/download-book">下載委託書</a></p>
 					<img src="/imgs/auctionBook.png" alt="" style="width:100%;">
 				</div>
 			</div>
