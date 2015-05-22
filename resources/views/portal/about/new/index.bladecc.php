@@ -1,45 +1,20 @@
 @extends('portal.app')
-
 @section('content')
-<style type="text/css">
-.aaa{
-height:181;
-border:1px solid red;
+<style type='text/css'>
+.kc_fm {
+  height: 149px;
 }
-.zx_sc ul li {
-  float: left;
-  margin-right: 11px;
-  display: inline;
-  margin-bottom: 32px;
+.ul {
+  list-style: none;
 }
-.pdy_zx_sc_img {
-  width: 180px;
-max-height: 200px;
-
-  overflow: hidden;
-  <!--border: 1px solid #e4e4e4;-->
-  position: relative;
-  text-align: center;
+.li{
+float:left;
 }
-.bSpan {
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  overflow: hidden;
-  margin-left: -1px;
-  font-size: 0;
-  line-height: 0;
-  vertical-align: middle;
-}
-.pdy_zx_sc_img img {
-  max-width: 175px;
-  max-height: 175px;
-  position: relative;
-  vertical-align: middle;
+.pdy_zt_img {
+  height: 154px;
 }
 </style>
 <script src="/plugins/jQuery/jQuery-2.1.3.min.js"></script>
-
 	<div id="newIndex">
 		<div class="sub-nav">
 			<div class="container">
@@ -72,24 +47,28 @@ max-height: 200px;
 									<article>
 									{{ str_limit($new->article, $limit = 100, $end = '...') }}
 									</article>
-<div class="zx_sc">
-                    	<ul id="new_art"> 
-										@foreach ($new->imgList as $img)
-<li>
-<div class="pdy_zx_sc_img">
-<span class="bSpan"></span>
-												{!!$img !!}
-</div>
-</li>
+									<div class="pic-list">
+			<div class="kc_fm">
 
+                   	<ul class='ul'>
+                        </div>
+										@foreach ($new->imgList as $img)
+										 
+			<li class="li">{!!$img!!}</li>
+
+											
 										@endforeach
-</ul>
-</div>
+
+			</ul>
+			</div>
 									</div>
+								</div>
 							</li>
 						@endforeach
 					</ul>
-						
+			
+
+			
 					<div style="float:right;">
 						{!! $news->render() !!}
 					</div>
@@ -101,7 +80,7 @@ max-height: 200px;
 $(function(){
 var imgs = $('.li img');
 $.each(imgs,function(i,item){
-        $(item).addClass("pdy_zt_img");
+	$(item).addClass("pdy_zt_img");
 });
 
 }

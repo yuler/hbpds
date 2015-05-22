@@ -48,7 +48,7 @@
 			                    </div>
 								<div class="form-group">
 			                    	{!! Form::label('art_name', '拍品名稱') !!}
-			                    	{!! Form::text('art_name', null, ['class' => 'form-control', 'placeholder' => '输入拍品名称']) !!}
+			                    	{!! Form::textarea('art_name', null, ['class' => 'form-control','rows'=>'3','cols'=>'50', 'placeholder' => '输入拍品名称']) !!}
 
 			                    </div>
 			                       <div class="form-group">
@@ -58,7 +58,7 @@
 
 			                    <div class="form-group">
 			                    	{!! Form::label('art_size', '尺寸') !!}
-			                    	{!! Form::text('art_size', null, ['class' => 'form-control','placeholder' => '输入尺寸']) !!}
+			                    	{!! Form::textarea('art_size', null, ['class' => 'form-control','rows'=>'3','placeholder' => '输入尺寸']) !!}
 			                    </div>
 
 	 							<div class="form-group">
@@ -68,25 +68,25 @@
 
  								<div class="form-group">
 			                    	{!! Form::label('art_seal', '鈐印（多為書畫） ') !!}
-		                    		{!! Form::textarea('art_seal', null, ['class' => 'form-control','id'=>'dd', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_seal', null, ['class' => 'form-control','rows'=>'5', 'placeholder' => '']) !!}
 			                    </div>
 	 							<div class="form-group">
 			                    	{!! Form::label('art_tizhi', '題識（款識）   ') !!}
-		                    		{!! Form::textarea('art_tizhi', null, ['class' => 'form-control', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_tizhi', null, ['class' => 'form-control','rows'=>'5', 'placeholder' => '']) !!}
 			                    </div>
 			                 
 			                   <div class="form-group">
 			                    	{!! Form::label('art_annotation', '釋文') !!}
-		                    		{!! Form::textarea('art_annotation', null, ['class' => 'form-control', 'placeholder' => '']) !!}
+		                    		{!! Form::textarea('art_annotation', null, ['class' => 'form-control','rows'=>'5', 'placeholder' => '']) !!}
 			                    </div>
  								<div class="form-group">
 			                    	{!! Form::label('art_source', '來源') !!}
-			                    	{!! Form::text('art_source', null, ['class' => 'form-control', 'placeholder' => '输入来源']) !!}
+			                    	{!! Form::textarea('art_source', null, ['class' => 'form-control','rows'=>'3', 'placeholder' => '输入来源']) !!}
 			                    </div>
 			                    
   								<div class="form-group">
 			                    	{!! Form::label('art_publish', '出版、參閱、展覽') !!}
-			                    	{!! Form::text('art_publish', null, ['class' => 'form-control', 'placeholder' => '输入出版']) !!}
+			                    	{!! Form::textarea('art_publish', null, ['class' => 'form-control','rows'=>'3', 'placeholder' => '输入出版']) !!}
 			                    </div>
 
 								 <div class="form-group">
