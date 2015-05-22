@@ -98,13 +98,13 @@
 									</div>
 									<div>
 										<p>LOT {{ $artwork['art_lot'] }}</p>
-										<p>估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
+										<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
 									</div>
 								</a>
 								<div class="info" style="margin:3px;height: 100px;width: 86%;">
-									<p>{{ $artwork['art_dynasty'] }}</p>
-									<p>{{ $artwork['art_author'] }}</p>
-									<p>{{ $artwork['art_name'] }}</p>
+									<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_dynasty'] }}</p>
+									<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_author'] }}</p>
+									<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_name'] }}</p>
 								</div>
 							</div>
 						@endforeach
