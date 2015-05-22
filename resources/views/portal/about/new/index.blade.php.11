@@ -1,10 +1,25 @@
 @extends('portal.app')
 
 @section('content')
+<style type='text/css'>
+.pic-list {
+  height: 149px;
+}
+.ul {
+  list-style: none;
+}
+.li{
+float:left;
+}
+.pdy_zt_img {
+  height: 154px;
+}
+</style>
 <style type="text/css">
-.aaa{
-height:181;
-border:1px solid red;
+.zx_sc {
+  margin-top: 19px;
+  overflow: hidden;
+  zoom: 1;
 }
 .zx_sc ul li {
   float: left;
@@ -13,11 +28,10 @@ border:1px solid red;
   margin-bottom: 32px;
 }
 .pdy_zx_sc_img {
-  width: 180px;
-max-height: 200px;
-
+  width: 208px;
+  height: 208px;
   overflow: hidden;
-  <!--border: 1px solid #e4e4e4;-->
+  border: 1px solid #e4e4e4;
   position: relative;
   text-align: center;
 }
@@ -32,8 +46,8 @@ max-height: 200px;
   vertical-align: middle;
 }
 .pdy_zx_sc_img img {
-  max-width: 175px;
-  max-height: 175px;
+  max-width: 200px;
+  max-height: 200px;
   position: relative;
   vertical-align: middle;
 }
@@ -72,20 +86,14 @@ max-height: 200px;
 									<article>
 									{{ str_limit($new->article, $limit = 100, $end = '...') }}
 									</article>
-<div class="zx_sc">
-                    	<ul id="new_art"> 
+									<div class="pic-list">
+<ul class='ul'>
 										@foreach ($new->imgList as $img)
-<li>
-<div class="pdy_zx_sc_img">
-<span class="bSpan"></span>
-												{!!$img !!}
-</div>
-</li>
-
+<li class='li'>												{!!$img !!}</li>
 										@endforeach
 </ul>
-</div>
 									</div>
+								</div>
 							</li>
 						@endforeach
 					</ul>
