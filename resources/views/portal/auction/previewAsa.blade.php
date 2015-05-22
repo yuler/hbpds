@@ -86,11 +86,10 @@
 						@foreach($preview_asa->artworks() as $artwork)
 							<div class="col-md-4">
 								<a href="/artwork/{{$artwork['id']}}" style="display:block;">
-									<div style="width:228px;height:228px;border-top:3px solid #eee;padding:0px;">
+									<div style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border-top:3px solid #eee;padding:0px;">
 										@if(sizeof($artwork->atts) > 0)
-											<center style="line-height: 228px;">
-												<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:100%;height: 200px;width:inherit;" onload="AutoResizeImage(0,222,this)">
-											</center>
+											<span style="display: inline-block;width: 0;height: 100%;overflow: hidden;margin-left: -1px;font-size: 0;line-height: 0;vertical-align: middle;"></span>
+											<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:208px;max-height: 202px;position: relative;vertical-align: middle;">
 										@else
 											<center style="line-height: 228px;">
 												<img src="/imgs/n1.png" alt="" style="max-width:100%;height: 200px;width:inherit;" onload="AutoResizeImage(222,222,this)">
@@ -102,7 +101,7 @@
 										<p>估值：HKD {{number_format($artwork['begin_price_hkd'])}}-{{number_format($artwork['end_price_hkd'])}}</p>
 									</div>
 								</a>
-								<div class="info" style="margin:3px;height: 100px;">
+								<div class="info" style="margin:3px;height: 100px;width: 86%;">
 									<p>{{ $artwork['art_dynasty'] }}</p>
 									<p>{{ $artwork['art_author'] }}</p>
 									<p>{{ $artwork['art_name'] }}</p>
@@ -110,6 +109,7 @@
 							</div>
 						@endforeach
 					</div>
+					{!! $preview_asa->artworks()->render() !!}
 				</div>
 			</div>
 		</div>
