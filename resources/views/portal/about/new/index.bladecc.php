@@ -1,8 +1,7 @@
 @extends('portal.app')
-
 @section('content')
 <style type='text/css'>
-.pic-list {
+.kc_fm {
   height: 149px;
 }
 .ul {
@@ -16,7 +15,6 @@ float:left;
 }
 </style>
 <script src="/plugins/jQuery/jQuery-2.1.3.min.js"></script>
-
 	<div id="newIndex">
 		<div class="sub-nav">
 			<div class="container">
@@ -50,17 +48,27 @@ float:left;
 									{{ str_limit($new->article, $limit = 100, $end = '...') }}
 									</article>
 									<div class="pic-list">
-<ul class='ul'>
+			<div class="kc_fm">
+
+                   	<ul class='ul'>
+                        </div>
 										@foreach ($new->imgList as $img)
-<li class='li'>												{!!$img !!}</li>
+										 
+			<li class="li">{!!$img!!}</li>
+
+											
 										@endforeach
-</ul>
+
+			</ul>
+			</div>
 									</div>
 								</div>
 							</li>
 						@endforeach
 					</ul>
-						
+			
+
+			
 					<div style="float:right;">
 						{!! $news->render() !!}
 					</div>
@@ -72,7 +80,7 @@ float:left;
 $(function(){
 var imgs = $('.li img');
 $.each(imgs,function(i,item){
-        $(item).addClass("pdy_zt_img");
+	$(item).addClass("pdy_zt_img");
 });
 
 }
