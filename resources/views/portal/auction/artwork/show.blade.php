@@ -89,7 +89,7 @@
 						<br>
 						<p style="line-height:30px;">{{ $artwork['art_name'] }}
 							@if($artwork['art_name'] && $artwork['art_material'])
-							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<br>
 							@endif
 							{{ $artwork['art_material'] }}
 						</p>
@@ -101,7 +101,7 @@
 						<br>
 						<p style="line-height:24px;">{{ $artwork['art_seal'] }}
 							@if($artwork['art_seal'] && $artwork['art_tizhi'])
-							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<br>
 							@endif
 							{{ $artwork['art_tizhi'] }}
 						</p>
