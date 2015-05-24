@@ -78,9 +78,15 @@
 									@endif
 								@endif -->
 								<br>
+								<div style="  height: 60px;">
+									@if($asa['asa_online_logo'])
+										<a href="{{ $asa['asa_online_url'] }}" class="yp-logo" target="_blank">
+											<img src="{{$asa['asa_online_logo']}}" alt="" style="width:100px;height:35px;">	
+										</a>
+									@endif
+								</div>
 								<br>
 								<p>{{ date('Y-m-d H:i', strtotime($asa['begin_time'])) }}&nbsp;&nbsp;開拍</p>
-								<br>
 								<!-- <p>{{ date('Y-m-d H:i', strtotime($asa['preview_begin_time'])) }}&nbsp;&nbsp;預覽</p> -->
 							</div>
 						</div>

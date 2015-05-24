@@ -17,7 +17,7 @@
 				@foreach($asas as $asa)
 					<li class="clearfix">
 						<div class="col-md-2 date">
-							<h2>{{ date('y年', strtotime($asa['begin_time'])) }}</h2>
+							<h2>{{ date('Y年', strtotime($asa['begin_time'])) }}</h2>
 							<p>{{ date('m月d日', strtotime($asa['begin_time'])) }} 开始</p>
 						</div>
 						<div class="col-md-4 img">
@@ -32,9 +32,11 @@
 							</p>
 							<br>
 							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn" target="_blank">参加网上拍卖</a>
-							<a href="{{ $asa['asa_online_logo'] }}" class="yp-logo" target="_blank">
-								<img src="/imgs/yp-logo.png" alt="" style="width:100px;height:35px;">	
-							</a>
+							@if($asa['asa_online_logo'])
+								<a href="{{ $asa['asa_online_url'] }}" class="yp-logo" target="_blank">
+									<img src="{{$asa['asa_online_logo']}}" alt="" style="width:100px;height:35px;">	
+								</a>
+							@endif
 						</div>
 					</li>
 				@endforeach

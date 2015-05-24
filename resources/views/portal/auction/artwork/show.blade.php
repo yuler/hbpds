@@ -70,9 +70,15 @@
 											</li>
 										@else
 											<li class="hide">
-												<a href="#" data-target="#carousel-id" data-slide-to="{{$key}}" style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border:3px solid #eee;padding:0px;display: block;line-height: 229px;">
-													<img src="{{ $att['att_path']}}" alt="" style="  width: auto;padding:5px;height: 202px;position: relative;vertical-align: middle;">
+												<a href="#" data-target="#carousel-id" data-slide-to="{{$key}}"style="display:block;color:white;">
+													<div style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border:3px solid #eee;padding:0px;">
+														<span style="display: inline-block;width: 0;height: 100%;overflow: hidden;margin-left: -1px;font-size: 0;line-height: 0;vertical-align: middle;"></span>
+														<img src="{{ $att['att_path']}}" alt="" style="width: auto;max-width: 95%;max-height: 202px;position: relative;vertical-align: middle;">
+													</div>
 												</a>
+												<!-- <a href="#" data-target="#carousel-id" data-slide-to="{{$key}}" style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border:3px solid #eee;padding:0px;display: block;line-height: 229px;">
+													<img src="{{ $att['att_path']}}" alt="" style="  width: auto;padding:5px;height: 202px;position: relative;vertical-align: middle;">
+												</a> -->
 											</li>
 										@endif
 									@endforeach
