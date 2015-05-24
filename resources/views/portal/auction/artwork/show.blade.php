@@ -123,7 +123,7 @@
 						<br>
 						@endif
 
-						@if( $artwork['art_price_hkd'] && $artwork['art_price_rmb'] )
+						@if( $artwork['art_price_hkd'] != 0 && $artwork['art_price_rmb'] != 0 )
 						<p style="line-height:30px;">成交價</p>
 						<p style="line-height:15px;">HKD: {{ number_format($artwork['art_price_hkd']) }}</p>
 						<p style="line-height:15px;">CNY: {{ number_format($artwork['art_price_rmb']) }}</p>
