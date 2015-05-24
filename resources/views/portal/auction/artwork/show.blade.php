@@ -116,13 +116,18 @@
 						<p style="line-height:30px;">{{ $artwork['art_source']}}</p>
 						<p style="line-height:30px;">{{ $artwork['art_publish']}}</p>
 						<br>
+						@if( $artwork['begin_price_hkd'] && $artwork['begin_price_rmb'] )
 						<p style="line-height:30px;">估價：</p>
 						<p style="line-height:15px;">HKD: {{ number_format($artwork['begin_price_hkd']) }}-{{ number_format($artwork['end_price_hkd']) }}</p>
 						<p style="line-height:15px;">CNY: {{ number_format($artwork['begin_price_rmb']) }}-{{ number_format($artwork['end_price_rmb']) }}</p>
 						<br>
+						@endif
+
+						@if( $artwork['art_price_hkd'] && $artwork['art_price_rmb'] )
 						<p style="line-height:30px;">成交價</p>
 						<p style="line-height:15px;">HKD: {{ number_format($artwork['art_price_hkd']) }}</p>
 						<p style="line-height:15px;">CNY: {{ number_format($artwork['art_price_rmb']) }}</p>
+						@endif
 					</div>
 					<br>
 					<div class="row description" style="padding-left:15px;line-height:30px;">
