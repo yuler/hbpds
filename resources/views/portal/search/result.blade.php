@@ -17,21 +17,26 @@
 			<div class="row productList">
 				@foreach($artworks as $artwork)
 					<div class="col-md-3">
-						<a href="/artwork/{{$artwork['id']}}">
-							@if(sizeof($artwork->atts) > 0)
-								<img src="{{ $artwork->atts[0]['att_path'] }}" alt="">
-							@else
-								<img src="/imgs/n1.png" alt="">
-							@endif
-							<div>
+						<a href="/artwork/{{$artwork['id']}}" style="display:block;">
+							<div style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border-top:3px solid #eee;padding:0px;">
+								@if(sizeof($artwork->atts) > 0)
+									<span style="display: inline-block;width: 0;height: 100%;overflow: hidden;margin-left: -1px;font-size: 0;line-height: 0;vertical-align: middle;"></span>
+									<img src="{{ $artwork->atts[0]['att_path'] }}" alt="" style="max-width:208px;max-height: 202px;position: relative;vertical-align: middle;">
+								@else
+									<center style="line-height: 228px;">
+										<img src="/imgs/n1.png" alt="" style="max-width:100%;height: 200px;width:inherit;" onload="AutoResizeImage(222,222,this)">
+									</center>
+								@endif
+							</div>
+							<div style="">
 								<p>LOT {{ $artwork['art_lot'] }}</p>
-								<p>估值： 900，000 HKD</p>
+								<p style="height:44px;">估值：HKD {{number_format($artwork['begin_price_hkd'])}} - {{number_format($artwork['end_price_hkd'])}}</p>
 							</div>
 						</a>
-						<div class="info">
-							<p>朝代： {{ $artwork['art_dynasty'] }}</p>
-							<p>作者： {{ $artwork['art_author'] }}</p>
-							<p>名称： {{ $artwork['art_name'] }}</p>
+						<div class="info" style="margin:3px;height: 92px;width: 88%;">
+							<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_dynasty'] }}</p>
+							<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_author'] }}</p>
+							<p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{ $artwork['art_name'] }}</p>
 						</div>
 					</div>
 				@endforeach
