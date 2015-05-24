@@ -15,14 +15,14 @@ class HbNewController extends Controller {
 	 */
 	public function index()
 	{
-		$locale = \App::getLocale();
+		/*$locale = \App::getLocale();
 		$lang = 0;
 		if($locale == 'zh-TW'){
 			$lang = 0;
 		}else {
 			$lang = 1;
-		}
-		$news = HbNew::where('published','=','1')->where('lang', '=', $lang)->paginate(5);
+		}*/
+		$news = HbNew::where('published','=','1')->paginate(5);
 		foreach ($news as $key => $new) {
 			$conent = $new->content;
 			$new->article = strip_tags($conent);

@@ -29,7 +29,7 @@
 								<div class="data">
 									{{ date('Y-m-d', strtotime($material->published_at)) }}
 								</div>
-								<div class="html">
+								<div class="html" style="  min-width: 800px;">
 									<p><a href="/material/{{ $material->id }}">{{ $material->title }}</a></p>
 									<article>
 									{{ str_limit($material->article, $limit = 100, $end = '...') }}

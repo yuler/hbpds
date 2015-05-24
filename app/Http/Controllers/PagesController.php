@@ -43,14 +43,14 @@ class PagesController extends Controller {
 
 	public function getAuctionReference()
 	{
-		$locale = \App::getLocale();
+		/*$locale = \App::getLocale();
 		$lang = 0;
 		if($locale == 'zh-TW'){
 			$lang = 0;
 		}else {
 			$lang = 1;
-		}
-		$materials = \App\HbMaterial::where('published','=','1')->where('lang', '=', $lang)->paginate(5);
+		}*/
+		$materials = \App\HbMaterial::where('published','=','1')->paginate(5);
 		foreach ($materials as $key => $material) {
 			$conent = $material->content;
 			$material->article = strip_tags($conent);
@@ -75,19 +75,18 @@ class PagesController extends Controller {
 
 	public function getSearch(Request $request)
 	{
-		$locale = \App::getLocale();
+		/*$locale = \App::getLocale();
 		$lang = 0;
 		if($locale == 'zh-TW'){
 			$lang = 0;
 		}else {
 			$lang = 1;
-		}
+		}*/
 		$kw = $request->input('kw');
 		$word = strtolower($kw);
 		$word = str_replace(' ','',$word);
 		$word = str_replace('lot','',$word);
 		$artworks = HbArtwork::where('art_lot', 'like', '%' . $word . '%')
-				->where('lang', '=', $lang)
 				->orWhere('art_name', 'like', '%' . $kw . '%')
 				->paginate(8);
 		return view('portal.search.result')->withKw($kw)->withArtworks($artworks);
