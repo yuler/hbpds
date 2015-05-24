@@ -33,7 +33,7 @@ header nav.navbar-menu {
         padding-bottom: 10px;
         border-bottom: 5px solid #ffcc00; }
     header nav.navbar-menu ul.navbar-left > li.active > a {
-      background-color: rgba(220, 192, 82, 0.7) !important;
+      background-color: inherit !important;
       border-bottom: 5px solid #ffcc00;
       padding-bottom: 10px; }
     header nav.navbar-menu ul.navbar-left > li.dropdown:hover .dropdown-menu {
@@ -286,7 +286,7 @@ footer .goto-top {
       background-image: inherit; }
     #artworkShow .content .info div a .fa {
       position: absolute;
-      top: 35%;
+      top: 42%;
       z-index: 5;
       display: inline-block;
       color: #333; }
@@ -461,3 +461,12 @@ div.productList > div {
     margin-left: 0px; }
   #artworkShow {
     padding: 0; } }
+
+.carousel-indicators .active {
+  background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+}
+.carousel-indicators li {
+  background-color: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}

@@ -33,4 +33,47 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="/bootstrap/js/bootstrap.min.js"></script>
 	</body>
+
+	<script type="text/javascript">
+	$(function(){
+		$(document).on('click','#toLeft',function(e){
+			var ele = $(this);
+			var page = $(this).data('page');
+			/*if($('#picList li').size() < 3*(page+1)){
+				ele.addClass('hide');
+			}*/
+			if(page > 1){
+				$('#toRight').data('page',page - 1);
+				$('#toLeft').data('page',page - 1);
+				$('#picList li').each(function(index){
+					if(index < (page-1)*3){
+						$(this).removeClass('hide');
+					}else{
+						$(this).addClass('hide');
+					}
+				});
+			}
+			
+		});
+
+		$(document).on('click','#toRight',function(e){
+			var ele = $(this);
+			var page = ele.data('page');
+			/*if($('#picList li').size() < 3*(page+1)){
+				ele.addClass('hide');
+			}*/
+			if(page < $('#picList li').size() / 2.0){
+				$('#toRight').data('page',page + 1);
+				$('#toLeft').data('page',page + 1);
+				$('#picList li').each(function(index){
+					if(index < page*3){
+						$(this).addClass('hide');
+					}else{
+						$(this).removeClass('hide');
+					}
+				});
+			}
+		});
+	});
+	</script>
 </html>

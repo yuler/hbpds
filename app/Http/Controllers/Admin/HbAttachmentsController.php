@@ -36,7 +36,6 @@ class HbAttachmentsController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-
 		$file = $request->file('upload');
 		if($file->getSize() > 5*1024*1024){
 			return response()->json(['success'=>'true','msg'=>'上傳文件不能大於 5M']);

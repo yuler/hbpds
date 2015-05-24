@@ -18,10 +18,10 @@
 		        @endforeach
 		    </div>
 		    <a class="left carousel-control" href="#carousel-id" data-slide="prev">
-		    	<img src="/imgs/banner-left.gif" alt="" style="position: absolute;top: 50%;">
+		    	<img src="/imgs/banner-left.gif" alt="" style="position: absolute;top: 50%;  filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;">
 		    </a>
 		    <a class="right carousel-control" href="#carousel-id" data-slide="next">
-		    	<img src="/imgs/banner-right.gif" alt="" style="position: absolute;top: 50%;">
+		    	<img src="/imgs/banner-right.gif" alt="" style="position: absolute;top: 50%;  filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;">
 		    </a>
 		</div>
 		
