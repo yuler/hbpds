@@ -31,7 +31,7 @@ class HbAsa extends Model {
 	{
 		return HbArtwork::where('asa_id','=',$this->id)
 						->orderBy('art_lot')
-						->paginate(6);
+						->paginate(24);
 	}
 
 	public function auction()
