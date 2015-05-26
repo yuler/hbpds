@@ -12,7 +12,7 @@
 		    	@foreach($banners as $key => $banner)
 			        <div class="item {{ $key == 0 ? 'active' : ''}}">
 			        	<a href="{{$banner['target_url']}}" target="_blank">
-			            	<img src="{{$banner['image_url']}}">
+			            	<img src="{{$banner['image_url']}}" style="min-height:500px;">
 			            </a>
 			        </div>
 		        @endforeach
@@ -28,7 +28,7 @@
 		<div class="container product-list" style="padding:0;">
 			<div class="row">
 			@foreach($ads as $key => $ad)
-				<div class="col-md-4">
+				<div class="col-xs-4">
 					<a href="{{$ad['target_url']}}" style="display:block;height:229px;color:white;" target="_blank">
 						<div style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border:3px solid #eee;padding:0px;">
 							<span style="display: inline-block;width: 0;height: 100%;overflow: hidden;margin-left: -1px;font-size: 0;line-height: 0;vertical-align: middle;"></span>

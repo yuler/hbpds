@@ -84,9 +84,7 @@ footer .description {
           text-decoration: underline; }
     footer .description ul li.last {
       padding: 0px;
-      float: right;
-      margin-top: -12px;
-      position: absolute; }
+      }
     footer .description ul .wx {
       display: inline-block; }
       footer .description ul .wx .wx-code {
@@ -469,4 +467,13 @@ div.productList > div {
 .carousel-indicators li {
   background-color: #d7d7d7;
   border: 1px solid #d7d7d7;
+}
+
+
+.container,body{
+  min-width: 1170px;
+}
+
+@media (max-width: 1170px) {
+  
 }

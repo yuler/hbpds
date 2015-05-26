@@ -1,6 +1,6 @@
 <footer>
 	<div class="description">
-		<div class="container">
+		<div class="container" style="padding:0;font-size: 0.9em;">
 			<p>{{ trans('portal.footer.company') }}</p>
 			<ul class="clearfix">
 				<li style="padding-right: 2%;">{{ trans('portal.footer.address') }}</li>
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		<div class="container" style="font-size:12px;">
+		<div class="container" style="font-size:12px;padding:0;">
 			<span>&copy; 2015 Yokohama International Auction (HK) Co. Ltd. All Rights Reserved</span>
 			<img src="/imgs/logo-jp.png" alt="">
 		</div>
