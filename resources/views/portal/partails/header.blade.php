@@ -2,13 +2,7 @@
 	<nav class="navbar navbar-default navbar-logo" role="navigation">
 		<div class="container page-index">
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+			<div class="navbar-header" style="width:600px;display:inline-block;">
 				<a class="navbar-brand" href="/">
 					<img src="/imgs/logo.jpg" alt="logo" class="logo">
 					<img src="/imgs/logo-text.png" alt="logo" class="logo-text">
@@ -17,24 +11,22 @@
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				
-				<ul class="nav navbar-nav navbar-right">
-					<form class="navbar-form navbar-left" role="search" action="/search">
-						<div class="input-group">
-							<input type="text" id="email" name="kw" class="form-control" placeholder="{{ trans('portal.header.search') }}">
-							<a href="javascript:void(0);" class="btn input-group-addon" onclick="$('form').submit();">
-								&nbsp;&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;
-							</a>
-						</div>
-					</form>
-				</ul>
-			</div><!-- /.navbar-collapse -->
+		
+			<ul class="nav navbar-nav navbar-right" style="padding-right:15px;">
+				<li>
+				<form class="navbar-form navbar-left" role="search" action="/search" style="width: 228px;">
+					<div class="input-group">
+						<input type="text" id="email" name="kw" class="form-control" placeholder="{{ trans('portal.header.search') }}">
+						<a href="javascript:void(0);" class="btn input-group-addon" onclick="$('form').submit();">
+							&nbsp;&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;
+						</a>
+					</div>
+				</form>
+				</li>
+			</ul>
 		</div>
 	</nav>
-	<div class="sm-logo">
-		<img src="/imgs/sm-logo.png" alt="">
-	</div>
+	
 	<nav class="navbar navbar-default navbar-menu" role="navigation">
 		<div class="container">
 			<ul class="nav navbar-nav navbar-left">

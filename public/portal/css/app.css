@@ -443,7 +443,7 @@ div.productList > div {
   display: none; }
 
 @media (max-width: 767px) {
-  .navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
+  ./* navbar-menu, .sub-nav, .goto-top, .sm-hide, .navbar-toggle, nav, footer {
     display: none !important; }
   .sm-logo {
     display: block; }
@@ -458,7 +458,7 @@ div.productList > div {
     margin-right: 0px;
     margin-left: 0px; }
   #artworkShow {
-    padding: 0; } }
+    padding: 0; }  */}
 
 .carousel-indicators .active {
   background-color: #ffcc00;
@@ -476,4 +476,17 @@ div.productList > div {
 
 @media (max-width: 1170px) {
   
+}
+
+header nav.navbar-menu {
+  min-width: 1170px;
+}
+.nav, .nav>li, .nav>li>a {
+  display: inline-block;
+}
+.navbar-nav {
+  margin: 0;
+}
+.navbar-right {
+  float: right;
 }
