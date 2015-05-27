@@ -16,14 +16,14 @@
 			<ul class="prodcut-list">
 				@foreach($asas as $asa)
 					<li class="clearfix">
-						<div class="col-md-2 date">
+						<div class="col-xs-2 date">
 							<h2>{{ date('Y年', strtotime($asa['begin_time'])) }}</h2>
 							<p>{{ date('m月d日', strtotime($asa['begin_time'])) }} 开始</p>
 						</div>
-						<div class="col-md-4 img">
+						<div class="col-xs-4 img">
 							<img src="{{ $asa['asa_image'] }}" alt="" style="height:208px;">
 						</div>
-						<div class="col-md-6 info">
+						<div class="col-xs-6 info">
 							<h2>{{ $asa['asa_name'] }}</h2>
 							<br>
 							<p>

@@ -13,14 +13,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
 						<li><a href="/contact">{{ trans('portal.header.contact') }}</a></li>
 						<li class="active"><a href="">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h2>{{ $new->title }}</h2>
 					<div class="data">{{ date('Y-m-d', strtotime($new->published_at)) }}</div>
 					<br>
@@ -31,4 +31,13 @@
 			</div>
 		</div>
 	</div>
+
+	<style type="text/css">
+		.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
+	  	}
+	</style>
 @endsection

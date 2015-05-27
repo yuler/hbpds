@@ -13,7 +13,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
 						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
@@ -21,7 +21,7 @@
 						<li><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h1>參考資料</h1>
 					<ul>
 						@foreach ($materials as $material)
@@ -53,4 +53,13 @@
 			</div>
 		</div>
 	</div>
+
+	<style type="text/css">
+		.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
+	  	}
+	</style>
 @endsection

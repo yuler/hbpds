@@ -34,13 +34,13 @@
 				    	@endforeach
 				    </div>
 					@if(sizeof($artwork->prev()) > 0)
-				    	<a class="left carousel-control sm-hide" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev">
+				    	<a class="left carousel-control sm-hide" href="/artwork/{{$artwork->prev()[0]['id']}}" data-slide="prev" style="  left: -8%;">
 				    		<span style="font-size:12px;right: -5%;">LOT&nbsp;&nbsp;{{$artwork->prev()[0]['art_lot']}}</span>
 				    		<i class="fa fa-angle-left fa-4x"></i>
 				    	</a>
 					@endif
 					@if(sizeof($artwork->next()) > 0)
-				    	<a class="right carousel-control sm-hide" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next">
+				    	<a class="right carousel-control sm-hide" href="/artwork/{{$artwork->next()[0]['id']}}" data-slide="next" style="right: -6%;">
 				    		<i class="fa fa-angle-right fa-4x"></i>
 				    		<span style="font-size:12px;left: 10%;">LOT&nbsp;&nbsp;{{$artwork->next()[0]['art_lot']}}</span>
 				    	</a>
@@ -48,15 +48,15 @@
 				</div>
 			@endif
 			<div class="row info">
-				<div class="col-md-10 col-md-offset-1 col-sm-12" style="padding:0px;">
+				<div class="col-xs-12" style="padding:0px;">
 					<hr class="sm-hide">
 					<div class="row">
-						<div class="col-md-4" style="margin-top:35px;">
+						<div class="col-xs-4" style="margin-top:35px;">
 							<h2 style="display:inline-block;">{{ $artwork['art_name'] }}</h2>  
 							&nbsp;&nbsp;&nbsp;&nbsp;LOT {{ $artwork['art_lot'] }}
 						</div>
 						@if(sizeof($artwork->atts) > 0)
-							<div class="col-md-8 sm-hide">
+							<div class="col-xs-8 sm-hide">
 								<ul class="clearfix" id="picList">
 									@foreach($artwork->atts as $key => $att)
 										@if($key < 3)

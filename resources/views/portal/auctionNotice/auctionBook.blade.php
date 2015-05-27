@@ -13,7 +13,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
 						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
@@ -21,7 +21,7 @@
 						<li class="active"><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h1>拍卖委托书</h1>
 					<p style="text-align: right;"><a href="/download-book">下載委託書</a></p>
 					<img src="/imgs/auctionBook.png" alt="" style="width:100%;">
@@ -29,4 +29,13 @@
 			</div>
 		</div>
 	</div>
+
+	<style type="text/css">
+		.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
+	  	}
+	</style>
 @endsection

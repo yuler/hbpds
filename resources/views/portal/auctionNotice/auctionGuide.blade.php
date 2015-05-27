@@ -13,7 +13,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li class="active"><a href="/auction-guide">{{ trans('portal.header.auction-guide') }}</a></li>
 						<li><a href="/transaction-read">{{ trans('portal.header.transaction-read') }}</a></li>
@@ -21,7 +21,7 @@
 						<li><a href="/auction-book">{{ trans('portal.header.auction-book') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h1>拍賣規則</h1>
 					<p>本規則的制定依據是相關法律法規同時參照了國際通行慣例按照以下規章執行</p>
 
@@ -89,6 +89,12 @@
 	<style type="text/css">
 		p {
 	  		line-height: 2em;
+	  	}
+	  	.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
 	  	}
 	</style>
 @endsection

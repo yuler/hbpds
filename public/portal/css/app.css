@@ -20,7 +20,7 @@ header nav.navbar-menu {
   header nav.navbar-menu ul.navbar-left > li {
     margin-left: -15px;
     padding-right: 30px; }
-    header nav.navbar-menu ul.navbar-left > li:hover > a {
+    header nav.navbar-menu ul.navbar-left > li.menu:hover > a {
       background-color: rgba(220, 192, 82, 0.7) !important;
       padding-bottom: 10px;
       border-bottom: 5px solid #ffcc00; }
@@ -28,7 +28,7 @@ header nav.navbar-menu {
       padding-top: 15px;
       color: white !important;
       padding-bottom: 15px; }
-      header nav.navbar-menu ul.navbar-left > li a:hover {
+      header nav.navbar-menu ul.navbar-left > li.menu a:hover {
         background-color: rgba(220, 192, 82, 0.7) !important;
         padding-bottom: 10px;
         border-bottom: 5px solid #ffcc00; }
@@ -489,4 +489,10 @@ header nav.navbar-menu {
 }
 .navbar-right {
   float: right;
+}
+.left-menu{
+  width: 390px!important;
+}
+.content{
+  width: 780px!important;
 }

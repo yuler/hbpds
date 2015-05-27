@@ -13,14 +13,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li><a href="/introduction">{{ trans('portal.header.introduction') }}</a></li>
 						<li class="active"><a href="/contact">{{ trans('portal.header.contact') }}</a></li>
 						<li><a href="/new">{{ trans('portal.header.new') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h1>聯繫方式</h1>
 
 					<h3>横滨国际拍卖（香港）有限公司 </h3>
@@ -133,6 +133,12 @@
 		   	background: #ffcc00;
 		   	margin-top: 20px;
 		}
+		.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
+	  	}
 	</style>
 @endsection
 

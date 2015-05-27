@@ -14,7 +14,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 left-menu">
+				<div class="col-xs-4 left-menu">
 					<h1>2015 年</h1>
 					<ul>
 						@foreach( $auctions as $auction)
@@ -48,7 +48,7 @@
 						@endforeach
 					</ul>
 				</div>
-				<div class="col-md-8 content">
+				<div class="col-xs-8 content">
 					<h1>{{ $preview_asa['asa_name'] }}</h1>
 					
 					@if(strlen($preview_asa['asa_preview_addr']) == 0 || 
@@ -84,7 +84,7 @@
 
 					<div class="row productList">
 						@foreach($preview_asa->artworks() as $artwork)
-							<div class="col-md-4">
+							<div class="col-xs-4">
 								<a href="/artwork/{{$artwork['id']}}" style="display:block;">
 									<div style="width:100%;height:229px;overflow: hidden;position: relative;text-align: center;border-top:3px solid #eee;padding:0px;">
 										@if(sizeof($artwork->atts) > 0)
