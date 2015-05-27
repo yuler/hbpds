@@ -117,7 +117,7 @@
 						<p style="line-height:30px;">{{ $artwork['art_publish']}}</p>
 						<br>
 						@if( $artwork['begin_price_hkd'] && $artwork['begin_price_rmb'] )
-						<p style="line-height:30px;">估價：</p>
+						<p style="line-height:30px;"></p>
 						<p style="line-height:15px;">HKD: {{ number_format($artwork['begin_price_hkd']) }}-{{ number_format($artwork['end_price_hkd']) }}</p>
 						<p style="line-height:15px;">CNY: {{ number_format($artwork['begin_price_rmb']) }}-{{ number_format($artwork['end_price_rmb']) }}</p>
 						<br>

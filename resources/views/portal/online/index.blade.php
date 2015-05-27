@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="container content">
-			<p>下列拍卖会均可以参与网上竞拍，点击下面 <a href="" class="hb-btn">参加网上拍卖</a> 既可参与竞投</p>
+			<p>下列拍卖会均可以参与网上竞拍，点击下面 <a href="" class="hb-btn">參加網上拍賣</a> 既可参与竞投</p>
 
 			<ul class="prodcut-list">
 				@foreach($asas as $asa)
@@ -31,7 +31,7 @@
 								{{ date('m月d日', strtotime($asa['begin_time'])) }}-{{ date('m月d日', strtotime($asa['end_time'])) }}
 							</p>
 							<br>
-							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn" target="_blank">参加网上拍卖</a>
+							<a href="{{ $asa['asa_online_url'] }}" class="hb-btn" target="_blank">參加網上拍賣</a>
 							@if($asa['asa_online_logo'])
 								<a href="{{ $asa['asa_online_url'] }}" class="yp-logo" target="_blank">
 									<img src="{{$asa['asa_online_logo']}}" alt="" style="width:100px;height:35px;">	
