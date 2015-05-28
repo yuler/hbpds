@@ -12,12 +12,12 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-xs-2">
 					<ul class="left-menu">
 						<li class="active"><a href="/introduction">{{ trans('portal.footer.privacy') }}</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10 content">
+				<div class="col-xs-10 content">
 					<h1>隱私保護</h1>
 					<h3>隱私權保護聲明</h3>
 					<p>隱私權是您的重要權利。向我們提供您的個人資訊是基於對我們的信任，我們會以負責的態度對待您的個人資訊，同時嚴格遵守隱私權的相關法律，我們相信您所提供的資訊只能用於為您提供更好的服務。因此我們制定了橫濱國際(香港)拍賣有限公司網上個人資訊資料的保密制度以保護您的個人資訊，我們的個人資訊保密制度摘要如下：</p>
@@ -57,5 +57,11 @@
 		p{
 			line-height: 2em;
 		}
+		.left-menu{
+	  		width: 165px!important;
+	  	}
+	  	.content{
+	  		width: 975px!important;
+	  	}
 	</style>
 @endsection

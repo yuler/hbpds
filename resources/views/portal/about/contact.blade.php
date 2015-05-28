@@ -25,8 +25,8 @@
 
 					<h3>横滨国际拍卖（香港）有限公司 </h3>
 					<p>地址： 中国香港湾仔轩尼诗道302-308号集成中心2305 </p>
-					<p>电话： (852) 2786 3648 </p>
-					<p>传真： (852) 2786 3877</p>
+					<p>电话： +852 2786-3778 </p>
+					<p>传真： +852 2786 3877</p>
 					<p>網站： <a href='http://www.ykauction.com' target='_blank' style='color:#0000FF'>www.ykauction.com</a></p>
 					<p>郵箱： <a href='mailto:info@ykauction.com' style='color:#0000FF'>info@ykauction.com</a></p>
 					<br>

@@ -70,12 +70,12 @@
 
 					<hr>
 
-					<h3>拍卖顺序</h3>
+					<!-- <h3>拍卖顺序</h3>
 					<ul>
 						@foreach($preview_asa->auction->asasByGroup($preview_asa['asa_group']) as $asa)
 							<li>{{ $asa['asa_name'] }}</li>
 						@endforeach
-					</ul>
+					</ul> -->
 
 					@if(strlen($preview_asa['asa_online_url'] > 0))
 						<h3 class="goOnline"><a href="{{ $preview_asa['asa_online_url'] }}" target="_blank">参加网上拍卖  <i class="fa fa-arrow-right"></i></a></h3>
@@ -98,7 +98,7 @@
 									</div>
 									<div style="">
 										<p>LOT {{ $artwork['art_lot'] }}</p>
-										<p style="height:44px;">估值：HKD {{number_format($artwork['begin_price_hkd'])}} - {{number_format($artwork['end_price_hkd'])}}</p>
+										<p style="height:44px;">HKD {{number_format($artwork['begin_price_hkd'])}} - {{number_format($artwork['end_price_hkd'])}}</p>
 									</div>
 								</a>
 								<div class="info" style="margin:3px;height: 92px;width: 86%;">
