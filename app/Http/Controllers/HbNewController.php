@@ -22,7 +22,7 @@ class HbNewController extends Controller {
 		}else {
 			$lang = 1;
 		}*/
-		$news = HbNew::where('published','=','1')->paginate(5);
+		$news = HbNew::where('published','=','1')->orderBy('created_at','desc')->paginate(5);
 		foreach ($news as $key => $new) {
 			$conent = $new->content;
 			$new->article = strip_tags($conent);
