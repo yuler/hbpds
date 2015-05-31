@@ -4,7 +4,7 @@
 			<p>{{ trans('portal.footer.company') }}</p>
 			<ul class="clearfix">
 				<li style="padding-right: 2%;">{{ trans('portal.footer.address') }}</li>
-				<li style="padding-right: 2%;">{{ trans('portal.footer.tel') }}： +852 2786 3648</li>
+				<li style="padding-right: 2%;">{{ trans('portal.footer.tel') }}： +852 2786 3778</li>
 				<li style="padding-right: 2%;">{{ trans('portal.footer.fax') }}： +852 2786 3877</li>
 				@if(app()->getLocale() == 'en')
 					<br>

@@ -69,7 +69,8 @@
 					</p>
 
 					<hr>
-
+					
+					<h3>共 {{$preview_asa->artworksCount() }} 個拍品</h3>
 					<!-- <h3>拍卖顺序</h3>
 					<ul>
 						@foreach($preview_asa->auction->asasByGroup($preview_asa['asa_group']) as $asa)

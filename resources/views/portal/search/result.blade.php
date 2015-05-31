@@ -30,7 +30,7 @@
 							</div>
 							<div style="">
 								<p>LOT {{ $artwork['art_lot'] }}</p>
-								<p style="height:44px;">估值：HKD {{number_format($artwork['begin_price_hkd'])}} - {{number_format($artwork['end_price_hkd'])}}</p>
+								<p style="height:44px;">HKD {{number_format($artwork['begin_price_hkd'])}} - {{number_format($artwork['end_price_hkd'])}}</p>
 							</div>
 						</a>
 						<div class="info" style="margin:3px;height: 92px;width: 88%;">

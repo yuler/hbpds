@@ -34,6 +34,13 @@ class HbAsa extends Model {
 						->paginate(24);
 	}
 
+
+	public function artworksCount()
+	{
+		return HbArtwork::where('asa_id','=',$this->id)
+						->count();
+	}
+
 	public function auction()
 	{
 		return $this->hasOne('App\HbAuction', 'id', 'auction_id');
