@@ -11,14 +11,14 @@
 			</div>
 		</div>
 		<div class="container content">
-			<p>下列拍卖会均可以参与网上竞拍，点击下面 <a href="" class="hb-btn">參加網上拍賣</a> 既可参与竞投</p>
+			<p>下列拍賣會均可以參與網上拍賣，點擊下面 <a href="" class="hb-btn">參加網上拍賣</a> 既可参与竞投</p>
 
 			<ul class="prodcut-list">
 				@foreach($asas as $asa)
 					<li class="clearfix">
 						<div class="col-xs-2 date">
 							<h2>{{ date('Y年', strtotime($asa['begin_time'])) }}</h2>
-							<p>{{ date('m月d日', strtotime($asa['begin_time'])) }} 开始</p>
+							<p>{{ date('m月d日', strtotime($asa['begin_time'])) }} 開始</p>
 						</div>
 						<div class="col-xs-4 img">
 							<img src="{{ $asa['asa_image'] }}" alt="" style="height:208px;">
@@ -27,7 +27,7 @@
 							<h2>{{ $asa['asa_name'] }}</h2>
 							<br>
 							<p>
-								<span>拍卖时间: </span>
+								<span>拍賣時間: </span>
 								{{ date('m月d日', strtotime($asa['begin_time'])) }}-{{ date('m月d日', strtotime($asa['end_time'])) }}
 							</p>
 							<br>
